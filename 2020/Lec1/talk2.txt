@@ -1,0 +1,85 @@
+﻿######### Structural Mechanics based on Newtonian mechanics ##############
+
+Structural mechanics is built on Newtonian mechanics plus a minimal set of modeling 
+assumptions derived from experimental results (of materials' testing).
+So we start from the principles of Newtonian mechanics.
+
+Newtonian mechanics is the mechanics invented by Newton. 
+It was invented originally to explain the motion of planets. 
+It has been extended and is used as a foundation of the mechanics of solid and fluid. 
+
+
+## Newton's laws of Motion
+Newtonian mechanics derives everything from the three principles.
+The three principles are stated as follows. 
+
+The first principle is the existence of inertia system.
+This principle assumes that there exist at least one coordinate system in which one can observe a body continues to move at a given velocity if no force is acting on the body. 
+
+The second principle is the conservation of linear momentum, which is known also as the Newton's law of motion. This principle is formulated as 
+ f= ma
+where f is force, m is mass, and a is acceleration. 
+This formula states that the acceleration of the body is proportional to the applied force. 
+The acceleration of the body resulting from the applied force is inversely proportional to the mass of the body.
+
+The third principle is the law of action and reaction. This principle is stated as follows. 
+Suppose that we have two bodies A and B, and they are acting forces each other. 
+Then the force applied to A by B and the force applied to B by A have the same magnitude but their directions are the complete opposite. In other words, if body A is pushing/pulling body B, the body B is pushing/pulling back A with the force of identical magnitude.  
+
+When solving mechanics problems, we primarily use the 2nd law. The law of motion. 
+
+######## Things to be Noted about Newton's 2nd law ###########
+There are three things to be noted about the 2nd law.
+
+Firstly, the mass m is a scalar quantity, whereas the force f and the acceleration a are vector quantities. To distinguish vector from scalar quantities, we use boldface letters in a typed manuscript to denote vectors. When handwriting vectors on your notebook or on a blackboard, we often write a vertical bar on top of the letters representing vectors instead of making them a little bit thicker. Scalar quantities has only the magnitude, which can be negative. Vectors are quantities that have both magnitude directions. Examples of physical scalar quantities are mass, temperature, length, concentration, voltage, and so on. 
+Examples of physical vector quantities are force, velocity, acceleration, heat and mass flux etc. 
+
+Secondly, the force f on the left-hand-side should be understood as the total force when multiple forces are applied to the body. If we write the ith out of n forces as f_i (f sub i), then the total force can be written as 
+	f_1+f_2+...f_n=\Sigma_{i=1}^n f_i 
+where the capital sigma is the summation symbol that reads "the sum of all terms of f sub i from i equals 1 to n". 
+
+Thirdly, if the body is known to be at rest for a period of time, then the acceleration equals zero reducing the equation of motion to 
+ f=\Sigma_{i=1}^n f_i=0.
+This equation is more commonly referred to as an "equilibrium equation". The equilibrium equation tells us that the sum of all forces acting to the structure must be zero if the structure is standing still while you’re observing it.
+
+####### Vector Algebra ( a quick review) ############
+To work on the equilibrium equation, we have to sum forces. Since a force is a vector quantity, we have to follow the rules of vector algebra in order to get the total force. 
+So we're going to make a quick review of vector algebra.  
+
+Graphically, a vector is represented by an arrow. The magnitude of the vector is represented by the length of the arrow. If you write the vector symbolically assigning a boldface character, say a, then the vector length is denoted by $|a|$ as |-2| represents the absolute value of scalar value -2. If you need to say the vector direction quantitatively, you may use the angle made by the arrow and a reference line. 
+
+If you have two vectors and they have the same magnitude and direction, then the two vectors are said to be identical writing  
+a=b 
+no matter where the two vectors are located. If you copy a given vector a and place it somewhere else and name it b, you'll get a second vector. Then the two vectors are physically distinct entities but mathematically identical. 
+
+There are two basic algebraic vector operations.
+One is the scalar multiplication and the other is the vector addition.
+
+The scalar multiplication is an operation between scalar value s and a vector v and is written as sv. The scalar multiplication is an operation that magnifies/shrinks the given vector $v$.
+For example, if the scalar multiplier s is equal to 2. Then 2v give you a new vector which is twice as long as v and pointing to the same direction as v. If s=1/3, the scalar multiplication gives you a vector 1/3v whose length is one third of v, pointing to the same direction as v. 
+If the multiplier is negative number, the scalar multiplication magnifies/shrinks the given vector and reverse the direction. For example, when the multiplier s=-2, you reverse the direction of v and then make it twice as long as the original vector v. 
+
+
+Vector addition is an operation between two vectors, say a and b. 
+To sum the two vectors graphically, we slide the first vector over to the head of the second, and then draw an arrow connecting tail of the first vector a to the head of the second vector b. The diagonal vector drawn thus is defined to be the sum of the vector a and vector b. 
+If two vectors are aligned, summing the two vector is straightforward.
+We can just connect the two vectors together to form the third vector. 
+Repeating the procedure described above, we can add more than two vectors. 
+When adding three(or more) vectors, the order of vector addition does not matter. 
+This means the following relation holds. 
+a+(b+c)=(a+b)+c
+Thus, vector sum is said to be associative. It is not difficult to prove this relation graphically. 
+
+When working on vectors, it is often convenient to resolve a given vector into components.  For example, we sometimes want to write a given vector x as a sum of two simpler vectors as
+	x=a+b. 
+In this case, the vectors a and b are said to be the components of x. 
+Resolving vector into the components is called a “vector decomposition”. 
+Of particularly useful is the vector decomposition into mutually orthogonal vectors. 
+If a pair of vectors make the right angle, the two vectors are said to be mutually orthogonal. 
+
+To illustrate the decomposition into mutually orthogonal vectors, let’s introduce an xy Cartesian coordinate system. If we wish to decompose a given vector x we draw lines vertically from the head of the vector x to the horizontal and vertical axes. Then, the projection onto the x and y axis give you a pair of mutually orthogonal vectors a and b, which reconstruct x by 
+	x = a+b. 
+Once we have introduced the coordinate system, we can identify the vector with the point in the coordinate system that the vector x is pointing at. In this case, we can therefore write 
+x with the coordinates (|a|,|b|). 
+
+ 

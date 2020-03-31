@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%%%%%%%%INTRODUCTORY REMARKS %%%%%%%%%%%%%%%%%%%%%%
+This course is Civil Engineering I. 
+The former halfo of a two-part lecture on the introduction to civil engineering.
+
+I'm professor Kimoto from the department of civil and environmental engineering. 
+In this course, we're going to learn the basics of structural and hydraulic engineering. 
+We have 16 hours each for CE I and CE II. 
+In the former 8 hours CE I, I'm going to talk about structural mechanics.
+Then, in the the latter 8 hours, prof. Yoshida will teach you an elementary hydraulic mechanics. 
+
+As you might have already noticed, we're going to learn mechanics in this class. 
+Mechanics is a branch of physics to study the action of forces and the motion of body that reults. 
+Pythics use mathematics as its language. 
+Structural and hydlaulic mechanics are no excpetion.
+In this course, therefore, I assume that you have a good knowledge of high-school mathematics.
+More specifically, I'll assume you're familiar with 
+	trigonometry (sine, cosine, tangent and their relations), 
+	elementary calculus (differentiation, integration and differential equation) 
+	and vector algebra in 2 and 3 dimensional space.
+(Everyone will be welcomed to my class.) 
+And anyone can sign up for CE I.
+I have to make it clear, however, it would be very difficult to follow the discussion in this class 
+	if you have not learned elementary mathematics I've mentioned.
+
+
+In this class, I'm going to give you class assignments. 
+Please do not worry too much about them because they are more like quizzes rather than assignments or projects.
+Your final grade will be evaluated based on the score you earn in those quizzes. 
+You'll earn the credit of this class if your total score exceeds 60 points out of 100 points. 
+As far as my part in this course is concerend, I'm not going to give you a term-end exam to evaluate your achievment. 
+
+Any quenstions so far? OK.
+
+If you have any questions, you may visit my office any time. 
+But I'd like to recommend making appointments by e-mail beforehand. 
+
+In my class, I will sometimes show you Power Point slides. 
+But more frequently I'll draw figures and write equations on the blackbord as well. 
+So please be advised that you take notes durring the class so that you can review what you've learned after the class. 
+
+%%%%%%%%%%%%%%% WHAT is CIVIL ENGEERING, STRUCTURAL MECHANICS ? %%%%%%%%%%%%%%%%%%%%%%%%%%
+This is a class for those who are interested in the mechanics for civil eneineers.  
+So what is "Civil engineering"?
+Civil engineering is an engineering discipline that deals with the design, construction and management of civil infrastractures. 
+The examples of civil infrastructures are: 
+roads, bridges, dams, tunnels, river banks, harbor fascilities, pipelines, sewerage systems, public transportation system and so on. 
+
+The types of infrastructures that CE deals with are diverse. 
+So, CE has many subdisciplines as shown in this slide, and structural engineering is one of the major sub-disciplines. 
+Structurl mechanics is a branch of physics that provide theoretical basis for structural engineering.
+In the context of civil engineering, structural mechanics is most closely related to the design of bridges.  
+
+############# BRIDGES; abundannce & importance ####################### 
+If you do not have a special interest in civil engineering, you might not recognize the abundance nor importance 
+of bridges and bridge-like structures. 
+Actually, bridges are everywhere and they are important.  
+
+If you look for, I'm sure you'd find a number of bridges.
+One day, on the way to my office, I tried to find as many bridges as possible. 
+I found at least 10  bridges during the 30 minitus walk to my office. 
+Here's what I found. 
+
+The first brdidge I encouner is a very short and primitive one spanning over a small canal. 
+The material is a local granite. 
+The width of the canal is about 1.0 to 1.5 m in width. 
+So this is fairly short bridge.  
+(Technically bars used as a structural member is called "beam" if it bears a bending force.)
+Although this is a very short one, 
+Tens of hundreds of automibiles cross this bridge every day because the bridge is in the middle of a busy residential area, and people use it regularly. 
+The second bridge I find is the railway bridge for JR Sanyo line. 
+The thrid one is also a railway bridge, which is for JR sanyo shinkansen. 
+We call it "bullet train" in English, the fastest train in Japan. 
+You may not regard those structures as bridges. 
+From the viewpoint of load bearing mechanism, elevated railway structures and highway structures 
+need to be designed as a series of bridges. 
+So, where there is a highway, there is a bridge. Where there is an elevated railway stracuture,there is a bridge. 
+In our country, we have dense network of highways and railways that extend to mountanieous area. 
+That is why we have numerous bridges. 
+ 
+############## Bridges are important ! ###############
+OK. 
+Why are bridges so important. 
+The reason is obvious to me. 
+But if you aren't sure or disagree with me. 
+Please imagine one of the following scenarios. 
+
+Scenario No. 1: 
+Imagine that a bridge you use every day to get to your school is closed for a month due to a repair work. 
+It must be annoying as you have to make a detour, and you have to wake up one hour earlier than usual. 
+
+Scenario No.2:
+Imagine that some bridges of Sanyo-shinkansen were damaged severly by a recent earthquake, 
+ and it will take about 6 month to complete the repair work. 
+But if you have an important job interview this week in Tokyo. 
+You'd probably have to fly to Tokyo. Or you may have to take a highway bus. 
+This means it will cost you extra money for transportation. 
+Or it will take you an extra time and the trip to Tokyo may become a tiring one.  
+Im sure you do not like them both. 
+
+Scenario No.3: 
+A bridge that can take you to the nearest major hospital has been shut down due to aging, but you 
+have grand parensts who have health problem. In case they had a heart attack or a stroke, they 
+have to rush to the hospital. But the hospital is not as close in distance as it used to be.    
+This could be a big problem for you and your family. 
+
+Scenario No.4: 
+Imagine that you are working for Okayama City and you are in charge of evacuating people in case of emergency 
+such as an earthquake. However, you know that a serious traffic congestion wouldoccur if one of 
+the major bridge in the city was damaged and closed. 
+If you failed to evacuate people under such circumstances, you'll be blamed for that. 
+You may even lose your job. 
+
+As these scenario suggest, it'd be highly incovenient at best and sometimes cause 
+life threatening problems if it were not for reliable bridges. 
+
+
+####################### Disturbances that Bridges have to Endure #################
+Needless to say, bridges have to support in the first place traffic loads. 
+Secondly and equally importantly, bridges have to support their own weight.
+The self weight. 
+This is not a trivial thing beause we have to use tons of steels and concrete to make our bridges strong enough.
+Furthermore, bridges have to endure winds, occasional earthquakes and snowfall. 
+Temperature variation has also to be taken into account because materials expand/shrink when tempature 
+reises/drops generating an additional internal force. 
+
+In designing brdiges, finding good balance between the strength and the weight is not an easy task. 
+That is why a variety of bridge types have been invented and constrcuted over the past centry.
+
+############ Six Basic Bridge Typs ################### 
+Here's some examples. 
+This slide shows 6 basic bridge types in the order of the bridge span. 
+Note that "span" is a technical word in bridge engineering which menas the pier-to-pier or tower-to-tower distance.
+
+This is an example of a girder bridge, 
+This is the most basic, simple and common type of bridge. 
+
+This is a rigid-frame bridge. 
+As you can see, the two angled legs are supporting  the deck so as to give the whole structure a greater rigidity than a simple beam. 
+This is an arch bridge. 
+You maight know that arch bridges have been built since the days of Roman era. 
+You might also know that an arch can resist to surprisingly large vertical force.  
+
+This is a truss bridge.
+Truss bridges are characterized by the triangular pattern formed by relatively thin structural members.  
+You have probably seen many railroad bridges  of this kind. 
+Later in this class, we'll learn the load bearing mechanism of truss bridges. 
+
+This is a cable-stayed bridge and this one is a suspension bridge. 
+These two bridge types have been adopted when to span the distance greater than a few hundred mesters, approximately.
+Akashi-Oh-Hashi, which is connecting Shikoku and Honshu (main land) island, is the most famous suspension bridge in Japan.  The span is approximately 2,000m, and is still the longest bridge in the world.
+
+The longer the span is, the more sophisticated the structures needed to be.  
+
+
+############ Safety + Reliability: Strength, Stiffness & Stability (3S of Bridges)########## 
+In order for our bridges to be safe and reliable, we have to ensure the followings.
+
+Firstly, bridges must be strong enough. 
+They should not fall or collapse in a brittle manner even under extreme loading condition sucu as earthquake strike. 
+
+Secondly, bridges must be sufficiently rigid. 
+They should not deform too much when traffic load is applied.
+Otherwise, we cannot drive safely on a highway. We cannot operate high-speed trains. 
+ 
+Thirdly, bridges have to be stable enough and not to vibrate wildly under a dynamic loading. 
+For example, bridges should not resonate with dynamic motions such as erathquake and wind. 
+Otherwise, we cannot use the bridge when wind is blowing. 
+We have to close the bridge everytime an earthquake occur.
+
+The primary objectives of strucutural analysis are to evaluate these aspects of bridges quantitatively. 
+
+
+################# STRUCTURAL MECHANICS BUILT UPON NEWTONIAN MECHNICS #######################
