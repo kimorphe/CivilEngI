@@ -1,0 +1,195 @@
+\documentclass[10pt,a4j]{article}
+%\usepackage{graphicx,wrapfig}
+\usepackage{graphicx}
+\setlength{\topmargin}{-1.5cm}
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{25.2cm}
+\newlength{\minitwocolumn}
+\setlength{\minitwocolumn}{0.5\textwidth}
+\addtolength{\minitwocolumn}{-\columnsep}
+%\addtolength{\baselineskip}{-0.1\baselineskip}
+%
+\def\Mmaru#1{{\ooalign{\hfil#1\/\hfil\crcr
+\raise.167ex\hbox{\mathhexbox 20D}}}}
+%
+\begin{document}
+\newcommand{\fat}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\D}{\partial}
+\newcommand{\w}{\omega}
+\newcommand{\ga}{\alpha}
+\newcommand{\gb}{\beta}
+\newcommand{\gx}{\xi}
+\newcommand{\gz}{\zeta}
+\newcommand{\vhat}[1]{\hat{\fat{#1}}}
+\newcommand{\spc}{\vspace{0.7\baselineskip}}
+\newcommand{\halfspc}{\vspace{0.3\baselineskip}}
+\bibliographystyle{unsrt}
+%\pagestyle{empty}
+\newcommand{\twofig}[2]
+ {
+   \begin{figure}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center}   #1
+         \end{center}
+     \end{minipage}
+         \hspace{\columnsep}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center} #2
+         \end{center}
+     \end{minipage}
+   \end{figure}
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace*{\baselineskip}
+\begin{center}
+	{\Large \bf Lecture Note 1, Civil Engineering I \\ - an introduction to structural mechanics}  
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Review of Vector Algebra}
+\subsection{Scalar and vector quantites}
+A scalar is a quantitiy that has only a magnitude, while a vector has 
+both magnitude(or length) and direction.
+%The magnitude can either be positive or negative. 
+The examples of scalar quantities frequently used in physics and engineering 
+are mass, temperature, concentration, length, weight and so on.
+%Vector is a quantity that has both a magnitude and direction. 
+The examples of vector quantities are displacement, velocity, acceleration, 
+force, heat flux, mass flux, electric poloarization, etc. 
+It is sometimes useful to denote vectors by arrows typically when 
+the gemterical relationship among the vectors is of interest.
+In that situation, the magnitude and direction of a vector 
+are indicated by the length and the orientation of the arrow, 
+respectively, as shown in Fig.\ref{fig:fig1_1}. 
+For more rigorous discussion, however, symbolic representations 
+of vectors are far more convenient. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.2\linewidth]{arrow.eps} 
+	\end{center}
+	\caption{A vector $\fat{a}$ shown graphically by an arrow.} 
+	\label{fig:fig1_1}
+\end{figure}
+To denote vector quantities in typed manuscripts symbolically, boldface letters such 
+as $\fat{x},\fat{u},\fat{v},\dots$ are used instead of writting simply as $x, u$ and $v$.
+It is important not to confuse vectors and scalars since they are qualitatively different entities.
+To denote the magnitude of vector $\fat{a}$, we either write $|\fat{a}|$ or simply $a$.
+Unlike scalars, vector length is always greater than or equal to zero(i.e. $|\fat{a}| \geq 0$).
+If $\fat{a}$ has a unit magnitude ($|\fat{a}|=a=1$), then $\fat{a}$ is said to be a unit vector. 
+If $|\fat{a}|=0$, it is said to be zero vector writting $\fat{a}=\fat{0}$. 
+Note that the direction is not defined for zero vector.
+\subsection{Vector Identity}
+Two vectors $\fat{a}$ and $\fat{b}$ are considered identical 
+if their magnitude and direction are equal.
+In that case, we write $\fat{a}=\fat{b}$ regardless of their locations(see, Fig.\ref{fig:fig1_2}-(a)). 
+For example, when two forces ($\fat{f}, \fat{g}$) of equal magnitude and direction 
+are acting to two different locations on a body, 
+$\fat{f}$ and $\fat{g}$ are considered mathematically identical although they 
+are physically different forces(Fig.\ref{fig:fig1_2}-(b)).
+The exception of this rule is position vectors. 
+The origin of position vectors are always taken at 
+the origin of a predefined coordinate as illustrated in Fig.\ref{fig:fig1_2}-(c).
+The position vectors should be defined in that way since the correspondance between 
+spatial points and position vectors must be one-to-one. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.7\linewidth]{identity.eps} 
+	\end{center}
+	\caption{(a),(b)Pairs of mathematically identical vectors. 
+	(c) An illustration of position vectors.} 
+	\label{fig:fig1_2}
+\end{figure}
+\subsection{Basic Algebraic Operation on Vectors}
+The most fundamental algebraic operations on vectors are (1)scalar mutiplication 
+and (2)vector additions, which may be introduced as follows.
+\subsubsection{Scalar multiplication}
+A multiplication between a scalar $s$ and a vector $a$ are called 
+"scalar multiplication" and is written as $s\fat{a}$. 
+For $s>0$, scalar multiplication $s\fat{a}$ streches(compresses) $\fat{a}$ by  $s$ times 
+if $s \geq 1(s<1)$ without changing the direction of $\fat{a}$.
+When $s<0$, $s\fat{a}$ stretches or compresses $\fat{a}$ by $|s|$ times after reversing 
+the direction of $\fat{a}$. 
+Two obvious consequences of this definition of scalar multiplication are:
+\begin{itemize}
+\item 
+	$1\fat{a}=\fat{a}$
+\item 
+	$0\fat{a}=\fat{0}$
+\end{itemize}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.7\linewidth]{smul.eps} 
+	\end{center}
+	\caption{The results of scalar multiplications $s\fat{a}$ dependent on the scalar $s$.} 
+	\label{fig:fig1_3}
+\end{figure}
+\subsubsection{Vector addition}
+Vector addition is an operation that produces a new vector by connecting a pair of vectors. 
+If we let $\fat{a}$ and $\fat{b}$ be two arbitrary vectors, 
+we can form a directed broken line by connecting the tail of one vector with 
+the head of the other. The sum $\fat{a}+\fat{b}$ is defined to be a vector 
+extending from the tail to the head of the broken line.
+The direct consenquece of this definition is 
+\begin{equation}
+	\fat{a}+\fat{0} = \fat{0}+\fat{a}=\fat{a}. 
+\end{equation}
+Note that vector addition is "commutative" since 
+\[
+	\fat{a}+\fat{b}=\fat{b}+\fat{a}
+\]
+alwyas hold true. This means the order of summation may is immaterial and can be 
+exchanged. Clearly, we can add more than two vectors by repeating the pair wise vectors addition.
+For example, we can perform summation of three vectors either by 
+\[
+	\fat{a}+\left( \fat{b}+\fat{c} \right)
+\]
+or by 
+\[
+	\left( \fat{a}+\fat{b} \right) + \fat{c}.
+\]
+We can prove graphically that the addition by result in a same vector. Hence, 
+\begin{equation}
+	\fat{a}+\left( \fat{b}+\fat{c} \right)
+	=
+	\left( \fat{a}+\fat{b} \right) + \fat{c}.
+\end{equation}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{vadd.eps} 
+	\end{center}
+	\caption{(a) Vector addition $\fat{a}+\fat{b}$ and 
+	(b) Vector subtraction $\fat{a}-\fat{b}$.} 
+	\label{fig:1_4}
+\end{figure}
+\subsection{Inner (or Dot) product} 
+\[
+	\fat{a}\cdot\fat{b}=|\fat{a}||\fat{b}|\cos\theta
+\]
+\subsection{Exterior (or Cross) product} 
+When a pair of vectors $\fat{a}$ and $\fat{b}$ make a right 
+angle, they are said to be mutually orothogonal.  
+\[
+	\fat{a}\times \fat{b}= \fat{c}
+	\Rightarrow
+	\fat{a}\cdot\fat{c}=\fat{b}\cdot\fat{c}=0
+	\left|c\right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
+\]
+\section{Newton's law of motion}
+Newton's law of motion may be stated as follows.
+\begin{itemize}
+\item 
+	There exsist a coordinate system in which a body moves at a constant velocity as long as the 
+	no force is exserted on it. Such coordinate system is called an "inertia system".
+		(exsistence of an intertia system)
+\item
+	The time rate of change in the linear momentum of a body is equal to the force applied to the body. 
+	This relation may be formulated as 
+	\[
+		\fat{f}=\frac{d}{dt}m\fat{v}
+	\]
+		where $m, \fat{f}$ and $\fat{v}$ denote the mass, force and velocity, respectively. 
+	(convervation of linear momentum, or equation of motion)
+\item
+	If a body A is applying a force to the other and B are internacting, 
+	The law of action and reaction.
+\end{itemize}
+\end{document}

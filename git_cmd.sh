@@ -3,6 +3,7 @@ git add 2020/Moodle/
 git add 2020/Lec1/*.tex
 git add 2020/Lec1/*.txt
 git add 2020/Lec1/*.svgz
+git add 2020/Lec1/makefile
 
 git commit
 git push -u origin master
