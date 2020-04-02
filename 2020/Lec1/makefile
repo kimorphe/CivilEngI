@@ -1,6 +1,6 @@
 note1.pdf: note1.dvi
 	dvipdfmx note1.dvi 
-note1.dvi: note1.tex arrow.eps identity.eps smul.eps vadd.eps
+note1.dvi: note1.tex arrow.eps identity.eps smul.eps vadd.eps iprod.eps components.eps
 	platex note1.tex
 
 arrow.eps: arrow.svgz
@@ -11,3 +11,7 @@ smul.eps: smul.svgz
 	inkscape -z -f smul.svgz -E smul.eps
 vadd.eps: vadd.svgz
 	inkscape -z -f vadd.svgz -E vadd.eps
+iprod.eps: iprod.svgz
+	inkscape -z -f iprod.svgz -E iprod.eps
+components.eps: components.svgz
+	inkscape -z -f components.svgz -E components.eps

@@ -102,19 +102,21 @@ spatial points and position vectors must be one-to-one.
 The most fundamental algebraic operations on vectors are (1)scalar mutiplication 
 and (2)vector additions, which may be introduced as follows.
 \subsubsection{Scalar multiplication}
-A multiplication between a scalar $s$ and a vector $a$ are called 
-"scalar multiplication" and is written as $s\fat{a}$. 
-For $s>0$, scalar multiplication $s\fat{a}$ streches(compresses) $\fat{a}$ by  $s$ times 
-if $s \geq 1(s<1)$ without changing the direction of $\fat{a}$.
-When $s<0$, $s\fat{a}$ stretches or compresses $\fat{a}$ by $|s|$ times after reversing 
-the direction of $\fat{a}$. 
-Two obvious consequences of this definition of scalar multiplication are:
+A multiplication between a scalar $s$ and a vector $a$ is called "scalar multiplication" 
+and is written as $s\fat{a}$. For $s>0$, scalar multiplication $s\fat{a}$ strecthes (compresses) $\fat{a}$ 
+by $s$ times if $s \geq 1 (s<1)$ without changing the direction(see Fig.\ref{fig:fig1_3}-(a) and (b)).
+When $s<0$, the scalar multiplication first reverset the directoin and then stretches or compresses 
+$\fat{a}$ by $|s|$ times(see Fig.\ref{fig:fig1_3}-(c) and (d)).
+Some obvious consequences of this definition of scalar multiplication are:
 \begin{itemize}
 \item 
-	$1\fat{a}=\fat{a}$
+	$1\fat{a}=\fat{a}$,
 \item 
-	$0\fat{a}=\fat{0}$
+	$0\fat{a}=\fat{0}$,
+\item
+	(st)\fat{a}=s(t\fat{a}),
 \end{itemize}
+where $s$ and $t$ are arbitrary scalars. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.7\linewidth]{smul.eps} 
@@ -127,17 +129,25 @@ Vector addition is an operation that produces a new vector by connecting a pair 
 If we let $\fat{a}$ and $\fat{b}$ be two arbitrary vectors, 
 we can form a directed broken line by connecting the tail of one vector with 
 the head of the other. The sum $\fat{a}+\fat{b}$ is defined to be a vector 
-extending from the tail to the head of the broken line.
-The direct consenquece of this definition is 
+extending from the origin of the broken line to its head.
+Followings are direct consenqueces of this definition.
 \begin{equation}
 	\fat{a}+\fat{0} = \fat{0}+\fat{a}=\fat{a}. 
 \end{equation}
+\begin{equation}
+	\left(s+t \right)\fat{a}= s\fat{a}+ t\fat{a}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	s(\fat{a}+\fat{b})=s\fat{a}+s\fat{b}
+	\label{eqn:}
+\end{equation}
 Note that vector addition is "commutative" since 
-\[
+\begin{equation}
 	\fat{a}+\fat{b}=\fat{b}+\fat{a}
-\]
-alwyas hold true. This means the order of summation may is immaterial and can be 
-exchanged. Clearly, we can add more than two vectors by repeating the pair wise vectors addition.
+\end{equation}
+alwyas hold true. This means the order of summation can be exchanged. 
+Clearly, we can add more than two vectors by repeating the pair wise vectors addition.
 For example, we can perform summation of three vectors either by 
 \[
 	\fat{a}+\left( \fat{b}+\fat{c} \right)
@@ -161,9 +171,38 @@ We can prove graphically that the addition by result in a same vector. Hence,
 	\label{fig:1_4}
 \end{figure}
 \subsection{Inner (or Dot) product} 
-\[
+Another useful multiplication is inner product or dot product.
+The inner product of $\fat{a}$ and $\fat{b}$ is written as $\fat{a}\cdot\fat{b}$, and 
+ may be defined by 
+\begin{equation}
 	\fat{a}\cdot\fat{b}=|\fat{a}||\fat{b}|\cos\theta
-\]
+\end{equation}
+where $\theta$ is the angle between $\fat{a}$ and $\fat{b}$. 
+Clearly, 
+\begin{equation}
+	\fat{a}\cdot\fat{b}
+	\left\{
+	\begin{array}{cc}
+		>0 & ( |\theta|< \pi/2) \\
+		<0 & ( |\theta| > \pi/2)
+	\end{array}
+	\right.
+	.
+	\label{eqn:}
+\end{equation}
+When $\fat{a}\cdot\fat{b}=0$, that is when $\theta=\pi/2$, $\fat{a}$ and $\fat{b}$ 
+are said to be mutual orthogonal.
+If $\fat{a}$ is a unit vector, then the inner product $\fat{a}\cdot\fat{b}$ gives 
+a projection of $\fat{b}$ to the line that extends alongside the unit vector $\fat{a}$. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.4\linewidth]{iprod.eps} 
+	\end{center}
+	\caption{The angle $\theta$ formed by vectors $\fat{a}$ and $\fat{b}$. 
+	(b) Projection of $\fat{b}$ to the line extending alongside a unit vector $\fat{a}$.} 
+	\label{fig:fig1_5}
+\end{figure}
+%%%%%%%%%%%%5
 \subsection{Exterior (or Cross) product} 
 When a pair of vectors $\fat{a}$ and $\fat{b}$ make a right 
 angle, they are said to be mutually orothogonal.  
@@ -173,6 +212,45 @@ angle, they are said to be mutually orothogonal.
 	\fat{a}\cdot\fat{c}=\fat{b}\cdot\fat{c}=0
 	\left|c\right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
 \]
+\subsection{Vector components (or decomposition into components)}
+When performing a vector algebra, manipulating vectors based directly on the gemetric 
+definition is impractical. 
+To circumvent this problem, we usually decompose vectors into components. 
+For the decompositoin it is convenient to introduce a coordinate. 
+There are variety of different coordinate systems. However, by far the most 
+fundamental and convenient is the Cartesian coordinate, which has mutually 
+orthogonal coordinate axes. 
+If we place our vector in the Catesian coordinate space so that the origin of the 
+vector comes to the orgin of the coordinate, we can determin the coordinates 
+that the vector is pointing at. 
+Since the correspondance between the coordinates and vector is one-to-one, we can 
+identify the vector and the coordinates. Thus we write
+\[
+	\fat{a}=(a_x, a_y).
+\]
+Note that $a_x$ and $a_y$ are the projected length of $\fat{a}$ to each coordinate axis.
+If we write the projection of $\fat{a}$ to $x$ and $y$ axes as $\fat{a}_x$ and $\fat{a}_y$ respectively, 
+then it is clear that 
+\begin{equation}
+	|\fat{a}_x|=a_x, \ \ |\fat{a}_y|=a_y.
+	\label{eqn:}
+\end{equation}
+Moreover, it can also be verified that 
+\begin{equation}
+	\fat{a}=\fat{a}_x+\fat{a}_y
+	\label{eqn:}
+\end{equation}
+holds.  This means $\fat{a}$ can be decomposed into componets. 
+In this sence, the coordinates $(a_x,a_y)$ are also called vector components. 
+More specifically, $a_x$ and $a_y$ are called $x$ and $y$ components, respectively.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.25\linewidth]{components.eps} 
+	\end{center}
+	\caption{Cartesian coordinates and vector components.} 
+	\label{fig:fig1_6}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
 Newton's law of motion may be stated as follows.
 \begin{itemize}
