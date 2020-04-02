@@ -99,8 +99,8 @@ spatial points and position vectors must be one-to-one.
 	\label{fig:fig1_2}
 \end{figure}
 \subsection{Basic Algebraic Operation on Vectors}
-The most fundamental algebraic operations on vectors are (1)scalar mutiplication 
-and (2)vector additions, which may be introduced as follows.
+The most fundamental algebraic operations on vectors are (1) scalar mutiplication 
+and (2) vector addition, which are introduced as follows.
 \subsubsection{Scalar multiplication}
 A multiplication between a scalar $s$ and a vector $a$ is called "scalar multiplication" 
 and is written as $s\fat{a}$. For $s>0$, scalar multiplication $s\fat{a}$ strecthes (compresses) $\fat{a}$ 
@@ -171,16 +171,33 @@ We can prove graphically that the addition by result in a same vector. Hence,
 	\label{fig:1_4}
 \end{figure}
 \subsection{Inner (or Dot) product} 
-Another useful multiplication is inner product or dot product.
-The inner product of $\fat{a}$ and $\fat{b}$ is written as $\fat{a}\cdot\fat{b}$, and 
- may be defined by 
+Another useful vector multiplication is inner product or dot product.
+The inner product of $\fat{a}$ and $\fat{b}$ is written as $\fat{a}\cdot\fat{b}$, 
+and may be defined by 
 \begin{equation}
 	\fat{a}\cdot\fat{b}=|\fat{a}||\fat{b}|\cos\theta
 \end{equation}
-where $\theta$ is the angle between $\fat{a}$ and $\fat{b}$. 
-Clearly, 
+where $\theta$ is the angle between $\fat{a}$ and $\fat{b}$ (see Fig.\ref{fig:fig1_5}-(a)). 
+Clearly, the inner product is commutative that the order of multiplication 
+can be changed.
 \begin{equation}
 	\fat{a}\cdot\fat{b}
+	=
+	\fat{b}\cdot\fat{a}, 
+	\label{eqn:}
+\end{equation}
+and linear in the following sense.
+\begin{equation}
+	\left(s\fat{a}+t\fat{b}\right)\cdot\fat{c}
+	=
+	s(\fat{a}\cdot\fat{c})+t(\fat{b}\cdot \fat{c})
+	\label{eqn:}
+\end{equation}
+Numerically, the inner product can either be positive or negative 
+depending on the angle $\theta$.
+\begin{equation}
+	\fat{a}\cdot\fat{b}
+	=
 	\left\{
 	\begin{array}{cc}
 		>0 & ( |\theta|< \pi/2) \\
@@ -192,26 +209,52 @@ Clearly,
 \end{equation}
 When $\fat{a}\cdot\fat{b}=0$, that is when $\theta=\pi/2$, $\fat{a}$ and $\fat{b}$ 
 are said to be mutual orthogonal.
-If $\fat{a}$ is a unit vector, then the inner product $\fat{a}\cdot\fat{b}$ gives 
-a projection of $\fat{b}$ to the line that extends alongside the unit vector $\fat{a}$. 
+Inner prodocut of unit vectors are often of particluar interest. 
+If $\fat{a}$ is a unit vector, $\fat{a}\cdot\fat{b}$ gives a projection of $\fat{b}$ 
+to the line colinear to $\fat{a}$ as shown in Fig.\ref{fig:fig1_5}. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{iprod.eps} 
 	\end{center}
 	\caption{The angle $\theta$ formed by vectors $\fat{a}$ and $\fat{b}$. 
-	(b) Projection of $\fat{b}$ to the line extending alongside a unit vector $\fat{a}$.} 
+	(b) A projection of $\fat{b}$ to the line colinear to a unit vector $\fat{a}$.} 
 	\label{fig:fig1_5}
 \end{figure}
 %%%%%%%%%%%%5
-\subsection{Exterior (or Cross) product} 
-When a pair of vectors $\fat{a}$ and $\fat{b}$ make a right 
-angle, they are said to be mutually orothogonal.  
-\[
-	\fat{a}\times \fat{b}= \fat{c}
-	\Rightarrow
-	\fat{a}\cdot\fat{c}=\fat{b}\cdot\fat{c}=0
-	\left|c\right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
-\]
+\subsection{Cross product} 
+For vectors in three dimensional space, yet another vector multiplication called 
+exterior or cross product may be defined. 
+For given pair of vectors $\fat{a}$ and $\fat{b}$, the cross product denoted by
+ $\times$ produces a third vector. The defining propertis of the cross product 
+are as follows. 
+\begin{equation}
+	\fat{a}\times \fat{b}= -\left(\fat{b} \times \fat{a} \right)
+	\label{eqn:asym}
+\end{equation}
+\begin{equation}
+	\left(\fat{a}\times\fat{b}\right)\cdot\fat{a} =
+	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0 
+	\label{eqn:ortho}
+\end{equation}
+\begin{equation}
+	\left|\fat{a}\times \fat{b} \right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
+	\label{eqn:area}
+\end{equation}
+In addition to the properties (\ref{eqn:asym})-(\ref{eqn:area}), it is usually 
+required for the cross product that the tuple:
+\begin{equation}
+	\left(\fat{a},\fat{b},\fat{a}\times \fat{b} \right)
+	\label{eqn:}
+\end{equation}
+forms a right-handed system.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.4\linewidth]{eprod.eps} 
+	\end{center}
+	\caption{Gemetrical configuration of a vector cross product 
+	$\fat{a}\times\fat{b}$ relative to $\fat{a}$ and $\fat{b}$.} 
+	\label{fig:fig1_6}
+\end{figure}
 \subsection{Vector components (or decomposition into components)}
 When performing a vector algebra, manipulating vectors based directly on the gemetric 
 definition is impractical. 
@@ -245,10 +288,10 @@ In this sence, the coordinates $(a_x,a_y)$ are also called vector components.
 More specifically, $a_x$ and $a_y$ are called $x$ and $y$ components, respectively.
 \begin{figure}[h]
 	\begin{center}
-	\includegraphics[width=0.25\linewidth]{components.eps} 
+	\includegraphics[width=0.5\linewidth]{components.eps} 
 	\end{center}
 	\caption{Cartesian coordinates and vector components.} 
-	\label{fig:fig1_6}
+	\label{fig:fig1_7}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
