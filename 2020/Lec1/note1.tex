@@ -310,14 +310,19 @@ However, the above discussion applies equally to vectors in 3D except the need f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
 Newton discovered the laws that govern the motion of planetary bodies. 
-The governing laws are 
+The governing laws he found are 
 \begin{enumerate}
 	\item Existence of an intertia system
 	\item Conservation of linear momentum
 	\item The law of action and reaction,
 \end{enumerate}
-which are called collectively as the Newton's laws of motion. 
-The Newton's law state the followings.
+which are collectively called as the Newton's laws of motion. 
+In his effort of understanding the planetary motion, he modeled the planetary 
+bodis by mass poits neglecting the size of the bodies. 
+Although considerable extentions have been made since his days to deal with a 
+ deformable bodies of finite size, the Newton's laws themselves have not been modified. 
+Structural mechanics is built entirely on the basis of Newton's mechanics. 
+The followings are reasonably accurate statements of the three Newton's law for our present application. 
 \begin{enumerate}
 \item 
 	There exsist a coordinate system in which we can observe bodies move at a constant velocity 
@@ -328,10 +333,80 @@ The Newton's law state the followings.
 	If two bodies are excersizing forces each other, the forces applied from one body to 
 	the other is equal in magnitude but opposite in direction.
 \end{enumerate}
-This relation may be formulated as 
-\[
+Among the three laws, the 2nd law is of our primary interest, and then comes the third. 
+To state the 2nd law more rigorously, let $m$ be the mass, and let $\fat{v}$ and $\fat{f}$ 
+be the velocity and the force, respectively. Then the linear momentum is given by $m\fat{v}$, 
+and the 2nd law can be written as 
+\begin{equation}
 	\fat{f}=\frac{d}{dt}\left(m\fat{v}\right)
-\]
-where $m, \fat{f}$ and $\fat{v}$ denote the mass, force and velocity, respectively. 
-(convervation of linear momentum, or equation of motion)
+	\label{eqn:2nd_law}
+\end{equation}
+where $t$ is time.
+The 3rd law is concerend with two interacting body, say body A and B. 
+If body A is applying a force $\fat{f}_{AB}$ to body B, 
+then the 3rd law tells us that body A is under the force $\fat{f}_{BA}$ 
+of same magnitude acting in the opposite direction. Thus, 
+the precise statement is written as 
+\begin{equation}
+	\fat{f}_{AB}=-\fat{f}_{BA}.
+	\label{eqn:}
+\end{equation}
+Note that either or both body A and B could be a floor or a wall of infinite mass. 
+%%%%%%%%%%%%%%%%%%%%
+\section{Equation of Motion}
+In Newton's mechanics, mass $m$ is a clearly defined constant. 
+Therefore, eq.(\ref{eqn:2nd_law}) can be written equivalently as 
+\begin{equation}
+	\fat{f}=m \frac{d\fat{v}}{dt}=m\fat{\alpha}, \ \ \left(\alpha=\frac{d\fat{v}}{dt}\right)
+	\label{eqn:eq_mot}
+\end{equation}
+where $\fat{\alpha}$ is the acceleration.
+Equation (\ref{eq_mot}) is more commonly called as "equation of motion".
+When $\fat{f}=\fat{0}$, eq.(\ref{fig:2nd_law}) is reduced to 
+\begin{equation}
+	\frac{d}{dt}\left(m\fat{v}\right)=\fat{0} \ \ \Rightarrow \ \ 
+	m\fat{v}=const.
+	\label{eqn:mv_cnst}
+\end{equation}
+In this case, the linear momentum does not chage over time. This is the reason why 
+the 2nd law is often reffered to as a conservation law of linear momentum.
+On the other hand, if the velocity is known not chaging over time, then the force 
+should vanish reducing the equation of motion to  
+\begin{equation}
+	\fat{f}=\fat{0}.
+	\label{eqn:equiv0}
+\end{equation}
+It seems that eq.(\ref{eqn:equiv0}) is a trivial relation. 
+When multiple forces are acting to the body, however, $\fat{f}$ 
+must be considered as the sum of all forces. To address this issue, 
+let the forces applied to the body be $\fat{f}_1, \fat{f}_2,\dots \fat{f}_n$, then 
+eq.(\ref{eqn:equiv0}) can be written more appropriately as 
+\begin{equation}
+	\sum_{i=1}^n\fat{f}_i=\fat{0}.
+	\label{eqn:equiv}
+\end{equation}
+Equation (\ref{eqn:equiv}) is called an "equilibrium equation" or "equilibrium condition". 
+\section{Dynamics and statics}
+A branch of mechanics that studies time varying motion and deformation of materials is 
+called "dynamics". Dynamics is one of the most important conner stones of such scientific 
+ disciplines as vibration, acoustics, and seismology.
+The other branch of mechanics is called "statics", which studies the action of forces 
+to materials in a static equilibirum. When narrowly defined, structural mechanics is fallen 
+in the caterogy of statics. A structural mechanics dedicated to the analysis of structural vibration 
+is called structural dynamics. 
+In this class, we're going to learn basic techniques to study strcutures in static equilibrium 
+under a given set of external forces. 
+This class is therefore concerned with a "static" structural mechanics, and derive everything 
+from the equilibrium equation (\ref{eqn:equiv}). 
+\section{Problems}
+\input{prb1.tex}
+%
+% Memo (still to write) 
+%  component-wise opreation, multiplication, addition, dot/cross products
+%  linearity of cross product
+%  Solved and non solved problems
+%　A guide for on-line study
+%  Overview 
+%  Objective of class
+%  On the subission of reports
 \end{document}
