@@ -42,7 +42,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vspace*{\baselineskip}
 \begin{center}
-	{\Large \bf Lecture Note 1, Civil Engineering I \\ - an introduction to structural mechanics}  
+	{\Large \bf Lecture Note 1 for Civil Engineering I \\ - an introduction to structural mechanics}  
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Review of Vector Algebra}
@@ -222,11 +222,10 @@ to the line colinear to $\fat{a}$ as shown in Fig.\ref{fig:fig1_5}.
 \end{figure}
 %%%%%%%%%%%%5
 \subsection{Cross product} 
-For vectors in three dimensional space, yet another vector multiplication called 
-exterior or cross product may be defined. 
-For given pair of vectors $\fat{a}$ and $\fat{b}$, the cross product denoted by
- $\times$ produces a third vector. The defining propertis of the cross product 
-are as follows. 
+For vectors in s three dimensional space, yet another vector multiplication called 
+cross (or exterior) product may be introduced. For given pair of vectors $\fat{a}$ and $\fat{b}$, 
+the cross product denoted by $\times$ produces a third vector $\fat{a}\times \fat{b}$. 
+The defining propertis of the cross product are as follows. 
 \begin{equation}
 	\fat{a}\times \fat{b}= -\left(\fat{b} \times \fat{a} \right)
 	\label{eqn:asym}
@@ -241,12 +240,24 @@ are as follows.
 	\label{eqn:area}
 \end{equation}
 In addition to the properties (\ref{eqn:asym})-(\ref{eqn:area}), it is usually 
-required for the cross product that the tuple:
+required that the tuple:
 \begin{equation}
 	\left(\fat{a},\fat{b},\fat{a}\times \fat{b} \right)
-	\label{eqn:}
+	\label{eqn:vtuple}
 \end{equation}
 forms a right-handed system.
+Note that property (\ref{eqn:asym}) implies 
+\begin{equation}
+	\fat{a}\times \fat{a}=\fat{0}
+	\label{eqn:}
+\end{equation}
+The motivation behind the above properties is evident. 
+As illustrated in Fig.\ref{fig:fig1_6}, the cross product are orthogonal to 
+both $\fat{a}$ and $\fat{b}$. Thus $\fat{a}\times \fat{b}$ is perpendicular 
+to the pararellogram formed by $\fat{a}$ and $\fat{b}$. 
+The direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) 
+forms a right-handed system, while the length is taken to be the area of 
+the parallelogram. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{eprod.eps} 
@@ -255,19 +266,19 @@ forms a right-handed system.
 	$\fat{a}\times\fat{b}$ relative to $\fat{a}$ and $\fat{b}$.} 
 	\label{fig:fig1_6}
 \end{figure}
-\subsection{Vector components (or decomposition into components)}
-When performing a vector algebra, manipulating vectors based directly on the gemetric 
-definition is impractical. 
-To circumvent this problem, we usually decompose vectors into components. 
+\subsection{Vector components}
+When performing a vector algebra, we almost always decompose the vectors into components. 
 For the decompositoin it is convenient to introduce a coordinate. 
-There are variety of different coordinate systems. However, by far the most 
-fundamental and convenient is the Cartesian coordinate, which has mutually 
-orthogonal coordinate axes. 
-If we place our vector in the Catesian coordinate space so that the origin of the 
+Among variety of different coordinate systems, Cartesian coordinates are 
+by far the most fundamental and most convenient.
+If we place our vector in a Catesian coordinate space so that the origin of the 
 vector comes to the orgin of the coordinate, we can determin the coordinates 
 that the vector is pointing at. 
+In Fig.\ref{fig:fig1_7}, Cartesian coordinates in 2 and 3 dimensional space 
+are illustrated.
 Since the correspondance between the coordinates and vector is one-to-one, we can 
-identify the vector and the coordinates. Thus we write
+identify the vector $\fat{a}$ with the coordinates $(a_x,a_y)$. Thus we write a 
+vector in 2 dimensional space as
 \[
 	\fat{a}=(a_x, a_y).
 \]
@@ -286,6 +297,9 @@ Moreover, it can also be verified that
 holds.  This means $\fat{a}$ can be decomposed into componets. 
 In this sence, the coordinates $(a_x,a_y)$ are also called vector components. 
 More specifically, $a_x$ and $a_y$ are called $x$ and $y$ components, respectively.
+Clearly, the third coordnate is required for the description of vectors in 3D space. 
+However, the above discussion applies equally to vectors in 3D except the need for 
+ the extra coordinate and vector component.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{components.eps} 
@@ -295,22 +309,29 @@ More specifically, $a_x$ and $a_y$ are called $x$ and $y$ components, respective
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
-Newton's law of motion may be stated as follows.
-\begin{itemize}
+Newton discovered the laws that govern the motion of planetary bodies. 
+The governing laws are 
+\begin{enumerate}
+	\item Existence of an intertia system
+	\item Conservation of linear momentum
+	\item The law of action and reaction,
+\end{enumerate}
+which are called collectively as the Newton's laws of motion. 
+The Newton's law state the followings.
+\begin{enumerate}
 \item 
-	There exsist a coordinate system in which a body moves at a constant velocity as long as the 
-	no force is exserted on it. Such coordinate system is called an "inertia system".
-		(exsistence of an intertia system)
+	There exsist a coordinate system in which we can observe bodies move at a constant velocity 
+	if no force is being exserted the bodies. Such coordinate system is called an "inertia system".
 \item
-	The time rate of change in the linear momentum of a body is equal to the force applied to the body. 
-	This relation may be formulated as 
-	\[
-		\fat{f}=\frac{d}{dt}m\fat{v}
-	\]
-		where $m, \fat{f}$ and $\fat{v}$ denote the mass, force and velocity, respectively. 
-	(convervation of linear momentum, or equation of motion)
+	The time rate of change in the linear momentum of a body is equal to the force applied to it.
 \item
-	If a body A is applying a force to the other and B are internacting, 
-	The law of action and reaction.
-\end{itemize}
+	If two bodies are excersizing forces each other, the forces applied from one body to 
+	the other is equal in magnitude but opposite in direction.
+\end{enumerate}
+This relation may be formulated as 
+\[
+	\fat{f}=\frac{d}{dt}\left(m\fat{v}\right)
+\]
+where $m, \fat{f}$ and $\fat{v}$ denote the mass, force and velocity, respectively. 
+(convervation of linear momentum, or equation of motion)
 \end{document}
