@@ -231,6 +231,12 @@ The defining propertis of the cross product are as follows.
 	\label{eqn:asym}
 \end{equation}
 \begin{equation}
+	\left(\fat{a}+\fat{b}\right)\times \fat{c}
+	=
+	\fat{a}\times \fat{c}+ \fat{b}\times \fat{c}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
 	\left(\fat{a}\times\fat{b}\right)\cdot\fat{a} =
 	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0 
 	\label{eqn:ortho}
@@ -307,6 +313,90 @@ However, the above discussion applies equally to vectors in 3D except the need f
 	\caption{Cartesian coordinates and vector components.} 
 	\label{fig:fig1_7}
 \end{figure}
+\subsection{Component-wise operations}
+Let
+\begin{equation}
+	\fat{a}=\left(a_x,a_y \right), \ \ 
+	\fat{b}=\left(b_x,b_y \right)
+	\label{eqn:}
+\end{equation}
+and let $s$ be an arbitrary scalar.
+\begin{equation}
+	s\fat{a}
+	=
+	\left\{
+		\begin{array}{c}
+			sa_x \\
+			sa_y 
+		\end{array}
+	\right\}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\fat{a}
+	+
+	\fat{b}
+	=
+	\left\{
+		\begin{array}{c}
+			a_x \\
+			a_y 
+		\end{array}
+	\right\}
+	+
+	\left\{
+		\begin{array}{c}
+			b_x \\
+			b_y 
+		\end{array}
+	\right\}
+	=
+	\left\{
+		\begin{array}{c}
+			a_x+b_x \\
+			a_y+b_y
+		\end{array}
+	\right\}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\fat{a} \cdot \fat{b}
+	=
+	\left\{
+		\begin{array}{c}
+			a_x \\
+			a_y 
+		\end{array}
+	\right\}
+	\cdot
+	\left\{
+		\begin{array}{c}
+			b_x \\
+			b_y 
+		\end{array}
+	\right\}
+	= a_xb_x+a_yb_y
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\left| \fat{a} \right|^2 = a_x^2 + a_y^2
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\left| \fat{a}-\fat{b} \right|^2
+	=
+	\left| \fat{a} \right|^2
+	\left| \fat{b} \right|^2
+	+2
+	\left| \fat{a} \right| \left| \fat{b} \right| \cos\theta
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	(a_x-b_x)^2+(a_y-b_y)^2
+	=
+	(a_x^2+a_y^2)+(b_x^2+b_y^2) -2\fat{a}\cdot\fat{b}
+	\label{eqn:}
+\end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
 Newton discovered the laws that govern the motion of planetary bodies. 
@@ -477,7 +567,7 @@ Exercise 1-5:\\
 	\begin{center}
 	\includegraphics[width=0.3\linewidth]{fig1_5.eps} 
 	\end{center}
-	\caption{Vectors $\fat{a}$ and $\fat{b}$ in 2-dimensional space with an
+	\caption{Vectors $\fat{a}, \fat{b}$ and $\fat{c}$ in 2-dimensional space with an
 	xy Cartesian coordinate system.}
 	\label{fig:fig1_5}
 \end{figure}
@@ -492,14 +582,15 @@ Exercise 1-5:\\
 	\begin{center}
 	\includegraphics[width=0.45\linewidth]{fig1_7.eps} 
 	\end{center}
-	\caption{Infinitely many downward forces acting to a horizontally supported bar AB.}
+	\caption{Infinitely many vertical forces of alternating direction on 
+	a horizontally supported bar AB.}
 	\label{fig:fig1_7}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.45\linewidth]{fig1_8.eps} 
 	\end{center}
-	\caption{An weight of mass $m$ hung from a ceiling by a string AB.} 
+	\caption{Two weights of different mass hung from a ceiling by strings} 
 	\label{fig:fig1_8}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -512,4 +603,22 @@ Exercise 1-5:\\
 %  Overview 
 %  Objective of class
 %  On the subission of reports
+\begin{enumerate}
+\item
+In the first reading, try getting an overall picture of the topics discussed in the class.
+You can skim and read casually through the lecture note.
+\item
+In your second reading, read the lecture note carefully and follow the logical 
+	development including definitions, formulas and solved problems.
+\item
+Close the textbook and try reconstructing what you've learnt.
+\item
+Solve by yourself the solved problems without looking at the solutions.
+\item
+Solve the classroom asingment and write up a solution. 
+Use A4 paper. Use of a word processor is not necessary as long as your 
+handwritten solution is intelgible. 
+Scan your answer sheet and submit online via Moodle your PDF scanned solution.
+The deadline of submission 
+\end{enumerate}
 \end{document}

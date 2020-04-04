@@ -1,0 +1,11 @@
+\begin{equation}
+	\fat{v}
+	=
+	\left\{
+		\begin{array}{c}
+			v_1 \\
+			v_2 
+		\end{array}
+	\right\}
+	\label{eqn:}
+\end{equation}

@@ -1,5 +1,6 @@
-\left(
-\begin{array}{cc}
-	& &  \\
-\end{array}
-\right)
+	\left\{
+		\begin{array}{cc}
+			&  \\
+			&  
+		\end{array}
+	\right\}
