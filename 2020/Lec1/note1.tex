@@ -790,28 +790,10 @@ from the equilibrium equation (\ref{eqn:equiv}).
 	subjected to infinitely many vertical forces $\fat{f}_i (i=1,2,...)$ 
 	whose magnitude decreases monotonically as 
 	\[
-	 \frac{ |\fat{f}_{i+1}| }{ |\fat{f}_i| } =\frac{9}{10} 
+	 	\frac{ |\fat{f}_{i+1}| }{ |\fat{f}_i| } =\frac{9}{10} 
 	\]
-	Determine the direction and the magnitude of the total force acting on the bar.\\
-
-	{\small 
-		In taking a component-based vector summation approach, we only need a vertical 
-		coordinate axis since all the force vector to be summed are aligned.  
-		In this one dimensional coordinate system, the $i$th force may be 
-		 expressed as $r^{i-1}f$ where $f=|\fat{f}_1|$
-		do
-		In this problem, all the force vectors are aligned. 
-		Thus, the force vectors can be summed just like summing a series of numbers(scalars). 
-		Moreover, the force vectors are all directed downward, we can identify each 
-		force vector 
-	}
-\item
-Exercise 1-5:\\
-	Suppose that an iron weight is hung from a ceiling by a string AB as shown in Fig.\ref{fig:fig1_4}-(a). 
-	Determine the magnitude of the horizontal force $F$ required to hold the weight as 
-	in the position shown in Fig\ref{fig:fig1_4}-(b).
-	Note that $m$ is mass and $g$ is gravity constant.  
-\end{enumerate}
+	where $|\fat{f}_1|=F$. Determine the direction and magnitude of the total 
+	force acting on the bar.\\
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig1_3.eps} 
@@ -819,13 +801,76 @@ Exercise 1-5:\\
 	\caption{Infinitely many downward forces acting to a horizontally supported bar AB.}
 	\label{fig:fig1_3}
 \end{figure}
-\begin{figure}[h]
+
+	{\small 
+		In summing the force vectors, we only need to consider the vertical components since 
+		the horizontal components vanish altogether. If we write the vertical component of $\fat{f}_i$ 
+		as $f_{zi}$ and let 
+		\[
+			\gamma=\frac{|\fat{f}_{i+1}|}{|\fat{f}_i|}=\frac{9}{10},
+		\]
+		then we may write $f_{zi}$ as 
+		\[
+			f_{zi}=F\gamma^{i-1}, (i=1,2,\dots).
+		\]
+		Thus the first $n$ terms of $f_{zi}$ can be summed explicitly as  
+		\[
+			\sum_{i=1}^n f_{zi}=F\sum_{i=1}^n\gamma^{i-1}=F\frac{1-\gamma^n}{1-\gamma} >0
+		\]
+		where a positive vertical component means a donward force.
+		Letting $n\rightarrow \infty$, we obtain the magnitude of the total force $\sum_{i=1}^\infty \fat{f}_i$ 
+		as follows. 
+		\[
+			\left| \sum_{i=1}^\infty \fat{f}_i \right| =\frac{F}{1-\gamma}=10F
+		\]
+	}
+\item
+	Suppose that a weight is hung from a ceiling by a string AB as shown in Fig.\ref{fig:fig1_4}-(a). 
+	Determine the magnitude of the horizontal force $F$ required to hold the weight as 
+	shown in Fig\ref{fig:fig1_4}-(b).  Note that $m$ is mass and $g$ is gravity constant. \\
+	\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.6\linewidth]{fig1_4.eps} 
 	\end{center}
-	\caption{An weight of mass $m$ hung from a ceiling by a string AB.} 
+	\caption{A weight of mass $m$ hung from a ceiling by a string AB.} 
 	\label{fig:fig1_4}
-\end{figure}
+	\end{figure}
+
+	{\small
+		Let the tensile forces acting in a string AC, DC and BC be 
+		$\fat{T}_{AC}, \fat{T}_{DC}$ and $\fat{T}_{BC}$, respectively. 
+		In the $xy$ Cartesian coordinate shown in Fig.*, the tensile force vectors 
+		are written as follows.
+		\[
+			\fat{T}_{AC}=|\fat{T}_{AC}|\left(-\cos\theta,\, -\sin\theta \right)
+		\]
+		\[
+			\fat{T}_{DC}=\left(F,\,0 \right)
+		\]
+		\[
+			\fat{T}_{BC}=\left(0,mg \right)
+		\]
+		At point C where the strings are joined,
+		the sum of the tensile forces must vanish since the joint is in 
+		static equilibrium. Thus the Newton's second law requires 
+		\begin{equation}
+			\fat{T}_{AC}+ \fat{T}_{DC}+\fat{T}_{BC}=\fat{0}.
+			\label{eqn:equivT}
+		\end{equation}
+		In terms of vector components, eq.(\ref{eqn:equivT}) is 
+		\begin{equation}
+			-|\fat{T}_{AC}|\cos\theta+F=0
+			,\ \ 
+			-|\fat{T}_{AC}|\sin\theta+mg=0
+			\label{eqn:}
+		\end{equation}
+		\begin{equation}
+			|\fat{T}_{AC}|=\frac{mg}{\sin\theta}, \ \ 
+			F=\frac{mg}{\tan\theta}
+			\label{eqn:}
+		\end{equation}
+	}
+\end{enumerate}
 \section{Supplementary Problems}
 \begin{enumerate}
 \item
