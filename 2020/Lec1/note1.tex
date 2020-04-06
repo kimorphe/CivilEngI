@@ -1,8 +1,10 @@
 \documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
+\usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
-\setlength{\textwidth}{16.5cm}
+%\setlength{\textwidth}{16.5cm}
+\setlength{\textwidth}{14.5cm}
 \setlength{\textheight}{25.2cm}
 \newlength{\minitwocolumn}
 \setlength{\minitwocolumn}{0.5\textwidth}
@@ -98,11 +100,11 @@ spatial points and position vectors must be one-to-one.
 	(c) An illustration of position vectors.} 
 	\label{fig:fig1_2}
 \end{figure}
-\subsection{Basic Algebraic Operation on Vectors}
+\subsection{Basic algebraic operation on vectors}
 The most fundamental algebraic operations on vectors are (1) scalar mutiplication 
 and (2) vector addition, which are introduced as follows.
 \subsubsection{Scalar multiplication}
-A multiplication between a scalar $s$ and a vector $a$ is called "scalar multiplication" 
+A multiplication between a scalar $s$ and a vector $a$ is called "scalar multiplication", 
 and is written as $s\fat{a}$. For $s>0$, scalar multiplication $s\fat{a}$ strecthes (compresses) $\fat{a}$ 
 by $s$ times if $s \geq 1 (s<1)$ without changing the direction(see Fig.\ref{fig:fig1_3}-(a) and (b)).
 When $s<0$, the scalar multiplication first reverset the directoin and then stretches or compresses 
@@ -125,7 +127,8 @@ where $s$ and $t$ are arbitrary scalars.
 	\label{fig:fig1_3}
 \end{figure}
 \subsubsection{Vector addition}
-Vector addition is an operation that produces a new vector by connecting a pair of vectors. 
+Vector addition is an operation that produces a new vector 
+by connecting a given  pair of vectors. 
 If we let $\fat{a}$ and $\fat{b}$ be two arbitrary vectors, 
 we can form a directed broken line by connecting the tail of one vector with 
 the head of the other. The sum $\fat{a}+\fat{b}$ is defined to be a vector 
@@ -133,20 +136,22 @@ extending from the origin of the broken line to its head.
 Followings are direct consenqueces of this definition.
 \begin{equation}
 	\fat{a}+\fat{0} = \fat{0}+\fat{a}=\fat{a}. 
+	\label{eqn:add_zero_vec}
 \end{equation}
 \begin{equation}
 	\left(s+t \right)\fat{a}= s\fat{a}+ t\fat{a}
-	\label{eqn:}
+	\label{eqn:dist_scalar}
 \end{equation}
 \begin{equation}
 	s(\fat{a}+\fat{b})=s\fat{a}+s\fat{b}
-	\label{eqn:}
+	\label{eqn:dist_vec}
 \end{equation}
 Note that vector addition is "commutative" since 
 \begin{equation}
 	\fat{a}+\fat{b}=\fat{b}+\fat{a}
+	\label{eqn:cmmt_vec_add}
 \end{equation}
-alwyas hold true. This means the order of summation can be exchanged. 
+always hold true. This means the order of summation can be exchanged. 
 Clearly, we can add more than two vectors by repeating the pair wise vectors addition.
 For example, we can perform summation of three vectors either by 
 \[
@@ -161,6 +166,7 @@ We can prove graphically that the addition by result in a same vector. Hence,
 	\fat{a}+\left( \fat{b}+\fat{c} \right)
 	=
 	\left( \fat{a}+\fat{b} \right) + \fat{c}.
+	\label{eqn:assct_vadd}
 \end{equation}
 \begin{figure}[h]
 	\begin{center}
@@ -170,31 +176,31 @@ We can prove graphically that the addition by result in a same vector. Hence,
 	(b) Vector subtraction $\fat{a}-\fat{b}$.} 
 	\label{fig:1_4}
 \end{figure}
-\subsection{Inner (or Dot) product} 
-Another useful vector multiplication is inner product or dot product.
-The inner product of $\fat{a}$ and $\fat{b}$ is written as $\fat{a}\cdot\fat{b}$, 
-and may be defined by 
+\subsection{Inner product} 
+Another useful vector multiplication is inner product, known also as dot product, 
+that assigns an scalar to a pair of vectors.  
+The inner product of $\fat{a}$ and $\fat{b}$ is often written as $\fat{a}\cdot\fat{b}$, 
+and is defined by 
 \begin{equation}
 	\fat{a}\cdot\fat{b}=|\fat{a}||\fat{b}|\cos\theta
+	\label{eqn:idot_def}
 \end{equation}
 where $\theta$ is the angle between $\fat{a}$ and $\fat{b}$ (see Fig.\ref{fig:fig1_5}-(a)). 
-Clearly, the inner product is commutative that the order of multiplication 
-can be changed.
+The inner product is clearly commutative that the order of multiplication can be changed.
 \begin{equation}
 	\fat{a}\cdot\fat{b}
 	=
 	\fat{b}\cdot\fat{a}, 
 	\label{eqn:}
 \end{equation}
-and linear in the following sense.
+Moreover, the operation is lnear in the following sense.
 \begin{equation}
 	\left(s\fat{a}+t\fat{b}\right)\cdot\fat{c}
 	=
 	s(\fat{a}\cdot\fat{c})+t(\fat{b}\cdot \fat{c})
 	\label{eqn:}
 \end{equation}
-Numerically, the inner product can either be positive or negative 
-depending on the angle $\theta$.
+Numerically, the inner product can either be positive or negative depending on the angle $\theta$.
 \begin{equation}
 	\fat{a}\cdot\fat{b}
 	=
@@ -207,11 +213,16 @@ depending on the angle $\theta$.
 	.
 	\label{eqn:}
 \end{equation}
-When $\fat{a}\cdot\fat{b}=0$, that is when $\theta=\pi/2$, $\fat{a}$ and $\fat{b}$ 
-are said to be mutual orthogonal.
-Inner prodocut of unit vectors are often of particluar interest. 
-If $\fat{a}$ is a unit vector, $\fat{a}\cdot\fat{b}$ gives a projection of $\fat{b}$ 
-to the line colinear to $\fat{a}$ as shown in Fig.\ref{fig:fig1_5}. 
+However, the inner product between $\fat{a}$ and itself is 
+\begin{equation}
+	\fat{a}\cdot \fat{a}=\left| \fat{a} \right|^2 \geq 0, 
+	\label{eqn:a_dot_a}
+\end{equation}
+ and the equality if (\ref{eqn:a_dot_a}) holds if an only if $\fat{a}=\fat{0}$.
+When $\fat{a}\cdot\fat{b}=0$, that is when $\theta=\pm \pi/2$, $\fat{a}$ and $\fat{b}$ 
+are said to be mutually orthogonal. The inner prodocut of unit vectors are often of 
+particluar interest. If $\fat{a}$ is a unit vector, $\fat{a}\cdot\fat{b}$ gives a projection 
+of $\fat{b}$ to the line colinear to $\fat{a}$(see Fig.\ref{fig:fig1_5}-(b)). 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{iprod.eps} 
@@ -220,92 +231,67 @@ to the line colinear to $\fat{a}$ as shown in Fig.\ref{fig:fig1_5}.
 	(b) A projection of $\fat{b}$ to the line colinear to a unit vector $\fat{a}$.} 
 	\label{fig:fig1_5}
 \end{figure}
-%%%%%%%%%%%%5
-\subsection{Cross product} 
-For vectors in s three dimensional space, yet another vector multiplication called 
-cross (or exterior) product may be introduced. For given pair of vectors $\fat{a}$ and $\fat{b}$, 
-the cross product denoted by $\times$ produces a third vector $\fat{a}\times \fat{b}$. 
-The defining propertis of the cross product are as follows. 
-\begin{equation}
-	\fat{a}\times \fat{b}= -\left(\fat{b} \times \fat{a} \right)
-	\label{eqn:asym}
-\end{equation}
-\begin{equation}
-	\left(\fat{a}+\fat{b}\right)\times \fat{c}
-	=
-	\fat{a}\times \fat{c}+ \fat{b}\times \fat{c}
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-	\left(\fat{a}\times\fat{b}\right)\cdot\fat{a} =
-	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0 
-	\label{eqn:ortho}
-\end{equation}
-\begin{equation}
-	\left|\fat{a}\times \fat{b} \right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
-	\label{eqn:area}
-\end{equation}
-In addition to the properties (\ref{eqn:asym})-(\ref{eqn:area}), it is usually 
-required that the tuple:
-\begin{equation}
-	\left(\fat{a},\fat{b},\fat{a}\times \fat{b} \right)
-	\label{eqn:vtuple}
-\end{equation}
-forms a right-handed system.
-Note that property (\ref{eqn:asym}) implies 
-\begin{equation}
-	\fat{a}\times \fat{a}=\fat{0}
-	\label{eqn:}
-\end{equation}
-The motivation behind the above properties is evident. 
-As illustrated in Fig.\ref{fig:fig1_6}, the cross product are orthogonal to 
-both $\fat{a}$ and $\fat{b}$. Thus $\fat{a}\times \fat{b}$ is perpendicular 
-to the pararellogram formed by $\fat{a}$ and $\fat{b}$. 
-The direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) 
-forms a right-handed system, while the length is taken to be the area of 
-the parallelogram. 
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.4\linewidth]{eprod.eps} 
-	\end{center}
-	\caption{Gemetrical configuration of a vector cross product 
-	$\fat{a}\times\fat{b}$ relative to $\fat{a}$ and $\fat{b}$.} 
-	\label{fig:fig1_6}
-\end{figure}
+%%%%%%%%%%%%
 \subsection{Vector components}
 When performing a vector algebra, we almost always decompose the vectors into components. 
-For the decompositoin it is convenient to introduce a coordinate. 
+For the vector decomposition it is convenient to introduce a coordinate. 
 Among variety of different coordinate systems, Cartesian coordinates are 
 by far the most fundamental and most convenient.
 If we place our vector in a Catesian coordinate space so that the origin of the 
-vector comes to the orgin of the coordinate, we can determin the coordinates 
-that the vector is pointing at. 
-In Fig.\ref{fig:fig1_7}, Cartesian coordinates in 2 and 3 dimensional space 
-are illustrated.
-Since the correspondance between the coordinates and vector is one-to-one, we can 
-identify the vector $\fat{a}$ with the coordinates $(a_x,a_y)$. Thus we write a 
-vector in 2 dimensional space as
+vector comes to the orgin of the coordinate, we can determin the coordinates that 
+the vector is pointing at. In Fig.\ref{fig:fig1_7}, Cartesian coordinates in 2 and 3 
+dimensional space are illustrated with the coordinates $(a_x,a_y)$ and $(a_x,a_y,a_z)$
+at the head of the vector $\fat{a}$.  Since the correspondance between the coordinates 
+and vector is one-to-one, we can identify the vector with the coordinates.
+Thus we write for a vector in 2D space as 
 \[
-	\fat{a}=(a_x, a_y).
+	\fat{a}=(a_x, a_y) \ {\rm or} 
+	\
+	\fat{a}=\left(
+	\begin{array}{c}
+		a_x \\
+		a_y
+	\end{array}
+	\right), 
 \]
-Note that $a_x$ and $a_y$ are the projected length of $\fat{a}$ to each coordinate axis.
-If we write the projection of $\fat{a}$ to $x$ and $y$ axes as $\fat{a}_x$ and $\fat{a}_y$ respectively, 
-then it is clear that 
+in 3D as 
+\[
+	\fat{a}=(a_x, a_y, a_z) \ {\rm or} 
+	\
+	\fat{a}=\left(
+	\begin{array}{c}
+		a_x \\
+		a_y \\
+		a_z
+	\end{array}
+	\right). 
+\]
+Note that $a_x, a_y$ and $a_z$ are the projected length of $\fat{a}$ to 
+each coordinate axis. If we write the projection of $\fat{a}$ to $x, y$ and $z$ axes as $\fat{a}_x,\fat{a}_y$ 
+and $\fat{a}_z$ respectively, it is then clear that 
 \begin{equation}
-	|\fat{a}_x|=a_x, \ \ |\fat{a}_y|=a_y.
+	|\fat{a}_x|=a_x, \ \ |\fat{a}_y|=a_y, \ \ |\fat{a}_z|=a_z
 	\label{eqn:}
 \end{equation}
-Moreover, it can also be verified that 
 \begin{equation}
-	\fat{a}=\fat{a}_x+\fat{a}_y
+	|\fat{a}|^2=a_x^2+a_y^2+a_z^2
 	\label{eqn:}
 \end{equation}
-holds.  This means $\fat{a}$ can be decomposed into componets. 
-In this sence, the coordinates $(a_x,a_y)$ are also called vector components. 
-More specifically, $a_x$ and $a_y$ are called $x$ and $y$ components, respectively.
-Clearly, the third coordnate is required for the description of vectors in 3D space. 
-However, the above discussion applies equally to vectors in 3D except the need for 
- the extra coordinate and vector component.
+Moreover, it can also be readily verified in Fig.\ref{fig:fig1_7} that 
+\begin{equation}
+	\fat{a}=\fat{a}_x+\fat{a}_y+\fat{a}_z
+	\label{eqn:dcmp}
+\end{equation}
+holds. This means $\fat{a}$ can be decomposed into componets. 
+If we use a set of mutually orthogonal unit vectors 
+shown in Fig.\ref{fig:fig1_9}, then eq.(\ref{eqn:dcmp}) can be rewritten as follows.
+\begin{equation}
+	\fat{a}=a_x\fat{e}_1+a_y\fat{e}_2+a_z\fat{e}_z
+	\label{eqn:}
+\end{equation}
+In this sence, the coordinates $a_x, a_y$ and $a_z$ are also called vector components. 
+More specifically, $a_x, $ and $a_y$ and $a_z$ are called $x, y$ and $z$ components, 
+respectively.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{components.eps} 
@@ -313,14 +299,26 @@ However, the above discussion applies equally to vectors in 3D except the need f
 	\caption{Cartesian coordinates and vector components.} 
 	\label{fig:fig1_7}
 \end{figure}
-\subsection{Component-wise operations}
-Let
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.3\linewidth]{eprod_xyz.eps} 
+	\end{center}
+	\caption{Basis vectors $\fat{e}_1, \fat{e}_2$ and $\fat{e}_3$ for an $xyz$ Cartesian coordinate.} 
+	\label{fig:fig1_9}
+\end{figure}
+\subsection{Componentwise operations}
+If we decompose vectors into components in a Cartesian coordinate system, 
+the vector algebra that has been discussed can be reduced to simple componentwise 
+operations. To see this, let $\fat{a}$ and $\fat{b}$ be arbitrary vectors in 2D space, 
+and write 
 \begin{equation}
-	\fat{a}=\left(a_x,a_y \right), \ \ 
-	\fat{b}=\left(b_x,b_y \right)
+	\fat{a}=\left(a_x, a_y \right), \ \ 
+	\fat{b}=\left(b_x, b_y \right).
 	\label{eqn:}
 \end{equation}
-and let $s$ be an arbitrary scalar.
+Then the inspection of Fig\ref{fig:vadd_cmp} reveals that  
+the scalar multiplication and the vector additon can be 
+performed component by component as follows.
 \begin{equation}
 	s\fat{a}
 	=
@@ -359,6 +357,31 @@ and let $s$ be an arbitrary scalar.
 	\right\}
 	\label{eqn:}
 \end{equation}
+
+The inner product can also be replaced by a componentwise operations.
+To derive the component-based formula for the inner product, we first recall that 
+the law of cosine for the vectors depicted in Fig.\ref{fig:fig1_5}-(a) is written as 
+\begin{equation}
+	\left| \fat{a}-\fat{b}\right|= 
+	|\fat{a}|^2+|\fat{b}|^2
+	+
+	2|\fat{a}|+|\fat{b}| \cos\theta
+	.
+	\label{eqn:cos_law}
+\end{equation}
+Using the vector components, eq.(\ref{eqn:cos_law}) is written also as 
+\begin{equation}
+	(a_x-b_x)^2+(a_y-b_y)^2
+	=
+	(a_x^2+a_y^2)+(b_x^2+b_y^2) -2\fat{a}\cdot\fat{b}.
+	\label{eqn:cos_law_cmp}
+\end{equation}
+Solving eq.(\ref{eqn:cos_law_cmp}) for $\fat{a}\cdot\fat{b}$, we obtain
+\begin{equation}
+	\fat{a}\cdot\fat{b}=a_xb_x+a_yb_y.
+	\label{eqn:}
+\end{equation}
+We may thus use 
 \begin{equation}
 	\fat{a} \cdot \fat{b}
 	=
@@ -378,25 +401,235 @@ and let $s$ be an arbitrary scalar.
 	= a_xb_x+a_yb_y
 	\label{eqn:}
 \end{equation}
+to evaluate the inner product instead of eq.(\ref{eqn:iprod_def}) for which the angle 
+between the vectors need to be obtained in the first place. 
+
+In derving component-based formulae for vectors in higher dimensional spaces, 
+writting vectors as a linear sum of basis vectors make everything more straightforward. 
+We hence write vectors in 3D space as 
 \begin{equation}
-	\left| \fat{a} \right|^2 = a_x^2 + a_y^2
+	\fat{a}= a_1\fat{e}_1+ a_2\fat{e}_2+ a_3\fat{e}_3, \ \ 
+	\fat{b}= b_1\fat{e}_1+ b_2\fat{e}_2+ b_3\fat{e}_3
 	\label{eqn:}
 \end{equation}
+rather than 
 \begin{equation}
-	\left| \fat{a}-\fat{b} \right|^2
+	\fat{a}= (a_1,  a_2, a_3) \ \ 
+	\fat{b}= (b_1,  b_2, b_3).
+\end{equation}
+We then immediately conclude 
+\begin{equation}
+	s\fat{a}
 	=
-	\left| \fat{a} \right|^2
-	\left| \fat{b} \right|^2
-	+2
-	\left| \fat{a} \right| \left| \fat{b} \right| \cos\theta
+	\left\{
+		\begin{array}{c}
+			sa_1 \\
+			sa_2 \\
+			sa_3 
+		\end{array}
+	\right\}
+	\label{eqn:}
+\end{equation}
+because 
+\begin{equation}
+	s\fat{a}= s \left(a_1\fat{e}_1+ a_2\fat{e}_2+ a_3\fat{e}_3\right)
+	=sa_1\fat{e}_1+ sa_2\fat{e}_2+ sa_3\fat{e}_3
+	\label{eqn:}
+\end{equation}
+results from eq.(\ref{eqn:dist_vec}).
+The vector addition can also be reduced to a componentwise operation:
+\begin{equation}
+	\fat{a}
+	+
+	\fat{b}
+	=
+	\left\{
+		\begin{array}{c}
+			a_1 \\
+			a_2 \\
+			a_3 
+		\end{array}
+	\right\}
+	+
+	\left\{
+		\begin{array}{c}
+			b_1 \\
+			b_2 \\
+			b_3 
+		\end{array}
+	\right\}
+	=
+	\left\{
+		\begin{array}{c}
+			a_1+b_1 \\
+			a_2+b_2 \\
+			a_3+b_3
+		\end{array}
+	\right\}
+	\label{eqn:}
+\end{equation}
+since 
+\begin{eqnarray}
+	\fat{a}+\fat{b}
+	&=&
+	\left(a_1\fat{e}_1+ a_2\fat{e}_2+ a_3\fat{e}_3 \right)+
+	\left(b_1\fat{e}_1+ b_2\fat{e}_2+ b_3\fat{e}_3 \right) \\
+	&=&
+	(a_1+b_1)\fat{e}_1
+	+
+	(a_2+b_2)\fat{e}_2
+	+
+	(a_3+b_3)\fat{e}_3
+	\label{eqn:}
+\end{eqnarray}
+follows from the associativity (\ref{eqn:assct_vadd}) of the operation. 
+Finally,the commutativity (\ref{eqn:}) and linearlity (\ref{eqn:}) allow us to expand 
+the inner product of the sum of vectors as 
+\begin{equation}
+	\fat{a}\cdot\fat{b}=
+	\left(a_1\fat{e}_1+ a_2\fat{e}_2+ a_3\fat{e}_3 \right)
+	\cdot
+	\left(b_1\fat{e}_1+ b_2\fat{e}_2+ b_3\fat{e}_3 \right) 
+	=
+	\sum_{i=1}^3\sum_{j=1}^3
+	a_ib_j\left(\fat{e}_i\cdot\fat{e}_j\right).
+	\label{eqn:iprod_3d}
+\end{equation}
+A majority of the inner products on the right hand side of \ref{eqn:iprod_3d}
+vanish due to the orthonormality condition: 
+\begin{equation}
+	\fat{e}_i\cdot\fat{e}_j=
+	\left\{
+		\begin{array}{cc}
+			1 & (i=j) \\
+			0 & (i\neq j)
+		\end{array}
+	\right.
+	\label{eqn:ON_cond}.
+\end{equation}
+From eqs(\ref{eqn:iprod_3d}) and (\ref{eqn:ON_cond}), we obtain a desired component-based formula for the inner product 
+in 3D space as 
+\begin{equation}
+	\fat{a}\cdot\fat{b}= a_1b_1+a_2b_2+a_3b_3a.
+	\label{eqn:}
+\end{equation}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.7\linewidth]{vadd_cmp.eps} 
+	\end{center}
+	\caption{Scalar multiplication and vector addition in terms of vector components .} 
+	\label{fig:fig1_8}
+\end{figure}
+\subsection{Vector Cross Product} 
+For vectors in s three dimensional space, yet another vector multiplication called 
+cross (or exterior) product may be introduced. For given pair of vectors $\fat{a}$ and $\fat{b}$, 
+the cross product denoted by $\times$ produces a third vector $\fat{a}\times \fat{b}$. 
+The defining propertis of the cross product are as follows. 
+\begin{equation}
+	\fat{a}\times \fat{b}= -\left(\fat{b} \times \fat{a} \right)
+	\label{eqn:asym}
+\end{equation}
+\begin{equation}
+	\left(\fat{a}+\fat{b}\right)\times \fat{c}
+	=
+	\fat{a}\times \fat{c}+ \fat{b}\times \fat{c}
 	\label{eqn:}
 \end{equation}
 \begin{equation}
-	(a_x-b_x)^2+(a_y-b_y)^2
-	=
-	(a_x^2+a_y^2)+(b_x^2+b_y^2) -2\fat{a}\cdot\fat{b}
+	\left(\fat{a}\times\fat{b}\right)\cdot\fat{a} =
+	%	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0 
+	\label{eqn:ortho}
+\end{equation}
+\begin{equation}
+	\left|\fat{a}\times \fat{b} \right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
+	\label{eqn:area}
+\end{equation}
+In addition to the properties (\ref{eqn:asym})-(\ref{eqn:area}), it is usually 
+required that the tuple:
+\begin{equation}
+	\left(\fat{a},\fat{b},\fat{a}\times \fat{b} \right)
+	\label{eqn:vtuple}
+\end{equation}
+forms a right-handed system.
+Note that property (\ref{eqn:asym}) implies 
+\begin{equation}
+	\fat{a}\times \fat{a}=\fat{0}, 
 	\label{eqn:}
 \end{equation}
+and properties (\ref{eqn:asym}) and \ref{eqn:ortho} imply 
+\begin{equation}
+	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0. 
+	\label{eqn:}
+\end{equation}
+The motivation behind the properties above is as follows. 
+As illustrated in Fig.\ref{fig:fig1_6}, the cross product are orthogonal to 
+both $\fat{a}$ and $\fat{b}$. Thus $\fat{a}\times \fat{b}$ is perpendicular 
+to the pararellogram formed by $\fat{a}$ and $\fat{b}$. 
+The direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) 
+forms a right-handed system, while the length is taken to be the area of 
+the parallelogram. 
+\begin{equation}
+	\fat{e}_1 \times  \fat{e}_2=\fat{e}_3, \ \ 
+	\fat{e}_2 \times  \fat{e}_3=\fat{e}_1, \ \ 
+	\fat{e}_3 \times  \fat{e}_1=\fat{e}_2,
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\fat{a}=
+	a_1\fat{e}_1 + a_2\fat{e}_2 + a_3\fat{e}_3, \ \ 
+	\fat{b}=
+	b_1\fat{e}_1 + b_2\fat{e}_2 + b_3\fat{e}_3
+	\label{eqn:}
+\end{equation}
+\begin{eqnarray}
+	\fat{a}\times \fat{b} &= &
+	\sum_{i=1}^3
+	\sum_{j=1}^3
+	a_ib_j \left(\fat{e}_i\times \fat{e}_j\right) \\
+	&=&
+	(a_2b_3-a_3b_2)\fat{e}_1
+	+
+	(a_3b_1-a_1b_3)\fat{e}_2
+	+
+	(a_1b_2-a_2b_1)\fat{e}_3
+\end{eqnarray}
+\begin{equation}
+	\fat{a}\times \fat{b}
+	=
+	\left(
+		\begin{array}{c}
+			a_1 \\
+			a_2 \\ 
+			a_3 
+		\end{array}
+	\right)
+	\times
+	\left(
+		\begin{array}{c}
+			b_1 \\
+			b_2 \\ 
+			b_3 
+		\end{array}
+	\right)
+	=
+	\left(
+		\begin{array}{c}
+			a_2b_3-a_3b_2 \\
+
+			a_3b_1-a_1b_3 \\ 
+			a_1b_2-a_2b_1
+		\end{array}
+	\right)
+	\label{eqn:}
+\end{equation}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.4\linewidth]{eprod.eps} 
+	\end{center}
+	\caption{Gemetrical configuration of a vector cross product 
+	$\fat{a}\times\fat{b}$ relative to $\fat{a}$ and $\fat{b}$.} 
+	\label{fig:fig1_6}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
 Newton discovered the laws that govern the motion of planetary bodies. 
@@ -488,66 +721,97 @@ In this class, we're going to learn basic techniques to study strcutures in stat
 under a given set of external forces. 
 This class is therefore concerned with a "static" structural mechanics, and derive everything 
 from the equilibrium equation (\ref{eqn:equiv}). 
-\section{Problems}
-\section*{Solved Problems}
-\begin{itemize}
+\section{Solved Problems}
+\begin{enumerate}
 \item
-Exercise 1-1:\\
-Verify that the vector addition is associative,i.e., 
-\[
-	\fat{a}+(\fat{b}+\fat{c})=
-		(\fat{a}+\fat{b})+\fat{c}
-\]
-using graphic representation of vectors. 
+	For vectors $\fat{a}$ and $\fat{b}$ shown in Fig.\ref{fig:fig1_1}, 
+	obitan $\fat{a}+\fat{b}$ and $\left| \fat{a}+\fat{b} \right|$ 
+	by the component-based method when $|\fat{a}|=1$ and $|\fat{b}|=2$.
+	Also, obtain $|\fat{a}+\fat{b}|$ numerically.
+	\begin{figure}
+		\begin{center}
+		\includegraphics[width=0.3\linewidth]{fig1_1.eps} 
+		\end{center}
+		\caption{Vectors $\fat{a}$ and $\fat{b}$ in 2 dimensional space with an $xy$ Cartesian coordinate system.}
+		\label{fig:fig1_1}
+	\end{figure}
+
+	{\small
+	In terms of components, the given vectors are written as 
+	\[
+		\fat{a}= \left( \frac{1}{\sqrt{2}}, \, \frac{1}{\sqrt{2}}\right), 
+		\fat{b}=2 \left( -\frac{1}{2}, \, \frac{\sqrt{3}}{2}\right).
+	\]
+	Hence,
+	\[
+		\fat{a}+\fat{b}=\left( \frac{1}{\sqrt{2}}-1, \frac{1}{\sqrt{2}}+\sqrt{3}\right),
+	\]
+	and 
+	\[
+		| \fat{a}+\fat{b}| = 
+		\left\{
+		\left( \frac{1}{\sqrt{2}}-1\right)^2 +
+		\left( \frac{1}{\sqrt{2}}+\sqrt{3}\right)^2
+		\right\}^{1/2}
+		=
+		\frac{\sqrt{11-2\sqrt{2}+4\sqrt{3}}}{2}
+	\]
+	}
 \item
-Exercise 1-2:\\
-For vectors $\fat{a}$ and $\fat{b}$ given in Fig.\ref{fig:fig1_1}, 
-work out $\fat{a}+\fat{b}$ by the component based 
-		method when  $|\fat{a}|=1$ and $|\fat{b}|=2$.
-		Also, obtain $|\fat{a}+\fat{b}|$ numerically.
-\item
-Exercise 1-3:\\
-		For vectors given in Fig.\ref{fig:fig1_2} Prove that 
+	For vectors shown in Fig.\ref{fig:fig1_2}, prove that 
 	\[
 		\fat{a}+\fat{b}+\fat{c}=\fat{0}
 	\]
-		if $|\fat{a}|=|\fat{b}|=|\fat{c}|$.
+	if $|\fat{a}|=|\fat{b}|=|\fat{c}|$.\\
+	\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=0.3\linewidth]{fig1_2.eps} 
+		\end{center}
+		\caption{Vectors $\fat{a}, \fat{b}$ and $\fat{c}$ of equal magnitude.} 
+		\label{fig:fig1_2}
+	\end{figure}
+
+	{\small
+		By sliding vectors $\fat{b}$ and $\fat{c}$ as shown in Fig.\ref{fig:fig}, 
+		we can verify that the three vectors form a closed path. 
+		This means $\fat{a}+\fat{b}+\fat{c}=\fat{0}$. 
+		You may, otherwise, introduce a Cartesian coordinate, and show that the componentwise vector addtion results in zero vector. 
+	}
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.25\linewidth]{fig1_2ans.eps} 
+		\end{center}
+		\caption{Slided replicas of vectors $\fat{b}$ and $\fat{c}$.} 
+		\label{fig:fig1_2ans}
+	\end{figure}
 \item
-Exercise 1-4:\\
-Suppose that a perfectly rigid bar AB is supported horizontally by a wall
- as shown in Fig.\ref{fig:fig1_3}, and is subjected to infinitely many 
-vertical forces $\fat{f}_i (i=1,2,...)$ whose magnitude decreases monotonically as 
-\[
- \frac{
-	|\fat{f}_{i+1}|
-	}{
-	|\fat{f}_i|
-}
-	=\frac{9}{10} 
-\]
-Determine the direction and the magnitude of the total force acting on the bar. 
+	Suppose that a perfectly rigid bar AB is supported horizontally by a wall
+	as shown in Fig.\ref{fig:fig1_3}. The bar is sufficiently long and is 
+	subjected to infinitely many vertical forces $\fat{f}_i (i=1,2,...)$ 
+	whose magnitude decreases monotonically as 
+	\[
+	 \frac{ |\fat{f}_{i+1}| }{ |\fat{f}_i| } =\frac{9}{10} 
+	\]
+	Determine the direction and the magnitude of the total force acting on the bar.\\
+
+	{\small 
+		In taking a component-based vector summation approach, we only need a vertical 
+		coordinate axis since all the force vector to be summed are aligned.  
+		In this one dimensional coordinate system, the $i$th force may be 
+		 expressed as $r^{i-1}f$ where $f=|\fat{f}_1|$
+		do
+		In this problem, all the force vectors are aligned. 
+		Thus, the force vectors can be summed just like summing a series of numbers(scalars). 
+		Moreover, the force vectors are all directed downward, we can identify each 
+		force vector 
+	}
 \item
 Exercise 1-5:\\
 	Suppose that an iron weight is hung from a ceiling by a string AB as shown in Fig.\ref{fig:fig1_4}-(a). 
 	Determine the magnitude of the horizontal force $F$ required to hold the weight as 
 	in the position shown in Fig\ref{fig:fig1_4}-(b).
 	Note that $m$ is mass and $g$ is gravity constant.  
-\end{itemize}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.3\linewidth]{fig1_1.eps} 
-	\end{center}
-	\caption{Vectors $\fat{a}$ and $\fat{b}$ in 2-dimensional space with an
-	xy Cartesian coordinate system.}
-	\label{fig:fig1_1}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.3\linewidth]{fig1_2.eps} 
-	\end{center}
-	\caption{Vectors $\fat{a}, \fat{b}$ and $\fat{c}$ of equal magnitude.} 
-	\label{fig:fig1_2}
-\end{figure}
+\end{enumerate}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig1_3.eps} 
@@ -562,7 +826,17 @@ Exercise 1-5:\\
 	\caption{An weight of mass $m$ hung from a ceiling by a string AB.} 
 	\label{fig:fig1_4}
 \end{figure}
-\section*{Problem Set}
+\section{Supplementary Problems}
+\begin{enumerate}
+\item
+Verify that the vector addition is associative,i.e., 
+\begin{equation}
+	\fat{a}+(\fat{b}+\fat{c})= (\fat{a}+\fat{b})+\fat{c}
+	\label{eqn:sprb1}
+\end{equation}
+using graphic representation of vectors. 
+(Draw arrows to represent $\fat{a},\fat{b}$ and $\fat{c}$ and veryfiy \ref{eqn:sprb1} holds.)
+\end{enumerate}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.3\linewidth]{fig1_5.eps} 
