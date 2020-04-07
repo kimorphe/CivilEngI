@@ -401,7 +401,7 @@ We may thus use
 	= a_xb_x+a_yb_y
 	\label{eqn:}
 \end{equation}
-to evaluate the inner product instead of eq.(\ref{eqn:iprod_def}) for which the angle 
+to evaluate the inner product instead of eq.(\ref{eqn:idot_def}) for which the angle 
 between the vectors need to be obtained in the first place. 
 
 In derving component-based formulae for vectors in higher dimensional spaces, 
@@ -524,56 +524,89 @@ in 3D space as
 For vectors in s three dimensional space, yet another vector multiplication called 
 cross (or exterior) product may be introduced. For given pair of vectors $\fat{a}$ and $\fat{b}$, 
 the cross product denoted by $\times$ produces a third vector $\fat{a}\times \fat{b}$. 
-The defining propertis of the cross product are as follows. 
+such that 
+%The defining propertis of the cross product are as follows. 
 \begin{equation}
 	\fat{a}\times \fat{b}= -\left(\fat{b} \times \fat{a} \right)
 	\label{eqn:asym}
 \end{equation}
 \begin{equation}
+	\left(\fat{a}\times\fat{b}\right)\cdot\fat{a} = 0
+	%	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0 
+	\label{eqn:ortho}
+\end{equation}
+\begin{equation}
 	\left(\fat{a}+\fat{b}\right)\times \fat{c}
 	=
 	\fat{a}\times \fat{c}+ \fat{b}\times \fat{c}
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-	\left(\fat{a}\times\fat{b}\right)\cdot\fat{a} =
-	%	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0 
-	\label{eqn:ortho}
+	\label{eqn:dist_eprod}
 \end{equation}
 \begin{equation}
 	\left|\fat{a}\times \fat{b} \right|^2=|\fat{a}|^2|\fat{b}|^2-\left(\fat{a}\cdot\fat{b}\right)^2
 	\label{eqn:area}
 \end{equation}
-In addition to the properties (\ref{eqn:asym})-(\ref{eqn:area}), it is usually 
+In addition to eqs.(\ref{eqn:asym})-(\ref{eqn:area}), it is usually 
 required that the tuple:
 \begin{equation}
 	\left(\fat{a},\fat{b},\fat{a}\times \fat{b} \right)
 	\label{eqn:vtuple}
 \end{equation}
 forms a right-handed system.
-Note that property (\ref{eqn:asym}) implies 
+Note that eq.(\ref{eqn:asym}) implies 
 \begin{equation}
 	\fat{a}\times \fat{a}=\fat{0}, 
 	\label{eqn:}
 \end{equation}
-and properties (\ref{eqn:asym}) and \ref{eqn:ortho} imply 
+and eqs.(\ref{eqn:asym}) and \ref{eqn:ortho} imply 
 \begin{equation}
 	\left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0. 
-	\label{eqn:}
+	\label{eqn:ortho_b}
 \end{equation}
-The motivation behind the properties above is as follows. 
-As illustrated in Fig.\ref{fig:fig1_6}, the cross product are orthogonal to 
-both $\fat{a}$ and $\fat{b}$. Thus $\fat{a}\times \fat{b}$ is perpendicular 
-to the pararellogram formed by $\fat{a}$ and $\fat{b}$. 
-The direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) 
-forms a right-handed system, while the length is taken to be the area of 
-the parallelogram. 
+In Fig.\ref{fig:fig1_6}, the geometrical configuration of $\fat{a}\times\fat{b}$ relative to 
+$\fat{a}$ and $\fat{b}$ is shown. As shown in this figure, the cross product is orthogonal 
+to both $\fat{a}$ and $\fat{b}$ as stated in eqs.(\ref{eqn:ortho}) and (\ref{eqn:ortho_b}).
+In other words, $\fat{a}\times \fat{b}$ is perpendicular to the pararellogram formed by $\fat{a}$ and $\fat{b}$. 
+In Fig.\ref{fig1_6}, the direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) 
+forms a right-handed system. while the length is determined according to eq.(\ref{eqn:area}).
+As indicated in Fig.\ref{fig:fig1_6}, the vector length given by eq.() is equal to the are $S$ of  
+the parallelogram spanned by $\fat{a}$ and $\fat{b}$. The equality $S=|\fat{a}\times \fat{b}|$ 
+becomes more obvious if we plug eq.(\ref{eqn:idot_def}) into eq.(\ref{eqn:area}) 
+to have the alternative expression for eq.(\ref{eqn:area}). 
 \begin{equation}
-	\fat{e}_1 \times  \fat{e}_2=\fat{e}_3, \ \ 
-	\fat{e}_2 \times  \fat{e}_3=\fat{e}_1, \ \ 
-	\fat{e}_3 \times  \fat{e}_1=\fat{e}_2,
+	\left|\fat{a}\times \fat{b} \right|^2
+	=
+	|\fat{a}|^2|\fat{b}|^2-
+	\left(
+	|\fat{a}||\fat{b}|\cos\theta \right)^2
+	= |\fat{a}|^2|\fat{b}|^2\sin^2\theta
+	=S^2
 	\label{eqn:}
 \end{equation}
+//
+%For the orthonormal basis vectors $\{\fat{e}_1,\fat{e}_2,\fat{e}_3 \}$ shown in Fig.\ref{fig:fig1_9}, 
+From the foregoing discussion, we can verify that a vector cross product between 
+orthonormal basis vectors either vanishes or gives one of the basis vector. 
+The non-vanishing cross prodcuts are
+\begin{equation}
+	\fat{e}_1 \times  \fat{e}_2=
+	-\fat{e}_2 \times  \fat{e}_1=
+	\fat{e}_3
+	\label{eqn:e1xe2}
+\end{equation}
+\begin{equation}
+	\fat{e}_2 \times  \fat{e}_3= 
+	-\fat{e}_3 \times  \fat{e}_2=\fat{e}_1
+	\label{eqn:e2xe3}
+\end{equation}
+\begin{equation}
+	\fat{e}_3 \times  \fat{e}_1
+	=
+	-\fat{e}_1 \times  \fat{e}_3=\fat{e}_2,
+	\label{eqn:e3xe1}
+\end{equation}
+The cross products in eqs(\ref{eqn:e1xe2})-(\ref{eqn:e3xe1}) may be used conveniently 
+ in deriving a component-based formula for the cross product of arbitrary vectors.
+ To see this, we write arbitrary vectors $\fat{a}$ and $\fat{b}$ as
 \begin{equation}
 	\fat{a}=
 	a_1\fat{e}_1 + a_2\fat{e}_2 + a_3\fat{e}_3, \ \ 
@@ -581,18 +614,27 @@ the parallelogram.
 	b_1\fat{e}_1 + b_2\fat{e}_2 + b_3\fat{e}_3
 	\label{eqn:}
 \end{equation}
-\begin{eqnarray}
-	\fat{a}\times \fat{b} &= &
+and consider expanding 
+\begin{equation}
+	\fat{a}\times \fat{b} = 
 	\sum_{i=1}^3
 	\sum_{j=1}^3
-	a_ib_j \left(\fat{e}_i\times \fat{e}_j\right) \\
-	&=&
+	a_ib_j \left(\fat{e}_i\times \fat{e}_j\right) 
+	\label{eqn:cross_ab}
+\end{equation}
+in terms of the basis vectors. Retaining non-vanishing cross products in 
+eq.(\ref{eqn:cross_ab}), we obtain
+\begin{equation}
+	\fat{a}\times \fat{b} = 
+	=
 	(a_2b_3-a_3b_2)\fat{e}_1
 	+
 	(a_3b_1-a_1b_3)\fat{e}_2
 	+
-	(a_1b_2-a_2b_1)\fat{e}_3
-\end{eqnarray}
+	(a_1b_2-a_2b_1)\fat{e}_3,
+	\label{eqn:cross_ab_worked}
+\end{equation}
+which implies 
 \begin{equation}
 	\fat{a}\times \fat{b}
 	=
@@ -620,8 +662,9 @@ the parallelogram.
 			a_1b_2-a_2b_1
 		\end{array}
 	\right)
-	\label{eqn:}
+	\label{eqn:cross_ab_cmp}.
 \end{equation}
+We thus have obtained a component-based formula (\ref{eqn:cross_ab_cmp}) for $\fat{a}\times\fat{b}$.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{eprod.eps} 
@@ -874,44 +917,65 @@ from the equilibrium equation (\ref{eqn:equiv}).
 \section{Supplementary Problems}
 \begin{enumerate}
 \item
-Verify that the vector addition is associative,i.e., 
-\begin{equation}
-	\fat{a}+(\fat{b}+\fat{c})= (\fat{a}+\fat{b})+\fat{c}
+	Verify that the vector addition is associative,i.e., 
+	\begin{equation}
+		\fat{a}+(\fat{b}+\fat{c})= (\fat{a}+\fat{b})+\fat{c}
 	\label{eqn:sprb1}
-\end{equation}
-using graphic representation of vectors. 
-(Draw arrows to represent $\fat{a},\fat{b}$ and $\fat{c}$ and veryfiy \ref{eqn:sprb1} holds.)
-\end{enumerate}
-\begin{figure}[h]
+	\end{equation}
+	using graphic representation of vectors. 
+	(Draw arrows to represent $\fat{a},\fat{b}$ and $\fat{c}$ and veryfiy \ref{eqn:sprb1} holds.)
+\item
+	For unit vectors shown in Fig.\ref{fig:fig1_5}, obtain $\fat{a}+\fat{b}+\fat{b}$.  
+	\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.3\linewidth]{fig1_5.eps} 
 	\end{center}
 	\caption{Vectors $\fat{a}, \fat{b}$ and $\fat{c}$ in 2-dimensional space with an
-	xy Cartesian coordinate system.}
+	$xy$ Cartesian coordinate system.}
 	\label{fig:fig1_5}
-\end{figure}
-\begin{figure}[h]
+	\end{figure}
+\item
+	For given vector $\fat{c}$ shown in Fig.\ref{fig:fig1_6}, determine the lengths of vectors 
+		$\fat{a}$ and $\fat{b}$ such that $\fat{a}+\fat{b}+\fat{c}=\fat{0}$.
+	\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.3\linewidth]{fig1_6.eps} 
 	\end{center}
 	\caption{Vectors $\fat{a}, \fat{b}$ and $\fat{c}$ of equal magnitude.} 
 	\label{fig:fig1_6}
-\end{figure}
-\begin{figure}[h]
+	\end{figure}
+\item
+	Suppose that a sufficiently long bar is supported horizontally by a rigid wall as 
+	illustrated in Fig.\ref{fig:fig1_7}. THe bar is subjected to 
+	infinitely many vertical forces $\fat{f}_1,\fat{f}_2,\dots $ of alternating 
+	directions. Determine the direction and the magnitude of the total force 
+	when the ratio of the magunitude of adjacent force is given by
+	\begin{equation}
+		\frac{| \fat{f}_{i+1}|}{|\fat{f}_i|}=\frac{2}{3}, \ \ (i=1,2,\dots)
+		\label{eqn:}
+	\end{equation}
+	with $|\fat{f}_1|=F$.
+	\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.45\linewidth]{fig1_7.eps} 
 	\end{center}
 	\caption{Infinitely many vertical forces of alternating direction on 
 	a horizontally supported bar AB.}
 	\label{fig:fig1_7}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.45\linewidth]{fig1_8.eps} 
-	\end{center}
-	\caption{Two weights of different mass hung from a ceiling by strings} 
-	\label{fig:fig1_8}
-\end{figure}
+	\end{figure}
+\item
+	Suppose that two weight of different mass ($m$ and $M$) are hung from 
+	a rigid ceiling as shown in Fig.\ref{fig:fig1_8}.
+	Determin the ratio $M/m$ when the string BC is known to be tied horizontally 
+	and the weights and strings are in static equilibrium.
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.45\linewidth]{fig1_8.eps} 
+		\end{center}
+		\caption{Two weights of different mass hung from a ceiling by perfectly flexible strings} 
+		\label{fig:fig1_8}
+	\end{figure}
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Memo (still to write) 
