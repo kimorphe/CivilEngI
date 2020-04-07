@@ -1,0 +1,108 @@
+\documentclass[10pt,a4j]{article}
+%\usepackage{graphicx,wrapfig}
+\usepackage{graphicx}
+\setlength{\topmargin}{-1.5cm}
+%\setlength{\leftmargin}{1.5cm}
+%\setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{25.2cm}
+\newlength{\minitwocolumn}
+\setlength{\minitwocolumn}{0.5\textwidth}
+\addtolength{\minitwocolumn}{-\columnsep}
+%\addtolength{\baselineskip}{-0.1\baselineskip}
+%
+\def\Mmaru#1{{\ooalign{\hfil#1\/\hfil\crcr
+\raise.167ex\hbox{\mathhexbox 20D}}}}
+%
+\begin{document}
+\newcommand{\fat}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\D}{\partial}
+\newcommand{\w}{\omega}
+\newcommand{\ga}{\alpha}
+\newcommand{\gb}{\beta}
+\newcommand{\gx}{\xi}
+\newcommand{\gz}{\zeta}
+\newcommand{\vhat}[1]{\hat{\fat{#1}}}
+\newcommand{\spc}{\vspace{0.7\baselineskip}}
+\newcommand{\halfspc}{\vspace{0.3\baselineskip}}
+\bibliographystyle{unsrt}
+%\pagestyle{empty}
+\newcommand{\twofig}[2]
+ {
+   \begin{figure}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center}   #1
+         \end{center}
+     \end{minipage}
+         \hspace{\columnsep}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center} #2
+         \end{center}
+     \end{minipage}
+   \end{figure}
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace*{\baselineskip}
+\begin{center}
+	{\Large \bf Lecture Note 2, Civil Engineering I \\
+	- introduction to structural mechanics-\\
+	Equilibrium of Force and Moment
+	}  \\
+\end{center}
+\vspace{1.5cm}
+\section*{Excersises 2}
+\begin{itemize}
+\item
+Exercise 2-1:\\
+Obtain moments with respect to points $P_1,P_2,\dots P_4$ due to the downward 
+vertical force $\fat{f}$ shown in Fig.\ref{fig:fig2_1} -(a).
+\item
+Exercise 2-2:\\
+Obtain moments with respect to points $P_1,P_2,\dots P_4$ due to 
+the horizontal force $\fat{f}$ shown in Fig.\ref{fig:fig2_1}-(b). 
+\item
+Exercise 2-3:\\
+Obtain moments with respect to points $P_2,P_3,\dots P_5$
+due to the load of magnitude $F$ acting obliquely to point $P_1$ 
+as shown in Fig.\ref{fig:fig2_2}-(a).
+\item
+Exercise 2-4:\\
+Obtain moments with respect to points $P_1,P_2,\dots P_4$
+ due to the force $\fat{f}$ acting obliquely to point $P_5$ as 
+		shown in Fig.\ref{fig:fig2_2}-(b).
+\item
+Exercise 2-5:\\
+	Determine the magnitude of the force $\fat{f}$ shown in 
+	Fig.\ref{fig:fig2_3}-(a) that is necessary to equilibrate 
+	the bar both in terms of the force and moment. 
+\item
+Exercise 2-6:\\
+	Calculate the total force and the total moments about $P_1, P_2,\dots P_5$, 
+	to show that the bar shown in Fig.\ref{fig:fig2_3}-(b) is in an equilibrium state 
+	in terms of both the force and moment. 
+	Note that $F$ and $F/2$ are the magnitude of the downward and upward forces 
+	applied vertically to the bar, respectively.
+\end{itemize}
+\newpage
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.7\linewidth]{fig2_1.eps} 
+	\end{center}
+	\caption{Vertical and horizontal forces acting on a body.} 
+	\label{fig:fig2_1}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.7\linewidth]{fig2_2.eps} 
+	\end{center}
+	\caption{Forces acting obliquely to a body.} 
+	\label{fig:fig2_2}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.8\linewidth]{fig2_3.eps} 
+	\end{center}
+	\caption{Straight bars subjected to a set of forces.} 
+	\label{fig:fig2_3}
+\end{figure}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

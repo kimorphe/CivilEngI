@@ -1,9 +1,14 @@
+all: note1.pdf prb1.pdf
 note1.pdf: note1.dvi
 	dvipdfmx -p a4 note1.dvi 
+prb1.pdf: prb1.dvi
+	dvipdfmx -p a4 prb1.dvi 
 note1.dvi: note1.tex arrow.eps identity.eps smul.eps vadd.eps iprod.eps eprod.eps components.eps vadd_cmp.eps eprod_xyz.eps\
        	fig1_1.eps fig1_2.eps fig1_3.eps fig1_4.eps fig1_2ans.eps\
        	fig1_5.eps fig1_6.eps fig1_7.eps fig1_8.eps
 	platex note1.tex
+prb1.dvi: prb1.tex fig1_8.eps
+	platex prb1.tex
 
 arrow.eps: arrow.svgz
 	inkscape -z -f arrow.svgz -E arrow.eps
