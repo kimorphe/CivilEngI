@@ -51,54 +51,158 @@
 \vspace{1.5cm}
 \setcounter{section}{1}
 \section{Equilbrium Condition}
-Let's consider a perfectly rigid body $B$ is subjected to a set of forces:
+Consider a perfectly rigid body $B$ subjected to a set of forces
 \[ 
 	\left\{\ \fat{f}_1, \fat{f}_2, \dots \fat{f}_{n} \right\}
 \]
 (see Fig.\ref{fig:fig3}-(a)).
-If $B$ is staying still undre the loading, the sum of forces must vanishes
+If $B$ is staying still under the loading, the Newton's 2nd law requires that 
+the sum of the forces must vanishes. Thus,
 \begin{equation}
-	\sum_{i=1}^n \fat{f}_i = \fat{0}
+	\sum_{i=1}^n \fat{f}_i = \fat{0}.
 	\label{eqn:2nd_law}
 \end{equation}
-according to the Newton's 2nd law. This is a necessary but not a sufficient condition 
-for the body to be in a static equilibrium. A counter example is shown in Fig.\ref{fig:fig3}-(b).
-In this case, the body will start rotating although the total force $\fat{f}_1+\fat{f}_2$ vanishes.
-The Newton's 2nd law \ref{eqn:2nd_law} ensures that the loading does not cause a 
- translational motion. 
- It is therefore necessaray to impose an addiional condition to prevent the body from rotating. 
- To do so, we first need to qunatify the tendency that a given force to cause a rotational motion. 
-The quantitative measure of such tendency is called moment, which is introduced as follows. 
+Note that eq.(\ref{eqn:2nd_law}) is a necessary and not a sufficient condition 
+for the body to be in a static equilibrium. 
+%A simple counter example for is shown in Fig.\ref{fig:fig3}-(b).
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3.eps} 
+	\end{center}
+	\caption{A body $B$ subjected to a set of forces $\fat{f}_i,(i=1\cdot n)$.} 
+	\label{fig:fig3}
+\end{figure}
+To see this, consider a special loading condition shown in Fig.\ref{fig:fig3}. 
+Then our experience tells us that the body start rotating upon loaindg although  
+the total force $\fat{f}_1+\fat{f}_2$ is zero.
+This means the Newton's 2nd law \ref{eqn:2nd_law} only ensures that the loads
+do not cause a translational motion. 
+It is therefore necessaray to introduce an additional condition concerning rotational 
+motion to complete the equilibrium condition for a rigid body. 
+To do so, we have to device a way to measure the tendency that a given force to have on 
+the rotational motion. 
 
-The moment should be proportinal to both the distance and the maginitude of the force. 
+The tendency that a force to rotatate a body about given point, or an axis,
+is called moment. To define the moment based on our experience, imagine that 
+a body $B$ is pinned on a wall at $P$ about which $B$ can rotate freely without 
+friction (see Fig.\ref{fig:fig1}). If a vertical load $\fat{f}$ is applied to a point $A$ 
+located on the same level as $P$, the body starts rotating in ithe clockwise direction.
+If we're asked to rotate the body twice as hard, we'd probably either 
+double the magnitude of the force, or slide the point of application twice as far from $P$ 
+as illustrated in Figs.\ref{eqn:fig1}-(b) and (c).
+This observation suggests that the moment should be proportional to the magnitude of the 
+force and the distance between the loading point and the pivot.  
+Thus, we may adopt the following as our first tentative definition for the moment $M$. 
 \begin{equation}
-	M=|\fat{r}| \times |\fat{f}_{\perp}|=S({\rm area \  of \ PABC})
-	\label{eqn:}
+	M=({\rm distance \, between \,the \, pivot\, and\, force) \times (magnitude \, of \, the \,force)}
+	\label{eqn:def_M_temp}
 \end{equation}
+According to the definition (\ref{eqn:def_M_temp}), the moments about $P$ due the 
+forces shown in Figs.-(a), (b) and (c) are evaluated as $r|\fat{f}|, r|2\fat{f}|$ and $2r|\fat{f}|$, respectively.
+
+The definition works fine as far as the configuration shown in shown in Fig.\ref{fig:fig1}.
+To generalize the definition further, let's next inspect an obliquely applied forces
+ shown in Fig.\ref{fig:fig2}.
+In this setup, the force is not vertically directed, and the pivot and loading points are on the different levels.
+If we decompose the force vector $\fat{f}$, as shown in Fig.\ref{fig:fig2} into the components parallell $\fat{f}_{\perp}$ 
+and vertical $\fat{f}_\parallel$ to the line $l$ passing $P$ and $A$, we notice that $\fat{f}_{\parallel}$ does not 
+contribute to the rotational motion about $P$. 
+This means we need to consider only the vertical component $\fat{f}_{\perp}$ in defining the moment. 
+Consequently, the present setup has been reduced to the previously inspected in Fig.\ref{fig:fig2}-(a).
+Thus, we can now write the formula for the moment $M$ as 
+\begin{equation}
+	M=|\fat{r}|\times |\fat{f}_{\perp}|.
+	\label{eqn:def_M_fp}
+\end{equation}
+Geometrically, eq.(\ref{eqn:def_M_fp}) gives the area $S$ of parallellogram $PABC$. 
+The formula for $M$ is altanatively writen as
 \begin{equation}
 	M=r_\perp \times |\fat{f}|
 	\label{eqn:}
 \end{equation}
+where $r_\perp$ is the parpendicular distance from $P$ to the line of loading 
+$l'$ depicted in Fig.\ref{fig:fig2}.
+Finally, we incorprate a mechanism to distinguish a clockwise from counterclockwise 
+moment into the definition of $M$. This is achieved by assigining positive 
+and negative moments to the anticlockwise and clockwise moments as follows.
 \begin{equation}
-	M=S \times \left\{
+	M=\sigma S , \ \ \left(S= |\fat{r}|\times |\fat{f}_{\perp}|=r_\perp \times |\fat{f}| \right)
+	\label{eqn:M_def}
+\end{equation}
+with 
+\begin{equation}
+	\sigma=\left\{
 		\begin{array}{cc}
-			+1 & (counterclockwise) \\
-			-1 & (clockwise) 
+			+1 & ({\rm counterclockwise}) \\
+			-1 & ({\rm clockwise}) 
 		\end{array}
 	\right.
-	\label{eqn:}
+	,
+	\label{eqn:sign}
 \end{equation}
+which completes our definition of moment. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=1.0\linewidth]{fig1.eps} 
+	\end{center}
+	\caption{
+		Basic loading conditions considered in defining moment that generate 
+		rotational motion about a pivotal point $P$.} 
+	\label{fig:fig1}
+\end{figure}
+
 \begin{equation}
-	M=\fat{r} \times \fat{f}
+	M=(0,0,xf_y-yf_x)
 	\label{eqn:}
 \end{equation}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.5\linewidth]{fig2.eps} 
+	\end{center}
+	\caption{Oblique load acting on a body $B$.} 
+	\label{fig:fig2}
+\end{figure}
+
+In the previous class, we have learned the relationship between the vector cross product 
+and the are of parallelogram. In the present case, it is written as 
+\begin{equation}
+	S=\left| \fat{r} \times \fat{f} \right|.
+	\label{eqn:}
+\end{equation}
+Thus, we can define the moment using the vector cross product. In that case, however, 
+ $\fat{r}$ and $\fat{f}$ have to be considered as vectors in 3D space. 
+If we employ the coordinate notation as 
 \begin{equation}
 	\fat{r}=(x,y,0), \ \ 
 	\fat{f}=(f_x,f_y,0)
 	\label{eqn:}
 \end{equation}
+the, the component-based formula of vector cross product gives us  
 \begin{equation}
-	M=(0,0,xf_y-yf_x)
+	\fat{r}\times \fat{f}=(0,0,xf_y-yf_x).
+\end{equation}
+We hence conclude
+\begin{equation}
+	M=\sigma \left| 
+		xf_y-yf_x
+	\right|.
+\end{equation}
+However, we can verify that $\sigma$, or the rotatinal direction, 
+has already been considered in the cross product, and we can write simply as 
+\begin{equation}
+	M=xf_y-yf_x.
+\end{equation}
+\begin{equation}
+	\fat{M}=(M_x, M_y, M_z)=
+	\fat{r}\times\fat{f}
+	=
+	\left(
+		yf_z-zf_y
+	,
+		zf_x-xf_z
+	,
+		xf_y-yf_x
+	\right)
 	\label{eqn:}
 \end{equation}
 \begin{equation}
@@ -116,27 +220,6 @@ The moment should be proportinal to both the distance and the maginitude of the 
 	=\fat{0}
 	\label{eqn:}
 \end{equation}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.6\linewidth]{fig3.eps} 
-	\end{center}
-	\caption{A body $B$ subjected to a set of forces $\fat{f}_i,(i=1\cdot n)$.} 
-	\label{fig:fig3}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=1.0\linewidth]{fig1.eps} 
-	\end{center}
-	\caption{Three equivalent forces in terms of the moment about pivot $P$.} 
-	\label{fig:fig1}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.5\linewidth]{fig2.eps} 
-	\end{center}
-	\caption{Oblique load acting on a body $B$.} 
-	\label{fig:fig2}
-\end{figure}
 \section*{Excersises 2}
 \begin{itemize}
 \item
