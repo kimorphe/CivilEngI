@@ -50,14 +50,15 @@
 \end{center}
 \vspace{1.5cm}
 \setcounter{section}{1}
-\section{Equilbrium Condition}
+\section{Equilbrium of Force and Moment}
+\subsection{Rotaional motion and moment}
 Consider a perfectly rigid body $B$ subjected to a set of forces
 \[ 
 	\left\{\ \fat{f}_1, \fat{f}_2, \dots \fat{f}_{n} \right\}
 \]
 (see Fig.\ref{fig:fig3}-(a)).
 If $B$ is staying still under the loading, the Newton's 2nd law requires that 
-the sum of the forces must vanishes. Thus,
+the total force vanishes. Thus,
 \begin{equation}
 	\sum_{i=1}^n \fat{f}_i = \fat{0}.
 	\label{eqn:2nd_law}
@@ -73,15 +74,15 @@ for the body to be in a static equilibrium.
 	\label{fig:fig3}
 \end{figure}
 To see this, consider a special loading condition shown in Fig.\ref{fig:fig3}. 
-Then our experience tells us that the body start rotating upon loaindg although  
-the total force $\fat{f}_1+\fat{f}_2$ is zero.
+Our experience tells us that the body start rotating upon loading the couple force 
+ shown in this figure although the sum $\fat{f}_1+\fat{f}_2$ of the forces is zero.
 This means the Newton's 2nd law \ref{eqn:2nd_law} only ensures that the loads
 do not cause a translational motion. 
 It is therefore necessaray to introduce an additional condition concerning rotational 
 motion to complete the equilibrium condition for a rigid body. 
 To do so, we have to device a way to measure the tendency that a given force to have on 
 the rotational motion. 
-
+\subsection{Moment}
 The tendency that a force to rotatate a body about given point, or an axis,
 is called moment. To define the moment based on our experience, imagine that 
 a body $B$ is pinned on a wall at $P$ about which $B$ can rotate freely without 
@@ -150,11 +151,10 @@ which completes our definition of moment.
 		rotational motion about a pivotal point $P$.} 
 	\label{fig:fig1}
 \end{figure}
-
-\begin{equation}
-	M=(0,0,xf_y-yf_x)
-	\label{eqn:}
-\end{equation}
+%\begin{equation}
+%	M=(0,0,xf_y-yf_x)
+%	\label{eqn:}
+%\end{equation}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig2.eps} 
@@ -163,35 +163,42 @@ which completes our definition of moment.
 	\label{fig:fig2}
 \end{figure}
 
-In the previous class, we have learned the relationship between the vector cross product 
-and the are of parallelogram. In the present case, it is written as 
+In the previous class, we have learned the relationship between the vector 
+cross product and the area of the parallelogram. In the present case, the 
+it is written as 
 \begin{equation}
 	S=\left| \fat{r} \times \fat{f} \right|.
 	\label{eqn:}
 \end{equation}
-Thus, we can define the moment using the vector cross product. In that case, however, 
- $\fat{r}$ and $\fat{f}$ have to be considered as vectors in 3D space. 
-If we employ the coordinate notation as 
+Thus, we can define the moment using the vector cross product. 
+In using vector cross product, however, $\fat{r}$ and $\fat{f}$ have 
+to be considered as vectors in 3D space. 
+The most straightforward way of embedding the 2D vectors in 3D space is 
+to pad zero to the third coordinate writting 
 \begin{equation}
 	\fat{r}=(x,y,0), \ \ 
-	\fat{f}=(f_x,f_y,0)
+	\fat{f}=(f_x,f_y,0).
 	\label{eqn:}
 \end{equation}
-the, the component-based formula of vector cross product gives us  
+Then the component-based formula of vector cross product yields the following. 
 \begin{equation}
 	\fat{r}\times \fat{f}=(0,0,xf_y-yf_x).
 \end{equation}
-We hence conclude
+We have thus obtained an alternative formula for $M$ as 
 \begin{equation}
 	M=\sigma \left| 
 		xf_y-yf_x
 	\right|.
 \end{equation}
-However, we can verify that $\sigma$, or the rotatinal direction, 
-has already been considered in the cross product, and we can write simply as 
+Furthermore, we can verify that 
 \begin{equation}
 	M=xf_y-yf_x.
 \end{equation}
+since $\sigma$, or the rotatinal direction, has already been considered in the cross product.
+The definition (\ref{eqn:M_def}) of the moment is valid only for 2D problem where 
+rotational motion take places about an axisi with  predetermined direction. 
+When we have to deal with rotational motion in 3D space, moment is defined as a vector 
+quantity by the cross product
 \begin{equation}
 	\fat{M}=(M_x, M_y, M_z)=
 	\fat{r}\times\fat{f}
@@ -202,24 +209,50 @@ has already been considered in the cross product, and we can write simply as
 		zf_x-xf_z
 	,
 		xf_y-yf_x
-	\right)
+	\right).
 	\label{eqn:}
 \end{equation}
+This is not surprising because the axis of rotation can be directed in 
+any direction in the three dimensional space depending on the loading condition. 
+\subsection{Equilibrium Equations}
+From the foregoing discussion, there should be two types of equilibrium conditions
+for a rigid body. The one is the equilibrium of force and the equibrium of the 
+moment is the other. Those are written as 
+\begin{equation}
+	\sum_{i=1}^n \fat{f}_i = \fat{0}, 
+	\label{eqn:equib_f}
+\end{equation}
+and 
 \begin{equation}
 	\sum_{i=1}^n \fat{x}_i\times \fat{f}_i
 	=
 	\fat{0}
-	\label{eqn:}
+	\label{eqn:equib_M}
 \end{equation}
+where $\fat{x}_i$ is the loading point of $\fat{f}_i$.
+It should be noted that $\fat{r}_i \times \fat{f}_i$ is the moment 
+due to $\fat{f}_i$ about the origin of the coordinate. 
+Equation (\ref{eqn:equib_M}) thus read 
+"the sum of all moment about the coordinate origin is zero".
+However, the total moment about an arbitrary point, say $\fat{p}$, 
+should equally vanishes if the body is staying still. 
+Thus, it seems necessary to write the equilbrium equation as 
+\begin{equation}
+	\sum_{i=1}^n \left(\fat{x}_i-\fat{p}\right) \times \fat{f}_i = \fat{0}
+	\label{eqn:equib_Mp}
+\end{equation}
+instead of eq.(\ref{eqn:equib_M}).
+However, eqs.(\ref{eqn:equib_f}) and (\ref{eqn:equib_M}) imply eq.(\ref{eqn:equib_Mp})
+because 
 \begin{equation}
 	\sum_{i=1}^n \left(\fat{x}_i-\fat{p}\right) \times \fat{f}_i
 	=
 	\sum_{i=1}^n \left( \fat{x}_i\times \fat{f}_i  \right)
 	- 
-	\fat{p} \times \left(\sum_{i=1}^n \ \fat{f}_i \right)
-	=\fat{0}
-	\label{eqn:}
+	\fat{p} \times \left(\sum_{i=1}^n \ \fat{f}_i \right), 
+	\label{eqn:equib_Mp2}
 \end{equation}
+and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
 \section*{Excersises 2}
 \begin{itemize}
 \item
