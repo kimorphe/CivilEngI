@@ -50,13 +50,92 @@
 \end{center}
 \vspace{1.5cm}
 \setcounter{section}{1}
-\section{Equilbrium}
+\section{Equilbrium Condition}
+Let's consider a perfectly rigid body $B$ is subjected to a set of forces:
+\[ 
+	\left\{\ \fat{f}_1, \fat{f}_2, \dots \fat{f}_{n} \right\}
+\]
+(see Fig.\ref{fig:fig3}-(a)).
+If $B$ is staying still undre the loading, the sum of forces must vanishes
+\begin{equation}
+	\sum_{i=1}^n \fat{f}_i = \fat{0}
+	\label{eqn:2nd_law}
+\end{equation}
+according to the Newton's 2nd law. This is a necessary but not a sufficient condition 
+for the body to be in a static equilibrium. A counter example is shown in Fig.\ref{fig:fig3}-(b).
+In this case, the body will start rotating although the total force $\fat{f}_1+\fat{f}_2$ vanishes.
+The Newton's 2nd law \ref{eqn:2nd_law} ensures that the loading does not cause a 
+ translational motion. 
+ It is therefore necessaray to impose an addiional condition to prevent the body from rotating. 
+ To do so, we first need to qunatify the tendency that a given force to cause a rotational motion. 
+The quantitative measure of such tendency is called moment, which is introduced as follows. 
+
+The moment should be proportinal to both the distance and the maginitude of the force. 
+\begin{equation}
+	M=|\fat{r}| \times |\fat{f}_{\perp}|=S({\rm area \  of \ PABC})
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	M=r_\perp \times |\fat{f}|
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	M=S \times \left\{
+		\begin{array}{cc}
+			+1 & (counterclockwise) \\
+			-1 & (clockwise) 
+		\end{array}
+	\right.
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	M=\fat{r} \times \fat{f}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\fat{r}=(x,y,0), \ \ 
+	\fat{f}=(f_x,f_y,0)
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	M=(0,0,xf_y-yf_x)
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\sum_{i=1}^n \fat{x}_i\times \fat{f}_i
+	=
+	\fat{0}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	\sum_{i=1}^n \left(\fat{x}_i-\fat{p}\right) \times \fat{f}_i
+	=
+	\sum_{i=1}^n \left( \fat{x}_i\times \fat{f}_i  \right)
+	- 
+	\fat{p} \times \left(\sum_{i=1}^n \ \fat{f}_i \right)
+	=\fat{0}
+	\label{eqn:}
+\end{equation}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3.eps} 
+	\end{center}
+	\caption{A body $B$ subjected to a set of forces $\fat{f}_i,(i=1\cdot n)$.} 
+	\label{fig:fig3}
+\end{figure}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig1.eps} 
 	\end{center}
-	\caption{Three equivalent forces in terms of the moment about pivot P.} 
+	\caption{Three equivalent forces in terms of the moment about pivot $P$.} 
 	\label{fig:fig1}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.5\linewidth]{fig2.eps} 
+	\end{center}
+	\caption{Oblique load acting on a body $B$.} 
+	\label{fig:fig2}
 \end{figure}
 \section*{Excersises 2}
 \begin{itemize}
