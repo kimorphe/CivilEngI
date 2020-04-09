@@ -1,0 +1,139 @@
+\documentclass[10pt,a4j]{article}
+%\usepackage{graphicx,wrapfig}
+\usepackage{graphicx}
+\setlength{\topmargin}{-1.5cm}
+%\setlength{\leftmargin}{1.5cm}
+%\setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{25.2cm}
+\newlength{\minitwocolumn}
+\setlength{\minitwocolumn}{0.5\textwidth}
+\addtolength{\minitwocolumn}{-\columnsep}
+%\addtolength{\baselineskip}{-0.1\baselineskip}
+%
+\def\Mmaru#1{{\ooalign{\hfil#1\/\hfil\crcr
+\raise.167ex\hbox{\mathhexbox 20D}}}}
+%
+\begin{document}
+\newcommand{\fat}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\D}{\partial}
+\newcommand{\w}{\omega}
+\newcommand{\ga}{\alpha}
+\newcommand{\gb}{\beta}
+\newcommand{\gx}{\xi}
+\newcommand{\gz}{\zeta}
+\newcommand{\vhat}[1]{\hat{\fat{#1}}}
+\newcommand{\spc}{\vspace{0.7\baselineskip}}
+\newcommand{\halfspc}{\vspace{0.3\baselineskip}}
+\bibliographystyle{unsrt}
+%\pagestyle{empty}
+\newcommand{\twofig}[2]
+ {
+   \begin{figure}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center}   #1
+         \end{center}
+     \end{minipage}
+         \hspace{\columnsep}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center} #2
+         \end{center}
+     \end{minipage}
+   \end{figure}
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace*{\baselineskip}
+\begin{flushright}
+	09/05/2019
+\end{flushright}
+\begin{center}
+	{\Large \bf Civil Engineering I \\
+	- Introduction to structural mechanics-\\
+	Design of simply supported truss structure 2
+	}  \\
+\end{center}
+%\vspace{1.5cm}
+\section*{Exercises 4}
+Consider designing a simply supported Warren truss shown in Fig.\ref{fig:fig4_1}.
+To assemble the truss, we use the bars of length $l$ having a uniform circular 
+cross section of diameter $d$ as illustrated in Fig.\ref{fig:fig4_2}-(a).
+When completed, the truss is going to be used to support two straight pipes (pipe 1 and 2) 
+crossing over a canal of width $3l$.
+In performing the structural analysis necessary for the design, 
+we will assume the followings.
+\subsection*{Assumptions}
+\begin{enumerate}
+\item
+	The two pipes are identical and are both completely filled with water. 
+\item
+	The the truss member (round bars) are so thin that their weight is negligible.
+\item
+	The weight of the water-filled pipes are supported evenly at the lower nodal 
+	points (joints) of the truss.
+\item
+	Due to the symmetry of the structure, the vertical downward force of magnitude 
+	$F$ applied to the nodes A, B, C and D comes only from pipe 1.
+\item
+	Although the pipes are infinitely long, the length of the pipe that needed to be 
+	supported by the truss is $4l$ (Imagine that the reminder of the weight goes 
+	to the supports on the ground that are not shown in Fig.\ref{fig:fig4_1}.)
+\item
+	A structural member breaks (yields) if the axial stress (axial force/area) 
+	exceeds a certain value called an "allowable stress".
+\end{enumerate}
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=1.25\linewidth]{fig4_1.eps} 
+	\end{center}
+	\caption{
+		(a)A front, (b) side, and (c) top views of a simply supported Warren truss made 
+		of round bars of uniform circular cross section. 
+		The truss truss bears the weight of two identical, symmetrically placed, water filled pipes.
+		The weight is distributed evenly to the nodal points (joints) on the lower level 
+		applying the downward vertical load of magnitude $F$ to the nodes A, B, C and D.
+	}
+	\label{fig:fig4_1}
+\end{figure}
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=0.5\linewidth]{fig4_2.eps} 
+	\end{center}
+	\caption{
+		The cross sections of (a) a truss member (round bar) and (b) the pipe.  
+	}
+	\label{fig:fig4_2}
+\end{figure}
+\subsection*{Problems}
+With the assumptions made above, determine the minimum value of $d$ for which the 
+truss can safely support the pipes without damaging (breaking) any of its members. 
+\begin{enumerate}
+\item
+	Determine the vertical reaction forces supplied to the truss by the supports at A and D. 
+\item
+	Determine the axial forces of truss member No.1 through 11. 
+\item
+	Determine the maximum tensile and compressional axial forces that arise in the truss members. 
+\item
+	%Let the outer diameter of the pipes be $D$, the thickness $t$, and the mass 
+	%densities of the water and stainless steel be $\rho_w$ and $\rho_s$, 
+	%respectively.
+	Write the magnitude $F$ of the force using the dimensions 
+	$l,D,t$ of the bars and pipes, gravitiy constant $g$, 
+	and the mass densities of water $\rho_w$ and steel $\rho_s$ as 
+	indicated in Fig.\ref{fig:fig4_2}. 
+\item
+	For given allowable stress $\sigma_a$, determine the minimum cross sectional 
+	area $A_{min}$ and the the corresponding diameter $d_{min}$. 
+	Note that the axial stress is given by $N/A$ where $N$ is the axial force 
+	and $A=\pi d^2/4$ is the cross sectional area of the bar.
+\item
+	Evaluate $d_{min}$ numerically when\\
+			$D$=500.0[mm], $t$=10.0[mm], 
+			$\rho_s=$7.9[g/cm$^3$],
+			$\rho_w=$1.0[g/cm$^3$],
+			$l=3.0$[m],
+			$\sigma_a$=20.0[kgf/mm$^2$], $g$=10.0[m/s$^2$]\\
+	You may use a scientific calculator, but the use of Excel is recommended. 
+	%so that you can review the process of your calculation and make modification if necessary.
+\end{enumerate}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

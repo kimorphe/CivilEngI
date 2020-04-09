@@ -675,95 +675,107 @@ We thus have obtained a component-based formula (\ref{eqn:cross_ab_cmp}) for $\f
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's law of motion}
-Newton discovered the laws that govern the motion of planetary bodies. 
-The governing laws he found are 
+Newton discovered the governing laws for the motion of planetary bodies. 
+The three famous laws (or principles) he found are  
 \begin{enumerate}
 	\item Existence of an intertia system
 	\item Conservation of linear momentum
 	\item The law of action and reaction,
 \end{enumerate}
-which are collectively called as the Newton's laws of motion. 
-In his effort of understanding the planetary motion, he modeled the planetary 
-bodis by mass poits neglecting the size of the bodies. 
-Although considerable extentions have been made since his days to deal with a 
- deformable bodies of finite size, the Newton's laws themselves have not been modified. 
-Structural mechanics is built entirely on the basis of Newton's mechanics. 
-The followings are reasonably accurate statements of the three Newton's law for our present application. 
+which are collectively known as the Newton's laws of motion. 
+The essence of the three laws may be presented as follows. 
 \begin{enumerate}
 \item 
-	There exsist a coordinate system in which we can observe bodies move at a constant velocity 
-	if no force is being exserted the bodies. Such coordinate system is called an "inertia system".
+	There exsist a coordinate system in which we observe that bodies continue to move at 
+	a given velocity if no force is exserted to them.
+	Such coordinate system is called an "inertia system".
 \item
 	The time rate of change in the linear momentum of a body is equal to the force applied to it.
 \item
 	If two bodies are excersizing forces each other, the forces applied from one body to 
-	the other is equal in magnitude but opposite in direction.
+	the other is equal in magnitude and opposite in direction.
 \end{enumerate}
-Among the three laws, the 2nd law is of our primary interest, and then comes the third. 
+In his effort of understanding the planetary motion, he modeled the planetary 
+bodies as mass points neglecting the size of the bodies. 
+Since his days, however, numerous extensions have been made, and the Newton's mechanics,
+has found hugely diverse applications ranging from continuum-based fluid and solid 
+mechanics to discrete particle-based mechanics such as molecules and granular materials. 
+Interestingly and importantly, the three principles have not been modified despite the 
+considerable extensions made to account for the motion, geometry and deformation of the 
+material of interest. Structural mechanics is no excption, which is why we first have to 
+state the Newton's law to make it clear that we derive everything from the principles 
+whenever possible. 
+\\
+
+%Structural mechanics is built entirely on the basis of Newton's mechanics. 
+Among the three laws, we're not going to dwell upon the 1st law in developing 
+structural mechanics theory. This is because we shall study time independent 
+problems to which a useful inertia system always exists. 
+The primary interests are hence in the 2nd and 3rd laws.  
 To state the 2nd law more rigorously, let $m$ be the mass, and let $\fat{v}$ and $\fat{f}$ 
-be the velocity and the force, respectively. Then the linear momentum is given by $m\fat{v}$, 
-and the 2nd law can be written as 
+be the velocity and the force, respectively. Then the linear momentum is given 
+by $m\fat{v}$, and the 2nd law may be formulated as 
 \begin{equation}
 	\fat{f}=\frac{d}{dt}\left(m\fat{v}\right)
 	\label{eqn:2nd_law}
 \end{equation}
-where $t$ is time.
-The 3rd law is concerend with two interacting body, say body A and B. 
-If body A is applying a force $\fat{f}_{AB}$ to body B, 
-then the 3rd law tells us that body A is under the force $\fat{f}_{BA}$ 
-of same magnitude acting in the opposite direction. Thus, 
-the precise statement is written as 
+where $t$ is a time variable. The 3rd law is concerend with two mechanically interacting bodies, 
+say body A and B. If we denote the force applied from A to B as $\fat{f}_{AB}$ 
+while that from B to A as $\fat{f}_{BA}$, then the 3rd law tells us that the 
+interaction forces must satisfy  
 \begin{equation}
 	\fat{f}_{AB}=-\fat{f}_{BA}.
-	\label{eqn:}
+	\label{eqn:3rd_law}
 \end{equation}
-Note that either or both body A and B could be a floor or a wall of infinite mass. 
+Note that either or both body A and B may be a floor or a wall of infinite mass. 
 %%%%%%%%%%%%%%%%%%%%
 \section{Equation of Motion}
-In Newton's mechanics, mass $m$ is a clearly defined constant. 
-Therefore, eq.(\ref{eqn:2nd_law}) can be written equivalently as 
+In Newtonian mechanics, mass $m$ is a clearly defined constant. 
+Therefore, eq.(\ref{eqn:2nd_law}) may be written as 
 \begin{equation}
 	\fat{f}=m \frac{d\fat{v}}{dt}=m\fat{\alpha}, \ \ \left(\alpha=\frac{d\fat{v}}{dt}\right)
 	\label{eqn:eq_mot}
 \end{equation}
-where $\fat{\alpha}$ is the acceleration.
-Equation (\ref{eq_mot}) is more commonly called as "equation of motion".
+where $\fat{\alpha}$ is the acceleration. Equation (\ref{eq_mot}) is often called "equation of motion". 
 When $\fat{f}=\fat{0}$, eq.(\ref{fig:2nd_law}) is reduced to 
 \begin{equation}
 	\frac{d}{dt}\left(m\fat{v}\right)=\fat{0} \ \ \Rightarrow \ \ 
 	m\fat{v}=const.
 	\label{eqn:mv_cnst}
 \end{equation}
-In this case, the linear momentum does not chage over time. This is the reason why 
-the 2nd law is often reffered to as a conservation law of linear momentum.
-On the other hand, if the velocity is known not chaging over time, then the force 
-should vanish reducing the equation of motion to  
+In this case, the linear momentum does not chage over time. 
+This is the reason why the 2nd law is reffered to as a conservation law of linear momentum.
+On the other hand, if we're investigating a time independent motion, 
+%if the velocity is known not to be chaging over time, 
+the force in eq.(\ref{eqn:2nd_law}) vanishes reducing the equation 
+of motion to 
 \begin{equation}
 	\fat{f}=\fat{0}.
 	\label{eqn:equiv0}
 \end{equation}
-It seems that eq.(\ref{eqn:equiv0}) is a trivial relation. 
-When multiple forces are acting to the body, however, $\fat{f}$ 
-must be considered as the sum of all forces. To address this issue, 
-let the forces applied to the body be $\fat{f}_1, \fat{f}_2,\dots \fat{f}_n$, then 
-eq.(\ref{eqn:equiv0}) can be written more appropriately as 
+It seems that eq.(\ref{eqn:equiv0}) is a trivial relation of no use. 
+When multiple forces are acting to the body, however, $\fat{f}$ is to be 
+considered as the sum of all forces. To address this issue more explicitly, let the 
+forces applied to the body be $\fat{f}_1, \fat{f}_2,\dots \fat{f}_n$, then 
+eq.(\ref{eqn:equiv0}) is written more appropriately as 
 \begin{equation}
-	\sum_{i=1}^n\fat{f}_i=\fat{0}.
+	\sum_{i=1}^n\fat{f}_i=\fat{0},
 	\label{eqn:equiv}
 \end{equation}
-Equation (\ref{eqn:equiv}) is called an "equilibrium equation" or "equilibrium condition". 
+which is called an "equilibrium equation" or "equilibrium condition". 
 \section{Dynamics and statics}
-A branch of mechanics that studies time varying motion and deformation of materials is 
-called "dynamics". Dynamics is one of the most important conner stones of such scientific 
- disciplines as vibration, acoustics, and seismology.
+A branch of mechanics that studies time varying motion and/or deformation of materials is 
+called "dynamics". Dynamics is one of the key subjects of such engineering fields 
+as vibration, acoustics, wind and earthquake engineering.
 The other branch of mechanics is called "statics", which studies the action of forces 
-to materials in a static equilibirum. When narrowly defined, structural mechanics is fallen 
-in the caterogy of statics. A structural mechanics dedicated to the analysis of structural vibration 
-is called structural dynamics. 
-In this class, we're going to learn basic techniques to study strcutures in static equilibrium 
-under a given set of external forces. 
-This class is therefore concerned with a "static" structural mechanics, and derive everything 
-from the equilibrium equation (\ref{eqn:equiv}). 
+to materials in a static equilibirum. A narrowly defined structural mechanics is fallen 
+into the latter caterogy. A structural mechanics dedicated to the analysis of structural 
+vibration is specifically called structural dynamics. In this class, we're going to learn 
+elementary techniques for the analysis of externally loaded structures in static equilibrium.
+This class is therefore concerned with a "static" structural mechanics, 
+and the 2nd law of eq.(\ref{eqn:3rd_law}) and the 3rd (\ref{eqn:3rd_law}) law will 
+serve as the fundamental principles. 
+%%%%%%%%%%%%%%%%%%%%%%5
 \section{Solved Problems}
 \begin{enumerate}
 \item
@@ -965,6 +977,8 @@ from the equilibrium equation (\ref{eqn:equiv}).
 	a horizontally supported bar AB.}
 	\label{fig:fig1_7}
 	\end{figure}
+\end{enumerate}
+\end{document}
 \item
 	Suppose that two weights of different mass ($m$ and $M$) are 
 	hung from a rigid ceiling as shown in Fig.\ref{fig:fig1_8}.
@@ -977,33 +991,4 @@ from the equilibrium equation (\ref{eqn:equiv}).
 		\caption{Two weights of different mass hung from a ceiling by perfectly flexible strings} 
 		\label{fig:fig1_8}
 	\end{figure}
-\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Memo (still to write) 
-%  component-wise opreation, multiplication, addition, dot/cross products
-%  linearity of cross product
-%  Solved and non solved problems
-%　A guide for on-line study
-%  Overview 
-%  Objective of class
-%  On the subission of reports
-\begin{enumerate}
-\item
-In the first reading, try getting an overall picture of the topics discussed in the class.
-You can skim and read casually through the lecture note.
-\item
-In your second reading, read the lecture note carefully and follow the logical 
-	development including definitions, formulas and solved problems.
-\item
-Close the textbook and try reconstructing what you've learnt.
-\item
-Solve by yourself the solved problems without looking at the solutions.
-\item
-Solve the classroom asingment and write up a solution. 
-Use A4 paper. Use of a word processor is not necessary as long as your 
-handwritten solution is intelgible. 
-Scan your answer sheet and submit online via Moodle your PDF scanned solution.
-The deadline of submission 
-\end{enumerate}
-\end{document}

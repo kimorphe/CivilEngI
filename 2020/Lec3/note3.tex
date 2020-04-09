@@ -1,0 +1,123 @@
+\documentclass[10pt,a4j]{article}
+%\usepackage{graphicx,wrapfig}
+\usepackage{graphicx}
+\setlength{\topmargin}{-1.5cm}
+%\setlength{\leftmargin}{1.5cm}
+%\setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{25.2cm}
+\newlength{\minitwocolumn}
+\setlength{\minitwocolumn}{0.5\textwidth}
+\addtolength{\minitwocolumn}{-\columnsep}
+%\addtolength{\baselineskip}{-0.1\baselineskip}
+%
+\def\Mmaru#1{{\ooalign{\hfil#1\/\hfil\crcr
+\raise.167ex\hbox{\mathhexbox 20D}}}}
+%
+\begin{document}
+\newcommand{\fat}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\D}{\partial}
+\newcommand{\w}{\omega}
+\newcommand{\ga}{\alpha}
+\newcommand{\gb}{\beta}
+\newcommand{\gx}{\xi}
+\newcommand{\gz}{\zeta}
+\newcommand{\vhat}[1]{\hat{\fat{#1}}}
+\newcommand{\spc}{\vspace{0.7\baselineskip}}
+\newcommand{\halfspc}{\vspace{0.3\baselineskip}}
+\bibliographystyle{unsrt}
+%\pagestyle{empty}
+\newcommand{\twofig}[2]
+ {
+   \begin{figure}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center}   #1
+         \end{center}
+     \end{minipage}
+         \hspace{\columnsep}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center} #2
+         \end{center}
+     \end{minipage}
+   \end{figure}
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace*{\baselineskip}
+\begin{flushright}
+	25/04/2019
+\end{flushright}
+\begin{center}
+	{\Large \bf Civil Engineering I \\
+	- Introduction to structural mechanics-\\
+	Application of equilibrium equations 
+	}  \\
+\end{center}
+\vspace{1.5cm}
+\section*{Exercises 3}
+\begin{itemize}
+\item
+Exercise 3.1\\
+A straight bar AC of length $l$ is subjected to the forces of magnitude  
+$H_A, V_A, V_C$ and $|\fat{f}|=F$ as shown in Fig.\ref{fig:fig3_1}. 
+For given $F$, determine $H_A, V_A$ and $V_C$ assuming that the bar is in a static equilibrium.,
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3_1.eps} 
+	\end{center}
+	\caption{A straight bar AC in a static equilibrium. 
+	$F, H_A, V_A, V_C$ and $|\fat{f}|=F$ denote the magnitude of applied forces.
+	}
+	\label{fig:fig3_1}
+\end{figure}
+\item
+Exercise 3.2\\
+A straight bar AC is supported statically as shown in Fig.\ref{fig:fig3_2}. 
+Determine the reaction forces from the supports at A and B. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3_2.eps} 
+	\end{center}
+	\caption{A simply supported bar AC subjected to an oblique force of magnitude $F$.}
+	\label{fig:fig3_2}
+\end{figure}
+\item
+Exercise 3.3\\
+Consider a straight bar AB clamped rigidly by a wall as shown in Fig.\ref{fig:fig3_3}.
+Determine the reaction forces and moment at the fixed end A  when 
+a point force of magnitude $F$ is applied obliquely to the right end B of the bar.  
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3_3.eps} 
+	\end{center}
+	\caption{A bar AB connected to a fixed support. 
+	An oblique load of magnitude $F$ is applied to the right end of the bar.} 
+	\label{fig:fig3_3}
+\end{figure}
+\item
+Exercise 3.4\\
+Examine the support conditions shown in Fig.\ref{fig:fig3_4}, and answer whether 
+all the reaction forces and moments may be determined using only the equilibrium equations. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.8\linewidth]{fig3_4.eps} 
+	\end{center}
+	\caption{A straight bar connected to (a)fixed supports, and (b) pinned supports.} 
+	\label{fig:fig3_4}
+\end{figure}
+\item
+Exercise 3.5\\
+Determine the reaction forces acting to the truss structures shown in Fig.\ref{fig:fig3_5} 
+due to the application of the external forces of magnitude $F$.
+\item
+Exercise 3.6\\
+Determine the axial forces generated in the truss structures shown in Fig.\ref{fig:fig3_5}
+by the externally applied forces of magnitude $F$.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=1.0\linewidth]{fig3_5.eps} 
+	\end{center}
+	\caption{Simply supported truss structures.} 
+	\label{fig:fig3_5}
+\end{figure}
+\end{itemize}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
