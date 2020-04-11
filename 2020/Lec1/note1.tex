@@ -4,7 +4,7 @@
 \usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
 %\setlength{\textwidth}{16.5cm}
-\setlength{\textwidth}{14.5cm}
+%\setlength{\textwidth}{14.5cm}
 \setlength{\textheight}{25.2cm}
 \newlength{\minitwocolumn}
 \setlength{\minitwocolumn}{0.5\textwidth}
@@ -26,7 +26,6 @@
 \newcommand{\spc}{\vspace{0.7\baselineskip}}
 \newcommand{\halfspc}{\vspace{0.3\baselineskip}}
 \bibliographystyle{unsrt}
-%\pagestyle{empty}
 \newcommand{\twofig}[2]
  {
    \begin{figure}
@@ -43,58 +42,42 @@
  }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vspace*{\baselineskip}
+\begin{flushright}
+	Civil Engineering I\\
+	April 23, 2020
+\end{flushright}
 \begin{center}
-	{\Large \bf Lecture Note 1 for Civil Engineering I \\ - an introduction to structural mechanics}  
+	{\Large \bf Lecture Note 1}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Review of Vector Algebra}
 \subsection{Scalar and vector quantites}
-A scalar is a quantity that has only a magnitude, while a vector has both magnitude(or length) and direction. The examples of frequently used scalar quantities in physics and engineering are mass, temperature, concentration, length, weight, and so on. It is sometimes useful to denote vectors by arrows typically when the geometrical relationship among vectors is of interest. In that situation, the length and orientation of the arrow indicate the magnitude and direction of the vector, respectively (see Fig.\ref{fig:fig1_1}). However, symbolic representations of vectors are more manipulative and convenient for rigorous discussion. 
+A scalar is a quantity that has only a magnitude, while a vector has both magnitude(or length) and direction. The examples of frequently used scalar quantities in physics and engineering are mass, temperature, concentration, length, weight, and so on. It is sometimes useful to denote vectors by arrows typically when the geometrical relationship among vectors is of interest. In that situation, the length and orientation of the arrow indicate the magnitude and direction of the vector, respectively (see Fig.\ref{fig:fig1}). However, symbolic representations of vectors are more manipulative and convenient for rigorous discussion. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.2\linewidth]{arrow.eps} 
 	\end{center}
 	\caption{A vector $\fat{a}$ shown graphically by an arrow.} 
-	\label{fig:fig1_1}
+	\label{fig:fig1}
 \end{figure}
+\subsection{Vector Identity}
 Two vectors $\fat{a}$ and $\fat{b}$ are considered identical 
-if their magnitude and direction are equal. In that case, we write $\fat{a}=\fat{b}$ regardless of their locations (see, Fig.\ref{fig:fig1_2}-(a)). For example, when two forces ($\fat{f}, \fat{g}$) of equal magnitude and direction are acting at two different locations on a body, $\fat{f}$ and $\fat{g}$ are considered mathematically identical although they are physically different forces (Fig.\ref{fig:fig1_2}-(b)). The exception of this rule is position vectors. The origin of position vectors are always taken at the origin of a predefined coordinate as illustrated in Fig.\ref{fig:fig1_2}-(c). The position vectors should be defined in this way since the correspondence between spatial points and position vectors must be one-to-one. 
+if their magnitude and direction are equal. In that case, we write $\fat{a}=\fat{b}$ regardless of their locations (see, Fig.\ref{fig:fig2}-(a)). For example, when two forces ($\fat{f}, \fat{g}$) of equal magnitude and direction are acting at two different locations on a body, $\fat{f}$ and $\fat{g}$ are considered mathematically identical although they are physically different forces (Fig.\ref{fig:fig2}-(b)). The exception of this rule is position vectors. The origin of position vectors are always taken at the origin of a predefined coordinate as illustrated in Fig.\ref{fig:fig2}-(c). The position vectors should be defined in this way since the correspondence between spatial points and position vectors must be one-to-one. 
 \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.7\linewidth]{identity.eps} 
     \end{center}
     \caption{(a),(b)Pairs of mathematically identical vectors. 
     (c) An illustration of position vectors.} 
-    \label{fig:fig1_2}
-\end{figure}
-\subsection{Vector Identity}
-Two vectors $\fat{a}$ and $\fat{b}$ are considered identical 
-if their magnitude and direction are equal.
-In that case, we write $\fat{a}=\fat{b}$ regardless of their locations(see, Fig.\ref{fig:fig1_2}-(a)). 
-For example, when two forces ($\fat{f}, \fat{g}$) of equal magnitude and direction 
-are acting to two different locations on a body, 
-$\fat{f}$ and $\fat{g}$ are considered mathematically identical although they 
-are physically different forces(Fig.\ref{fig:fig1_2}-(b)).
-The exception of this rule is position vectors. 
-The origin of position vectors are always taken at 
-the origin of a predefined coordinate as illustrated in Fig.\ref{fig:fig1_2}-(c).
-The position vectors should be defined in that way since the correspondance between 
-spatial points and position vectors must be one-to-one. 
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.7\linewidth]{identity.eps} 
-	\end{center}
-	\caption{(a),(b)Pairs of mathematically identical vectors. 
-	(c) An illustration of position vectors.} 
-	\label{fig:fig1_2}
+    \label{fig:fig2}
 \end{figure}
 \subsection{Basic algebraic operation on vectors}
-The most fundamental algebraic operations on vectors are (1) scalar mutiplication and (2) vector addition, which are introduced as follows.
+The most fundamental algebraic operations on vectors are (1)scalar mutiplication and (2)vector addition, which are introduced as follows.
 \subsubsection{Scalar multiplication}
 A multiplication between a scalar $s$ and a vector $a$ is called "scalar multiplication", and is written as $s\fat{a}$. For $s>0$, scalar multiplication $s\fat{a}$ strecthes (compresses) $\fat{a}$ 
-by $s$ times if $s \geq 1 (s<1)$ without changing the direction(see Fig.\ref{fig:fig1_3}-(a) and (b)).
+by $s$ times if $s \geq 1 (s<1)$ without changing the direction(see Fig.\ref{fig:fig3}-(a) and (b)).
 When $s<0$, the scalar multiplication first reverses the directoin and then stretches or compresses 
-$\fat{a}$ by $|s|$ times (see Fig.\ref{fig:fig1_3}-(c) and (d)).
+$\fat{a}$ by $|s|$ times (see Fig.\ref{fig:fig3}-(c) and (d)).
 The followings are obvious consequences of the definition of scalar multiplication. 
 \begin{itemize}
 \item 
@@ -104,13 +87,14 @@ The followings are obvious consequences of the definition of scalar multiplicati
 \item
     (st)\fat{a}=s(t\fat{a}),
 \end{itemize}
-where $s$ and $t$ are arbitrary scalars. 
+where $s$ and $t$ are arbitrary scalars, and $\fat{0}$ means the vector of zero length.
+For $s=-1$, we write the scalar multiplication $-1\fat{a}$ simply as $-\fat{a}$.
 \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.7\linewidth]{smul.eps} 
     \end{center}
     \caption{The results of scalar multiplications $s\fat{a}$ dependent on the scalar $s$.} 
-    \label{fig:fig1_3}
+    \label{fig:fig3}
 \end{figure}
 \subsubsection{Vector addition}
 Vector addition is an operation that produces a new vector 
@@ -127,12 +111,12 @@ by connecting a pair of vectors. If we let $\fat{a}$ and $\fat{b}$ be two arbitr
     s(\fat{a}+\fat{b})=s\fat{a}+s\fat{b}
     \label{eqn:dist_vec}
 \end{equation}
-Note that vector addition is "commutative" because 
+Note that vector addition is "commutative" because Fig.\ref{fig:fig4}-(a) is showing that
 \begin{equation}
     \fat{a}+\fat{b}=\fat{b}+\fat{a}
     \label{eqn:cmmt_vec_add}
 \end{equation}
-always holds true. This means the order of summation can be exchanged. We can add more than two vectors by repeating the pairwise vectors addition. For example, we can perform summation of three vectors either by 
+always holds true. This means the order of summation can be exchanged. We can add more than two vectors by repeating the pairwise vectors addition. For example, we may add three vectors either by 
 \[
     \fat{a}+\left( \fat{b}+\fat{c} \right),
 \]
@@ -147,13 +131,18 @@ We can prove graphically that the additions above result in a same vector. Hence
     \left( \fat{a}+\fat{b} \right) + \fat{c}.
     \label{eqn:assct_vadd}
 \end{equation}
+It is not necessary to define a vector subtraction $\fat{a}-\fat{b}$ separately. 
+Rather, we write the vector sum $\fat{a}+(-\fat{b})$ as $\fat{a}-\fat{b}$.
+This is natural and valid since the scalar multiplication and vector addition we have defined ensure that 
+$\fat{a}+(-\fat{b})+\fat{b}=\fat{a}$. 
+A geometrical interpretation of the subtraction is shown in Fig.\ref{fig:fig4}-(b).   
 \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.6\linewidth]{vadd.eps} 
     \end{center}
     \caption{(a) Vector addition $\fat{a}+\fat{b}$ and 
     (b) Vector subtraction $\fat{a}-\fat{b}$.} 
-    \label{fig:1_4}
+    \label{fig:fig4}
 \end{figure}
 %
 \subsection{Inner product} 
@@ -163,19 +152,19 @@ and is defined by
     \fat{a}\cdot\fat{b}=|\fat{a}||\fat{b}|\cos\theta
     \label{eqn:idot_def}
 \end{equation}
-where $\theta$ is the angle between $\fat{a}$ and $\fat{b}$ (see Fig.\ref{fig:fig1_5}-(a)). The inner product is commutative that the order of multiplication can be changed.
+where $\theta$ is the angle between $\fat{a}$ and $\fat{b}$ (see Fig.\ref{fig:fig5}-(a)). The inner product is commutative that the order of multiplication can be changed.
 \begin{equation}
     \fat{a}\cdot\fat{b}
     =
     \fat{b}\cdot\fat{a}, 
-    \label{eqn:}
+    \label{eqn:ab_ba}
 \end{equation}
 Moreover, the operation is lnear in the following sense.
 \begin{equation}
     \left(s\fat{a}+t\fat{b}\right)\cdot\fat{c}
     =
     s(\fat{a}\cdot\fat{c})+t(\fat{b}\cdot \fat{c})
-    \label{eqn:}
+    \label{eqn:a_dot_b_lin}
 \end{equation}
 Numerically, the inner product can either be positive or negative depending on the angle $\theta$.
 \begin{equation}
@@ -190,26 +179,29 @@ Numerically, the inner product can either be positive or negative depending on t
     .
     \label{eqn:}
 \end{equation}
-However, the inner product between $\fat{a}$ and itself is always greater than or equal to zero. Hence, 
+The inner product between $\fat{a}$ and itself is always greater than or equal to zero. Hence, 
 \begin{equation}
     \fat{a}\cdot \fat{a}=\left| \fat{a} \right|^2 \geq 0, 
     \label{eqn:a_dot_a}
 \end{equation}
- and the equality holds if an only if $\fat{a}=\fat{0}$. When $\fat{a}\cdot\fat{b}=0$, that is when $\theta=\pm \pi/2$, $\fat{a}$ and $\fat{b}$ are said to be mutually orthogonal. The inner prodocut of unit vectors are often of particluar interest. If $\fat{a}$ is a unit vector, $\fat{a}\cdot\fat{b}$ gives a projection 
-of $\fat{b}$ to the line colinear to $\fat{a}$ (see Fig.\ref{fig:fig1_5}-(b)). 
+ and the equality holds if an only if $\fat{a}=\fat{0}$. When $\fat{a}\cdot\fat{b}=0$, 
+ that is when $\theta=\pm\frac{\pi}{2}$, $\fat{a}$ and $\fat{b}$ are said to be mutually orthogonal. The inner prodocut of unit vectors are often of particluar interest. If $\fat{a}$ is a unit vector, $\fat{a}\cdot\fat{b}$ gives a projection 
+of $\fat{b}$ to the line colinear to $\fat{a}$ (see Fig.\ref{fig:fig5}-(b)). 
 \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.4\linewidth]{iprod.eps} 
     \end{center}
     \caption{The angle $\theta$ formed by vectors $\fat{a}$ and $\fat{b}$. 
     (b) A projection of $\fat{b}$ to the line colinear to a unit vector $\fat{a}$.} 
-    \label{fig:fig1_5}
+    \label{fig:fig5}
 \end{figure}
 %
 %%%%%%%%%%%%
 \subsection{Vector components}
 When performing a vector algebra, we almost always decompose the vectors into components. For vector decomposition, it is convenient to introduce a coordinate system. Among a variety of different coordinate systems, Cartesian coordinates are by far the most fundamental and convenient.
-If we place our vector in a Cartesian coordinate space so that the origin of the vector comes to the coordinate origin, we can determine the coordinates a point that the vector is pointing at. In Fig.\ref{fig:fig1_7}, Cartesian coordinate systems in 2 and 3 dimensional spaces are illustrated with the coordinates $(a_x,a_y)$ and $(a_x,a_y,a_z)$ at the head of the vector $\fat{a}$.  Since the correspondence between the coordinates and the vector is one-to-one, we can identify the vector with the coordinates. Thus, we write a vector in 2D space as 
+If we place our vector $\fat{a}$ in a Cartesian coordinate space so that the origin of the vector comes 
+to the coordinate origin, we can determine the coordinates of the spatial point $P$ that $\fat{a}$ is pointing at. 
+In Fig.\ref{fig:fig6}, Cartesian coordinate systems in 2 and 3 dimensional spaces are illustrated with the coordinates $(a_x,a_y)$ and $(a_x,a_y,a_z)$ at the head of the vector $\fat{a}$.  Since the correspondence between the coordinates and the vector is one-to-one, we can identify the vector with the coordinates. Thus, we write a vector in 2D space as 
 \[
     \fat{a}=(a_x, a_y) \ {\rm or} 
     \
@@ -243,7 +235,7 @@ and
     |\fat{a}|^2=a_x^2+a_y^2+a_z^2
     \label{eqn:}
 \end{equation}
-hold. Moreover, we can readily verify in Fig.\ref{fig:fig1_7} that 
+hold. Moreover, we can readily verify in Fig.\ref{fig:fig6} that 
 \begin{equation}
     \fat{a}=\fat{a}_x+\fat{a}_y+\fat{a}_z
     \label{eqn:dcmp}
@@ -256,17 +248,17 @@ holds. This means $\fat{a}$ can be decomposed into components. If we use a set o
 In this sence, the coordinates $a_x, a_y$ and $a_z$ are also called vector components. More specifically, $a_x, a_y$ and $a_z$ are called $x, y$ and $z$ components, respectively.
 \begin{figure}[h]
     \begin{center}
-    \includegraphics[width=0.5\linewidth]{components.eps} 
+    \includegraphics[width=0.6\linewidth]{components.eps} 
     \end{center}
     \caption{Cartesian coordinates and vector components.} 
-    \label{fig:fig1_7}
+    \label{fig:fig6}
 \end{figure}
 \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.3\linewidth]{eprod_xyz.eps} 
     \end{center}
     \caption{Basis vectors $\fat{e}_1, \fat{e}_2$ and $\fat{e}_3$ for an $xyz$ Cartesian coordinate.} 
-    \label{fig:fig1_9}
+    \label{fig:fig7}
 \end{figure}
 %
 \subsection{Componentwise operations}
@@ -276,7 +268,7 @@ If we decompose vectors into components in a Cartesian coordinate system, the ve
     \fat{b}=\left(b_x, b_y \right).
     \label{eqn:}
 \end{equation}
-Then, the inspection of Fig\ref{fig:vadd_cmp} reveals that  
+Then, the inspection of Fig\ref{fig:fig8} reveals that  
 the scalar multiplication and the vector additon can be 
 performed component by component as follows.
 \begin{equation}
@@ -318,7 +310,7 @@ performed component by component as follows.
     \label{eqn:}
 \end{equation}
 
-The inner product can also be replaced by a componentwise operation. To derive the component-based formula for the inner product, we recall that the law of cosine for the vectors depicted in Fig.\ref{fig:fig1_5}-(a), which is written as 
+The inner product can also be replaced by a componentwise operation. To derive the component-based formula for the inner product, we recall that the law of cosine for the vectors depicted in Fig.\ref{fig:fig5}-(a), which is written as 
 \begin{equation}
     \left| \fat{a}-\fat{b}\right|= 
     |\fat{a}|^2+|\fat{b}|^2
@@ -388,7 +380,7 @@ We then conclude
 because 
 \begin{equation}
     s\fat{a}= s \left(a_1\fat{e}_1+ a_2\fat{e}_2+ a_3\fat{e}_3\right)
-    =sa_1\fat{e}_1+ sa_2\fat{e}_2+ sa_3\fat{e}_3
+	=(sa_1)\fat{e}_1+ (sa_2)\fat{e}_2+ (sa_3)\fat{e}_3
     \label{eqn:}
 \end{equation}
 results from eq.(\ref{eqn:dist_vec}). The vector addition can also be reduced to a componentwise operation:
@@ -436,7 +428,8 @@ since
     (a_3+b_3)\fat{e}_3
     \label{eqn:}
 \end{eqnarray}
-follows from the associativity (\ref{eqn:assct_vadd}). Finally, the commutativity (\ref{eqn:}) and linearlity (\ref{eqn:}) allow us to expand the inner product of the vector sum as 
+follows from the associativity (\ref{eqn:assct_vadd}). 
+Finally, the commutativity (\ref{eqn:ab_ba}) and linearlity (\ref{eqn:a_dot_b_lin}) allow us to expand the inner product of the vector sum as 
 \begin{equation}
     \fat{a}\cdot\fat{b}=
     \left(a_1\fat{e}_1+ a_2\fat{e}_2+ a_3\fat{e}_3 \right)
@@ -458,9 +451,10 @@ A majority of the inner products on the right hand side of eq.(\ref{eqn:iprod_3d
     \right.
     \label{eqn:ON_cond}.
 \end{equation}
-From eqs.(\ref{eqn:iprod_3d}) and (\ref{eqn:ON_cond}), we obtain a desired component-based formula for the inner product in 3D space as 
+From eqs.(\ref{eqn:iprod_3d}) and (\ref{eqn:ON_cond}), we obtain the component-based formula 
+for the inner product in 3D space as 
 \begin{equation}
-    \fat{a}\cdot\fat{b}= a_1b_1+a_2b_2+a_3b_3a.
+    \fat{a}\cdot\fat{b}= a_1b_1+a_2b_2+a_3b_3.
     \label{eqn:}
 \end{equation}
 \begin{figure}[h]
@@ -468,7 +462,7 @@ From eqs.(\ref{eqn:iprod_3d}) and (\ref{eqn:ON_cond}), we obtain a desired compo
     \includegraphics[width=0.7\linewidth]{vadd_cmp.eps} 
     \end{center}
     \caption{Scalar multiplication and vector addition in terms of vector components .} 
-    \label{fig:fig1_8}
+    \label{fig:fig8}
 \end{figure}
 %
 \subsection{Vector Cross Product} 
@@ -503,12 +497,23 @@ forms a right-handed system. Note that eq.(\ref{eqn:asym}) implies
     \fat{a}\times \fat{a}=\fat{0}, 
     \label{eqn:}
 \end{equation}
-and eqs.(\ref{eqn:asym}) and \ref{eqn:ortho} imply 
+and eqs.(\ref{eqn:asym}) and (\ref{eqn:ortho}) imply 
 \begin{equation}
     \left(\fat{a}\times\fat{b}\right)\cdot\fat{b} =0. 
     \label{eqn:ortho_b}
 \end{equation}
-In Fig.\ref{fig:fig1_6}, the geometrical configuration of $\fat{a}\times\fat{b}$ relative to $\fat{a}$ and $\fat{b}$ is shown. As shown in this figure, the cross product is orthogonal to both $\fat{a}$ and $\fat{b}$ as stated in eqs.(\ref{eqn:ortho}) and (\ref{eqn:ortho_b}). In other words, $\fat{a}\times \fat{b}$ is perpendicular to the pararellogram formed by $\fat{a}$ and $\fat{b}$. In Fig.\ref{fig1_6}, the direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) forms a right-handed system, while the length is determined according to eq.(\ref{eqn:area}). As indicated in Fig.\ref{fig:fig1_6}, the vector length given by eq.(\ref{eqn:}) is equal to the area $S$ of the parallelogram spanned by $\fat{a}$ and $\fat{b}$. The equality $S=|\fat{a}\times \fat{b}|$ becomes more obvious if we plug eq.(\ref{eqn:idot_def}) into eq.(\ref{eqn:area}) to have the alternative expression for eq.(\ref{eqn:area}). 
+In Fig.\ref{fig:fig9}, the geometrical configuration of $\fat{a}\times\fat{b}$ 
+relative to $\fat{a}$ and $\fat{b}$ is shown. 
+The cross product is orthogonal to both $\fat{a}$ and $\fat{b}$ as stated in eqs.(\ref{eqn:ortho}) 
+and (\ref{eqn:ortho_b}). In other words, $\fat{a}\times \fat{b}$ is perpendicular to 
+the pararellogram formed by $\fat{a}$ and $\fat{b}$. In Fig.\ref{fig9}, 
+the direction of $\fat{a}\times\fat{b}$ is chosen so that the tuple (\ref{eqn:vtuple}) 
+forms a right-handed system, while the length is determined according to eq.(\ref{eqn:area}). 
+As indicated in Fig.\ref{fig:fig9}, the vector length given by eq.(\ref{eqn:area}) 
+is equal to the area $S$ of the parallelogram spanned by $\fat{a}$ and $\fat{b}$. 
+The equality $S=|\fat{a}\times \fat{b}|$ becomes evident if we plug 
+eq.(\ref{eqn:idot_def}) into eq.(\ref{eqn:area}) to have the alternative expression 
+for eq.(\ref{eqn:area}). 
 \begin{equation}
     \left|\fat{a}\times \fat{b} \right|^2
     =
@@ -537,7 +542,7 @@ From the foregoing discussion, we can verify that a vector cross product between
     -\fat{e}_1 \times  \fat{e}_3=\fat{e}_2,
     \label{eqn:e3xe1}
 \end{equation}
-The cross products in eqs.(\ref{eqn:e1xe2})-(\ref{eqn:e3xe1}) may be used conveniently in deriving a component-based formula for the cross product of arbitrary vectors. To see this, we write arbitrary vectors $\fat{a}$ and $\fat{b}$ as
+The cross products in eqs.(\ref{eqn:e1xe2})-(\ref{eqn:e3xe1}) may be used in deriving a component-based formula for the cross product of arbitrary vectors. To see this, we write arbitrary vectors $\fat{a}$ and $\fat{b}$ as
 \begin{equation}
     \fat{a}=
     a_1\fat{e}_1 + a_2\fat{e}_2 + a_3\fat{e}_3, \ \ 
@@ -545,7 +550,7 @@ The cross products in eqs.(\ref{eqn:e1xe2})-(\ref{eqn:e3xe1}) may be used conven
     b_1\fat{e}_1 + b_2\fat{e}_2 + b_3\fat{e}_3,
     \label{eqn:}
 \end{equation}
-and consider expanding the following dual summation in terms of the basis vectors.
+and consider expanding the following dual summation:
 \begin{equation}
     \fat{a}\times \fat{b} = 
     \sum_{i=1}^3
@@ -553,9 +558,10 @@ and consider expanding the following dual summation in terms of the basis vector
     a_ib_j \left(\fat{e}_i\times \fat{e}_j\right) 
     \label{eqn:cross_ab}
 \end{equation}
+in terms of the basis vectors.
 Retaining non-vanishing cross products in eq.(\ref{eqn:cross_ab}), we obtain
 \begin{equation}
-    \fat{a}\times \fat{b} = 
+    \fat{a}\times \fat{b} 
     =
     (a_2b_3-a_3b_2)\fat{e}_1
     +
@@ -601,7 +607,7 @@ We have thus obtained a component-based formula (\ref{eqn:cross_ab_cmp}) for $\f
     \end{center}
     \caption{Gemetrical configuration of a vector cross product 
     $\fat{a}\times\fat{b}$ relative to $\fat{a}$ and $\fat{b}$.} 
-    \label{fig:fig1_6}
+    \label{fig:fig9}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Newton's laws of motion}
@@ -667,7 +673,7 @@ A branch of mechanics that studies time-varying motion and/or deformation of mat
 \item
     For vectors $\fat{a}$ and $\fat{b}$ shown in Fig.\ref{fig:fig1_1}, 
     obitan $\fat{a}+\fat{b}$ and $\left| \fat{a}+\fat{b} \right|$ 
-    by the component-based method when $|\fat{a}|=1$ and $|\fat{b}|=2$. Also, obtain $|\fat{a}+\fat{b}|$ numerically.
+    by the component-based method when $|\fat{a}|=1$ and $|\fat{b}|=2$. 
     \begin{figure}
         \begin{center}
         \includegraphics[width=0.3\linewidth]{fig1_1.eps} 
@@ -809,7 +815,7 @@ Thus we can conclude
     using graphic representation of vectors. 
     (Draw arrows to represent $\fat{a},\fat{b}$ and $\fat{c}$. THen verify \ref{eqn:sprb1} holds.)
 \item
-    For unit vectors shown in Fig.\ref{fig:fig1_5}, obtain $\fat{a}+\fat{b}+\fat{b}$.  
+    For unit vectors shown in Fig.\ref{fig:fig_5}, obtain $\fat{a}+\fat{b}+\fat{c}$.  
     \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.3\linewidth]{fig1_5.eps} 
