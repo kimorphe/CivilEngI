@@ -1,7 +1,7 @@
 \documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
 %\setlength{\textwidth}{16.5cm}
 %\setlength{\textwidth}{14.5cm}
@@ -617,7 +617,7 @@ Newton discovered the governing laws for the motion of planetary bodies. The thr
     \item Conservation of linear momentum
     \item The law of action and reaction,
 \end{enumerate}
-which are collectively known as Newton's laws of motion. We can state the essence of the three laws as follows. 
+which are known as Newton's laws of motion. The essence of the three laws are
 \begin{enumerate}
 \item 
     There exists a coordinate system in which we observe that bodies continue to move at a given velocity if no force is exerted to them. Such a coordinate system is called an "inertia system".
@@ -626,10 +626,15 @@ which are collectively known as Newton's laws of motion. We can state the essenc
 \item
     If two bodies are exercising forces each other, the forces applied from one body to the other are equal in magnitude and opposite in direction.
 \end{enumerate}
-In his effort of understanding the planetary motion, Newton modeled the planetary bodies as mass points neglecting the size of the bodies. Since his days, researchers have extended Newton's mechanics in many respects. As a result, Newton's mechanics have found hugely diverse applications ranging from continuum-based fluid and solid mechanics to discrete particle-based mechanics such as molecular and colloidal dynamics. Importantly, the three principles have not been modified despite the considerable extensions, which is why we first have to state Newton's law and make it clear that we will derive everything from the fundamental principles whenever possible. 
-\\
- 
-Among the three laws, we do not dwell upon the 1st law in developing structural mechanics theory. This is because we shall study time-independent problems to which a natural and useful inertia system always exists. The primary interests are hence in the 2nd and 3rd laws. To state the 2nd law more rigorously, let $m$ be the mass, and let $\fat{v}$ and $\fat{f}$ be the velocity and the force, respectively. Then the linear momentum is given by $m\fat{v}$, and we can formulate the 2nd law as 
+In his effort of understanding the planetary motion, Newton modeled the planetary bodies as mass points neglecting the size of the bodies. Since his days, researchers have extended Newton's mechanics in many respects. 
+As a result, Newton's mechanics have found hugely diverse application areas that ranges 
+from the continuum-based fluid and solid mechanics to the discrete particle-based mechanics 
+such as molecular and colloidal dynamics. Importantly, the three principles have not been 
+modified despite the considerable extensions. This is why we first have to look at 
+Newton's laws in learning structural mechanics.
+Among the three laws, however, we do not dwell upon the 1st law. 
+This is because we shall study time-independent problems to which a natural and useful inertia system always exists. 
+The primary interests are therefore in the 2nd and 3rd laws. To state the 2nd law more rigorously, let $m$ be the mass, and let $\fat{v}$ and $\fat{f}$ be the velocity and the force, respectively. Then the linear momentum is given by $m\fat{v}$, and we can formulate the 2nd law as 
 \begin{equation}
     \fat{f}=\frac{d}{dt}\left(m\fat{v}\right)
     \label{eqn:2nd_law}
@@ -648,32 +653,44 @@ Therefore, eq.(\ref{eqn:2nd_law}) may be written as
     \fat{f}=m \frac{d\fat{v}}{dt}=m\fat{\alpha}, \ \ \left(\alpha=\frac{d\fat{v}}{dt}\right)
     \label{eqn:eq_mot}
 \end{equation}
-where $\fat{\alpha}$ is the acceleration. Equation (\ref{eqn:eq_mot}) is often called "equation of motion". When $\fat{f}=\fat{0}$, eq.(\ref{fig:2nd_law}) is reduced to \begin{equation}
+where $\fat{\alpha}$ is the acceleration. Equation (\ref{eqn:eq_mot}) is often called "equation of motion". When $\fat{f}=\fat{0}$, eq.(\ref{eqn:2nd_law}) is reduced to 
+\begin{equation}
     \frac{d}{dt}\left(m\fat{v}\right)=\fat{0} \ \ \Rightarrow \ \ 
     m\fat{v}=const.
     \label{eqn:mv_cnst}
 \end{equation}
 In this case, the linear momentum does not chage over time. 
-This is the reason why the 2nd law is referred to as the conservation law of linear momentum. On the other hand, if we're investigating a time-independent motion, the force in eq.(\ref{eqn:2nd_law}) vanishes to reduce the equation of motion to the following. 
+This is the reason why the 2nd law is referred to as the conservation law of linear momentum. 
+If we're investigating a time-independent motion, the time derivative in eq.(\ref{eqn:2nd_law}) vanishes 
+to have the following. 
 \begin{equation}
     \fat{f}=\fat{0}.
     \label{eqn:equiv0}
 \end{equation}
 It seems that eq.(\ref{eqn:equiv0}) is a trivial relation of no use. 
-When multiple forces are acting to the body, $\fat{f}$ is understood as the sum of all forces. To address this issue more explicitly, let the forces applied to the body be $\fat{f}_1, \fat{f}_2,\dots \fat{f}_n$, then eq.(\ref{eqn:equiv0}) is written more appropriately as 
+When multiple forces are acting to the body, $\fat{f}$ is understood as the sum of all forces. 
+To address this point, let the forces applied to the body be $\fat{f}_1, \fat{f}_2,\dots \fat{f}_n$. 
+Then eq.(\ref{eqn:equiv0}) is written more appropriately as 
 \begin{equation}
     \sum_{i=1}^n\fat{f}_i=\fat{0},
     \label{eqn:equiv}
 \end{equation}
 Equation (\ref{eqn:equiv}) is called an "equilibrium equation" or "equilibrium condition". 
 \section{Dynamics and statics}
-A branch of mechanics that studies time-varying motion and/or deformation of materials is called "dynamics". Dynamics is one of the key building blocks of such engineering fields as vibration, acoustics, wind, and earthquake engineering. The other branch of mechanics is called "statics", which studies the action of forces to materials and structures in static equilibrium. A narrowly defined structural mechanics is fallen into the latter category. A structural mechanics dedicated to the analysis of structural vibration is specifically called structural dynamics. In this class, we will learn elementary techniques for the analysis of externally loaded structures in static equilibrium. This class is therefore concerned with a "static" structural mechanics for which the 2nd law of eq.(\ref{eqn:3rd_law}) and the 3rd (\ref{eqn:3rd_law}) law serve as the fundamental principles. 
+A branch of mechanics that studies time-varying motion and/or deformation of materials is called "dynamics". 
+Dynamics is one of the key building blocks of such engineering fields as vibration, acoustics, wind, and earthquake engineering. 
+The other branch of mechanics is called "statics", which studies the action of forces to materials and structures in static equilibrium. 
+Narrowly defined structural mechanics fallen into the latter category. 
+A structural mechanics dedicated to the analysis of structural vibration is specifically called structural dynamics. 
+In this class, we will learn elementary techniques for the analysis of externally loaded structures 
+in static equilibrium. This class is therefore concerned with a "static" structural mechanics for which the 2nd law of eq.(\ref{eqn:equiv})
+ and the 3rd law (\ref{eqn:3rd_law}) serve as the fundamental principles.  
 \section{Solved Problems}
 \begin{enumerate}
 \item
     For vectors $\fat{a}$ and $\fat{b}$ shown in Fig.\ref{fig:fig1_1}, 
     obitan $\fat{a}+\fat{b}$ and $\left| \fat{a}+\fat{b} \right|$ 
-    by the component-based method when $|\fat{a}|=1$ and $|\fat{b}|=2$. 
+    by the component-based method when $|\fat{a}|=1$ and $|\fat{b}|=2$. \\
     \begin{figure}
         \begin{center}
         \includegraphics[width=0.3\linewidth]{fig1_1.eps} 
@@ -700,7 +717,7 @@ A branch of mechanics that studies time-varying motion and/or deformation of mat
         \left( \frac{1}{\sqrt{2}}+\sqrt{3}\right)^2
         \right\}^{1/2}
         =
-        \frac{\sqrt{11-2\sqrt{2}+4\sqrt{3}}}{2}.
+		\sqrt{5-\sqrt{2}+\sqrt{6}}.
     \]
     }
 \item
@@ -718,7 +735,7 @@ A branch of mechanics that studies time-varying motion and/or deformation of mat
     \end{figure}
 
     {\small
-        By sliding vectors $\fat{b}$ and $\fat{c}$ as shown in Fig.\ref{fig:fig}, we can verify that the three vectors form a closed path. This means $\fat{a}+\fat{b}+\fat{c}=\fat{0}$. You may, otherwise, introduce a Cartesian coordinate, and show that the componentwise vector addtion results in zero vector. 
+        By sliding vectors $\fat{b}$ and $\fat{c}$ as shown in Fig.\ref{fig:fig1_2ans}, we can verify that the three vectors form a closed path. This means $\fat{a}+\fat{b}+\fat{c}=\fat{0}$. You may, otherwise, introduce a Cartesian coordinate, and show that the componentwise vector addtion results in zero vector. 
     }
     \begin{figure}[h]
         \begin{center}
@@ -750,31 +767,39 @@ with $|\fat{f}_1|=F$. Determine the direction and magnitude of the total force a
         \[
             f_{zi}=F\gamma^{i-1}, (i=1,2,\dots).
         \]
-  Then, the first $n$ terms of $f_{zi}$ can be summed explicitly as  
+  The first $n$ terms of $f_{zi}$ can be summed explicitly as  
         \[
             \sum_{i=1}^n f_{zi}=F\sum_{i=1}^n\gamma^{i-1}=F\frac{1-\gamma^n}{1-\gamma} >0
         \]
         where a positive vertical component means a donward force.
-        Letting $n\rightarrow \infty$, we obtain the magnitude of the total force $\sum_{i=1}^\infty \fat{f}_i$ 
+        Letting $n\rightarrow \infty$, we obtain the magnitude of the downward total force 
+	$\sum_{i=1}^\infty \fat{f}_i$ 
         as follows. 
         \[
-            \left| \sum_{i=1}^\infty \fat{f}_i \right| =\frac{F}{1-\gamma}=10F
+            \left| \sum_{i=1}^\infty \fat{f}_i \right| =
+	    \sum_{i=1}^\infty \fat{f}_{zi}=
+	    \frac{F}{1-\gamma}=10F >0
         \]
+	The positivity $\sum f_{zi}>0$ means the total force is directed downward. 
     }
 \item
-    Suppose that weight is hung from a ceiling by a string AB as shown in Fig.\ref{fig:fig1_4}-(a). Determine the magnitude of the horizontal force $F$ required to hold the weight as shown in Fig.\ref{fig:fig1_4}-(b).  Note that $m$ is mass and $g$ is the gravity constant. \\
+    Suppose that a weight is hanging from a ceiling by a string AB as shown in Fig.\ref{fig:fig1_4}-(a). 
+    Determine the magnitude of the horizontal force $F$ required to hold the weight as shown 
+    in Fig.\ref{fig:fig1_4}-(b). In this figure, the mass and the gravity constant are denoted 
+    by $m$ and $g$, respectively. \\
     \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.6\linewidth]{fig1_4.eps} 
     \end{center}
-    \caption{A weight of mass $m$ hung from a ceiling by a string AB.} 
+    \caption{A weight hanging from a ceiling by a string.} 
     \label{fig:fig1_4}
     \end{figure}
 
     {\small
         Let the tensile forces acting in a string AC, DC and BC be 
         $\fat{T}_{AC}, \fat{T}_{DC}$ and $\fat{T}_{BC}$, respectively. 
-        In the $xy$ Cartesian coordinate shown in Fig.*, the tensile force vectors are written as follows.
+	In the $xy$ Cartesian coordinate shown in Fig.\ref{fig:fig1_4}-(b), 
+	the tensile force vectors are written as follows.
         \[
             \fat{T}_{AC}=|\fat{T}_{AC}|\left(-\cos\theta,\, -\sin\theta \right)
         \]
@@ -795,7 +820,7 @@ In terms of vector components, eq.(\ref{eqn:equivT}) is written as
             ,\ \ 
             -|\fat{T}_{AC}|\sin\theta+mg=0
             \label{eqn:}
-        \end{equation}.
+        \end{equation}
 Thus we can conclude
         \begin{equation}
             |\fat{T}_{AC}|=\frac{mg}{\sin\theta}, \ \ 
@@ -813,9 +838,9 @@ Thus we can conclude
     \label{eqn:sprb1}
     \end{equation}
     using graphic representation of vectors. 
-    (Draw arrows to represent $\fat{a},\fat{b}$ and $\fat{c}$. THen verify \ref{eqn:sprb1} holds.)
+		(Draw arrows to represent $\fat{a},\fat{b}$ and $\fat{c}$. Then verify eq.(\ref{eqn:sprb1}) holds.)
 \item
-    For unit vectors shown in Fig.\ref{fig:fig_5}, obtain $\fat{a}+\fat{b}+\fat{c}$.  
+    For the unit vectors shown in Fig.\ref{fig:fig1_5}, obtain $\fat{a}+\fat{b}+\fat{c}$.  
     \begin{figure}[h]
     \begin{center}
     \includegraphics[width=0.3\linewidth]{fig1_5.eps} 
@@ -850,13 +875,4 @@ Thus we can conclude
     \end{figure}
 \end{enumerate}
 \end{document}
-\item
-    Suppose that two weights of different mass ($m$ and $M$) are hung from a rigid ceiling as shown in Fig.\ref{fig:fig1_8}. Determine the ratio $M/m$ when the string BE is known to be tied horizontally and the weights and strings are in static equilibrium.
-    \begin{figure}[h]
-        \begin{center}
-        \includegraphics[width=0.45\linewidth]{fig1_8.eps} 
-        \end{center}
-        \caption{Two weights of different mass hung from a ceiling by perfectly flexible strings} 
-        \label{fig:fig1_8}
-    \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
