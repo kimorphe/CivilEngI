@@ -1,7 +1,8 @@
 note2.pdf: note2.dvi 
 	dvipdfmx -p a4 note2.dvi
 note2.dvi: note2.tex fig1.eps fig2_1.eps fig2_3.eps \
-	fig1.eps fig2.eps fig3.eps fig4.eps fig5.eps fig6.eps fig7.eps fig8.eps fig9.eps
+	fig1.eps fig2.eps fig3.eps fig4.eps fig5.eps fig6.eps fig7.eps fig8.eps fig9.eps \
+	fig4_1.eps fig6_1.eps
 	platex note2.tex
 fig1.eps: Figs/fig1.svgz
 	inkscape -z -f Figs/fig1.svgz -E fig1.eps
@@ -22,3 +23,8 @@ fig8.eps: Figs/fig8.svgz
 	inkscape -z -f Figs/fig8.svgz -E fig8.eps
 fig9.eps: Figs/fig9.svgz
 	inkscape -z -f Figs/fig9.svgz -E fig9.eps
+
+fig4_1.eps: Figs/fig4_1.svgz
+	inkscape -z -f Figs/fig4_1.svgz -E fig4_1.eps
+fig6_1.eps: Figs/fig6_1.svgz
+	inkscape -z -f Figs/fig6_1.svgz -E fig6_1.eps
