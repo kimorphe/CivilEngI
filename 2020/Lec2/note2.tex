@@ -253,60 +253,150 @@ because
 	\label{eqn:equib_Mp2}
 \end{equation}
 and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
-\section*{Excersises 2}
-\begin{itemize}
+\section{Solved Problems}
+\begin{enumerate}
 \item
-Exercise 2-1:\\
-Obtain moments with respect to points $P_1,P_2,\dots P_4$ due to the downward 
-vertical force $\fat{f}$ shown in Fig.\ref{fig:fig2_1} -(a).
+	Obtain the moments about $P_1,P_2,P_3$ and $P_4$ due to the vertical
+	force $\fat{f}$ shown in Fig.\ref{fig:fig4}.
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.35\linewidth]{fig4.eps} 
+		\end{center}
+		\caption{A vertical force of maginitude $F$ acting downward to a body.} 
+		\label{fig:fig4}
+	\end{figure}
+	\\
+
+	{\small
+		Let the pertpendicular distance from $A$ to $P_i$ be denoted as $h_i$ for $i=1,\dots 4$. 
+		Then, $h_i$ are given as 
+		\[
+			h_1=2h, \ h_2=r, \ h_3=0, \ h_4=h.
+		\]
+		The moment $M_i$ about $P_i$ is given by 
+		\[
+			M_i=\pm \left| \fat{f} \right| h_i= \pm Fh_i
+		\]	
+		where the sign is determined so that the counterclockwise momemt has a positive value.
+		Hence, the moments are given as
+		\[
+			M_1=-2Fr, \ M_2=-Fr, \ M_3=0, \ M_4=Fr.
+		\]
+	}
 \item
-Exercise 2-2:\\
-Obtain moments with respect to points $P_1,P_2,\dots P_4$ due to 
-the horizontal force $\fat{f}$ shown in Fig.\ref{fig:fig2_1}-(b). 
+	Obtain the moments about $P_1$ to $P_5$ due to the obliquely acting load $\fat{f}$ 
+	of magnitude $F$ as shown in Fig.\ref{fig:fig6}.
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.35\linewidth]{fig6.eps} 
+		\end{center}
+		\caption{A force of magnitude $F$ acting obliquely to a body.} 
+		\label{fig:fig6}
+	\end{figure}
+	\\
+	{\small
+		Let's denote the moment about $P_i$ as $M_i$ for $i=1,\dots 4$.
+		Since the line of action of $\fat{f}$ passes $P_1$, we have $M_1=0$.
+		If we note that $\overrightarrow{AP_2}$ is perpendicular to $\fat{f}$, 
+		we obtain $M_2$ as 
+		\[ 
+			M_2=F\times \overline{AP}_2=\sqrt{2}Fr
+		\].
+		To obtain $M_3$ and $M_4$, it is convenient to decompose $\fat{f}$ into 
+		the horizontal and vertical components as 
+		\[
+			\fat{f}=(f_x,f_y)=\frac{F}{\sqrt{2}}\left(1, -1\right).
+		\]
+		With $f_y$, $M_3$ and $M_4$ are evaluated as follows.
+		\[
+			M_3=+\left|f_y\right| \times \overline{A P_3}=\frac{Fr}{\sqrt{2}}
+		\]
+		\[
+			M_4=+\left|f_y \right| \times \overline{A P_4}=\sqrt{2}Fr
+		\]
+		The moments are all positive since $\fat{f}$ generates the counterclockwise moments 
+		with respect to $P_1$ to $P_4$.
+	}
 \item
-Exercise 2-3:\\
-Obtain moments with respect to points $P_2,P_3,\dots P_5$
-due to the load of magnitude $F$ acting obliquely to point $P_1$ 
-as shown in Fig.\ref{fig:fig2_2}-(a).
+	Determine the magnitude and the direction of the force $\fat{f}$ shown in 
+	Fig.\ref{fig:fig8} necessary to equilibrate the four forces acting to the bar.
+	Also, find if the total moment vanishes for the force thus determined.  
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.4\linewidth]{fig8.eps} 
+		\end{center}
+		\caption{A straight bar subjected to a set of forces.} 
+		\label{fig:fig8}
+	\end{figure}
+	\\
+
+	{\small
+		Let $F$ be the unknwon magnitude of $\fat{f}$, and write $\fat{f}$ with 
+		the vector component as 
+		\[
+			\fat{f}=F \left( -\cos\theta,\, \sin\theta \right)
+		\]
+		for the $xy$ Cartesian coordinate shown in Fig.\ref{fig:fig8}. 
+		Then, the equiribrium equations of the horizontal and vertical forces are 
+		given by 
+		\[
+			-F\cos\theta + 2[kgf]=0, \ \ 
+			F\sin\theta -1[kgf]-1[kgf]=0.
+		\]
+		to find 
+		\begin{equation}
+			F=2\sqrt{2} \,[{\rm kgf}], \ \ \theta=\frac{\pi}{4}
+			\label{eqn:ans3}
+		\end{equation}
+		For the force vector given by eq.(\ref{eqn:ans3}), we can show that the 
+		the sum of the moments vanishes.
+		For example, the total moment about $(x,y)=(0,0)$, that is the point where $\fat{f}$ 
+		is applied, is evaluated as  
+		\[
+			{\rm 1[kgf] \times 2[m] -1[kgf] \times 2[m]=0 [kgf] }
+		\]
+		since the horizontal and the oblique force $\fat{f}$ do not contribute to 
+		the moment about this point. We would conclude the same if 
+		regardless of the point for which the moments are evaluated. 	
+	}
+
+\end{enumerate}
+\section{Supplmentary Problems}
+\begin{enumerate}
 \item
-Exercise 2-4:\\
-Obtain moments with respect to points $P_1,P_2,\dots P_4$
- due to the force $\fat{f}$ acting obliquely to point $P_5$ as 
-		shown in Fig.\ref{fig:fig2_2}-(b).
+	Obtain moments with respect to points $P_1,P_2,\dots P_4$ due to 
+	the horizontal force $\fat{f}$ shown in Fig.\ref{fig:fig5}. 
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.35\linewidth]{fig5.eps} 
+		\end{center}
+		\caption{A horizontal force of magnitude $F$ acting to a body.} 
+		\label{fig:fig5}
+	\end{figure}
 \item
-Exercise 2-5:\\
-	Determine the magnitude of the force $\fat{f}$ shown in 
-	Fig.\ref{fig:fig2_3}-(a) that is necessary to equilibrate 
-	the bar both in terms of the force and moment. 
+	Obtain moments with respect to points $P_2,P_3,\dots P_5$
+	due to the load of magnitude $F$ acting obliquely to 
+	point $P_1$ as shown in Fig.\ref{fig:fig7}.
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.35\linewidth]{fig7.eps} 
+		\end{center}
+		\caption{A force of magnitude $F$ acting obliquely to a body.} 
+		\label{fig:fig7}
+	\end{figure}
 \item
-Exercise 2-6:\\
 	Calculate the total force and the total moments about $P_1, P_2,\dots P_5$, 
-	to show that the bar shown in Fig.\ref{fig:fig2_3}-(b) is in an equilibrium state 
+	to show that the bar shown in Fig.\ref{fig:fig9} is in an equilibrium state 
 	in terms of both the force and moment. 
 	Note that $F$ and $F/2$ are the magnitude of the downward and upward forces 
 	applied vertically to the bar, respectively.
-\end{itemize}
-\newpage
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.7\linewidth]{fig2_1.eps} 
-	\end{center}
-	\caption{Vertical and horizontal forces acting on a body.} 
-	\label{fig:fig2_1}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.7\linewidth]{fig2_2.eps} 
-	\end{center}
-	\caption{Forces acting obliquely to a body.} 
-	\label{fig:fig2_2}
-\end{figure}
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.8\linewidth]{fig2_3.eps} 
-	\end{center}
-	\caption{Straight bars subjected to a set of forces.} 
-	\label{fig:fig2_3}
-\end{figure}
+	\begin{figure}[h]
+		\begin{center}
+		\includegraphics[width=0.4\linewidth]{fig9.eps} 
+		\end{center}
+		\caption{A straight bar subjected to a set of forces.} 
+		\label{fig:fig9}
+	\end{figure}
+\end{enumerate}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
