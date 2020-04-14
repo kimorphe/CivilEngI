@@ -1,6 +1,7 @@
 \documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
+\usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
 %\setlength{\leftmargin}{1.5cm}
 %\setlength{\textwidth}{15.5cm}
@@ -186,6 +187,56 @@ reaction force is nonexistent.
 	\caption{Roller supports installed on immobile floor and wall.} 
 	\label{fig:fig8}
 \end{figure}
+\subsubsection{Simple support}
+When a bar is supported by a pin support at one end and by a roller 
+support by the other end, we say the bar is simply supported. 
+The combination of the roller and pin support is called simple support. 
+When a bar is simply supported, we can determine the reaction forces 
+from the equilibirium conditions for the force and moment. 
+To see this, consider a simply supported bar shown in Fig.\ref{fig:fig3_2}
+subjected to an angled load.
+The pin support at the left end applies both the vertical and horizontal reaction forces 
+since the motion except rotation is constrained at the left end.
+At the right end of the bar, the rotation and lateral motion are allowed.
+Only a vertical reaction force arises at the right end. 
+Fig.\ref{fig:fig3_1} shows the non-vanishing reaction forces with the external 
+force at the center of the bar. The diagram showing the forces acting to a body or 
+a portion of the body is called free body diagram. Fig.\ref{fig:fig3_1} is an example 
+of the free body diagram for a simply supported bar.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3_2.eps} 
+	\end{center}
+	\caption{A simply supported bar AC subjected to an oblique force of magnitude $F$.}
+	\label{fig:fig3_2}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.6\linewidth]{fig3_1.eps} 
+	\end{center}
+	\caption{
+		A free body diagram for a simply supported bar.
+		$F, H_A, V_A, V_C$ and $|\fat{f}|=F$ denote the magnitude of forces.
+	}
+	\label{fig:fig3_1}
+\end{figure}
+The equilbirium conditon for the moment about $A$ is 
+\[
+	-F\sin\frac{\pi}{4}\times \frac{l}{2} + V_C\times l =0,
+\]
+Thus we have $V_C=\frac{F}{2\sqrt{2}}$. The equilibrium of the horizontal force 
+gives us 
+\[
+	H=F\cos\frac{\pi}{4}=\frac{F}{\sqrt{2}}.
+\]
+Finally, the equilbirium of vertical forces requires 
+\[
+	F\sin\frac{\pi}{4} -(V_A+V_C)=0
+\]
+determines $V_A$ as 
+\[
+	V_A=\frac{F}{2\sqrt{2}}.
+\]
 \subsection{Pin Connection}
 Two or more truss members are usually connected either by a gasset plate or a hinge. 
 The former type of connection is called a rigid connection where as the latter 
@@ -230,44 +281,40 @@ This means that the truss members transmit only the axial forces
  As we will see, this simplifies the analyses of truss structures greatly. 
 \begin{figure}[h]
 	\begin{center}
-	\includegraphics[width=0.7\linewidth]{fig4.eps} 
+	\includegraphics[width=0.8\linewidth]{fig4.eps} 
 	\end{center}
 	\caption{Rigid and pin connections joining two truss members.} 
 	\label{fig:fig4}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
-	\includegraphics[width=0.7\linewidth]{fig5.eps} 
+	\includegraphics[width=0.8\linewidth]{fig5.eps} 
 	\end{center}
 	\caption{The axial force transmitted to a truss member.}
 	\label{fig:fig5}
 \end{figure}
 \subsection{Analysis of Truss Structure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.4\linewidth]{fig9.eps} 
+	\end{center}
+	\caption{A simply supported truss.} 
+	\label{fig:fig9}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.8\linewidth]{fig10.eps} 
+	\end{center}
+	\caption{(a) A free body diagram for a truss of Fig.\ref{fig:fig9}. 
+	(b) The forces acting to the nodal points.} 
+	\label{fig:fig10}
+\end{figure}
 \subsection{Solved Problems}
 \begin{enumerate}
 \item
 A straight bar AC of length $l$ is subjected to the forces of magnitude  
 $H_A, V_A, V_C$ and $|\fat{f}|=F$ as shown in Fig.\ref{fig:fig3_1}. 
 For given $F$, determine $H_A, V_A$ and $V_C$ assuming that the bar is in a static equilibrium.,
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.6\linewidth]{fig3_1.eps} 
-	\end{center}
-	\caption{A straight bar AC in a static equilibrium. 
-	$F, H_A, V_A, V_C$ and $|\fat{f}|=F$ denote the magnitude of applied forces.
-	}
-	\label{fig:fig3_1}
-\end{figure}
-\item
-A straight bar AC is supported statically as shown in Fig.\ref{fig:fig3_2}. 
-Determine the reaction forces from the supports at A and B. 
-\begin{figure}[h]
-	\begin{center}
-	\includegraphics[width=0.6\linewidth]{fig3_2.eps} 
-	\end{center}
-	\caption{A simply supported bar AC subjected to an oblique force of magnitude $F$.}
-	\label{fig:fig3_2}
-\end{figure}
 \item
 Consider a straight bar AB clamped rigidly by a wall as shown in Fig.\ref{fig:fig3_3}.
 Determine the reaction forces and moment at the fixed end A  when 
