@@ -277,8 +277,8 @@ to
 	\label{eqn:sec_forces}
 \end{equation}
 This means that the truss members transmit only the axial forces 
- if they are connected both ends by hinges.
- As we will see, this simplifies the analyses of truss structures greatly. 
+ if they are connected at both ends by hinges. As we will see, this 
+ greatly simplifies the analyses of truss structures. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig4.eps} 
@@ -293,7 +293,22 @@ This means that the truss members transmit only the axial forces
 	\caption{The axial force transmitted to a truss member.}
 	\label{fig:fig5}
 \end{figure}
+%
+%
 \subsection{Analysis of Truss Structure}
+One of the primary objectives of the analysis of truss structure is to determine 
+the axial forces in truss members generated due to  the extrnal load. 
+Evaluation of the axial forces is important because the excessive axial force leads to the 
+failure of the member and/or the structure.
+When a pin-connected truss is simply supported, the reaction forces from the supports and the 
+axial forces in the truss members can be determined from the equilbrium conditions of forces. 
+To obtain the axial forces, we're going to impose equilbrium conditions node by node.   
+There are two other approaches to this problem. However the node-by-node method is the simplest. 
+To study this approach, consider determining axial forces in the truss shown in 
+Fig.\ref{fig:fig9}. This is one of the simplest truss structures of all, but it can serve as a 
+canonical problem in learning the node-by-node method.\\ 
+
+
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{fig9.eps} 
@@ -301,35 +316,105 @@ This means that the truss members transmit only the axial forces
 	\caption{A simply supported truss.} 
 	\label{fig:fig9}
 \end{figure}
+The analysis of truss structure usually start with the identification of 
+external forces that act to the structure. 
+The external loads include reaction forces.  
+In the present problem, the horizontal force at node $C$ of magnitude $F$ 
+is the given external load.
+The reaction forces are not known, but we can determine them using 
+equilbrium conditions for the whole truss structure. To write the 
+equilbrium equations, we draw a free body diagram as shown in Fig.\ref{fig:fig9}-(a)
+where $H_A, V_A$ and $V_B$ are the horizontal or vertical component 
+of the reaction forces. The arrows in this figure indicate the direction of 
+forces when the vector componets take positive values. 
+With the foregoing notation, the equilbrium equations of the forces 
+and moment are written as
+\begin{equation}
+	F+H_A=0, \ \ V_A+V_B=0, \ \ -F\times l\sin\frac{\pi}{3}+V_B\times l=0.
+	\label{eqn:}
+\end{equation}
+Note that the total moment about $A$ has been considered in the third equation.
+Thus, we have 
+\begin{equation}
+	H_A=-F, \ \ V_A=-V_B=\frac{\sqrt{3}}{2}F
+	\label{eqn:}
+\end{equation}
+Once we have obtained every reaction force, we're ready to determine the axial forces. 
+For the analysis of the axial forces, it is convenient to enumerate the truss members as 
+shown in Fig.\ref{fig:fig8}-(a), and denote the axial forces of the $i$th truss member 
+as $N_i$ for $i=1,2$ and 3. Note that the tensile axial force is taken to be positive. 
+If a tensile axial force is acting to a truss member, then the truss member is 
+being pulled by the joints it is connected to. 
+In other words, the truss member under a tensile axial force is pulling 
+the joints at its end. This is a consequence of the law of action and reaction.
+In the present situation, body A is the truss member and body B is the joint connected to.
+To make things clearer, let's look at the truss member 1. The truss member 1 is connected 
+to node A and B. Therefore, it is pulling the nodes A and B together if $N_1>0$. 
+The same observation applies to the truss members 2 and 3. 
+Figure.\ref{fig:fig9}-(b) shows the forces that act to each node (joints) of the truss. 
+It should be noted that this figure depicts the forces acting to the node not the truss members.  
+Since the truss structure including its joints is at rest, the set of forces 
+applied to each joint must satisfy the equilbrium condition.
+By imposing the equilbrium conditions for horizontal and vertical forces node by node, 
+we can determine the axial forces. This procedure goes as follows.
+\begin{enumerate}
+\item
+	Node A: \\
+		The equilbrium equations of 
+	the horizontal and vertical forces are written respectively as 
+	\begin{equation}
+		N_1+H_A+N_2\cos\alpha=0, \ \ N_2\sin\alpha+V_A=0
+		\label{eqn:nodeA}
+	\end{equation}
+	where $\alpha=\frac{\pi}{3}$. Solving eq.(\ref{eqn:nodeA}), 
+	we have $N_1=\frac{F}{2}$ and $N_2=F$. 
+\item
+	Node B: \\
+	From the equilbrium equations:
+	\begin{equation}
+		N_1+N_3\cos\alpha=0, \ \ N_3\sin\alpha+V_B=0	
+		\label{eqn:nodeB}
+	\end{equation}
+	for node B, we obtain $N_1=\frac{F}{2}$ and $N_3=-F$.
+	We can verify that the axial force for member 1 from eq.(\ref{eqn:nodeA}) 
+	agrees with that from eq.(\ref{eqn:nodeB}).
+\item
+	Node C: \\
+	We have already determined all the axial forces. The equilbrium 
+	conditions for node C written as 
+	\begin{equation}
+		F-N_1\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0,
+		\label{eqn:nodeC}
+	\end{equation}
+	are redundant. However, we can verify that $N_1,N_2$ and $N_3$ we 
+	have obtained do satisfy eq.(\ref{eqn:nodeC}). 
+\end{enumerate}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig10.eps} 
 	\end{center}
 	\caption{(a) A free body diagram for a truss of Fig.\ref{fig:fig9}. 
-	(b) The forces acting to the nodal points.} 
+	(b) The forces exerted on the nodal points by the truss members.} 
 	\label{fig:fig10}
 \end{figure}
 \subsection{Solved Problems}
 \begin{enumerate}
 \item
-A straight bar AC of length $l$ is subjected to the forces of magnitude  
-$H_A, V_A, V_C$ and $|\fat{f}|=F$ as shown in Fig.\ref{fig:fig3_1}. 
-For given $F$, determine $H_A, V_A$ and $V_C$ assuming that the bar is in a static equilibrium.,
-\item
-Consider a straight bar AB clamped rigidly by a wall as shown in Fig.\ref{fig:fig3_3}.
-Determine the reaction forces and moment at the fixed end A  when 
-a point force of magnitude $F$ is applied obliquely to the right end B of the bar.  
+Consider a straight bar AB held by a fixed support as shown in Fig.\ref{fig:fig3_3}.
+Determine the reaction forces and reaction moment at the fixed end $A$ when 
+a point force of magnitude $F$ is applied obliquely to the right end $B$ 
+of the bar.  
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.6\linewidth]{fig3_3.eps} 
 	\end{center}
-	\caption{A bar AB connected to a fixed support. 
+	\caption{A bar connected to a fixed support. 
 	An oblique load of magnitude $F$ is applied to the right end of the bar.} 
 	\label{fig:fig3_3}
 \end{figure}
 \item
-Examine the support conditions shown in Fig.\ref{fig:fig3_4}, and answer whether 
-all the reaction forces and moments may be determined using only the equilibrium equations. 
+Examine the support conditions shown in Fig.\ref{fig:fig3_4}, and find whether 
+all the reaction forces and moments can be determined from the equilibrium equations. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig3_4.eps} 
@@ -338,11 +423,50 @@ all the reaction forces and moments may be determined using only the equilibrium
 	\label{fig:fig3_4}
 \end{figure}
 \item
-Determine the reaction forces acting to the truss structures shown in Fig.\ref{fig:fig3_5} 
-due to the application of the external forces of magnitude $F$.
+	Determine the reaction and axial forces acting to the simply supported 
+	truss shown in Fig.\ref{fig:13}.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.5\linewidth]{fig13.eps} 
+	\end{center}
+	\caption{A simply supported truss structure.} 
+	\label{fig:fig13}
+\end{figure}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=1.0\linewidth]{fig14.eps} 
+	\end{center}
+	\caption{(a)A free body diagram of the whole truss structure.
+	(b) Axial forces acting to the joints connected by hinges.} 
+	\label{fig:fig14}
+\end{figure}
+\end{enumerate}
+\subsection{Supplementary Problems}
+\begin{enumerate}
 \item
-Determine the axial forces generated in the truss structures shown in Fig.\ref{fig:fig3_5}
-by the externally applied forces of magnitude $F$.
+Consider a bar subjected to two angled forces as shown in Fig.\ref{fig:fig3_5}, and 
+determine the reaction forces and moment at the fixed support.
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.5\linewidth]{fig11.eps} 
+	\end{center}
+	\caption{A bar subjected to two angled forces of magnitude $F$.}
+	\label{fig:fig11}
+\end{figure}
+\item
+	Examine the bars shown in Fig.\ref{fig:fig12} under a vertical load 
+	of magnitude $F$, and answer whether the reaction forces and 
+	moment can be determined from the equilbrium conditions.
+	If the answer is positive, obtain the reaction forces and moment. 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=1.0\linewidth]{fig12.eps} 
+	\end{center}
+	\caption{Bars subjected to a vertical force of magnitude $F$.} 
+	\label{fig:fig12}
+\end{figure}
+\item
+Determine the reaction and axial forces acting to the truss structures shown in Fig.\ref{fig:fig3_5}.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig3_5.eps} 
