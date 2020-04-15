@@ -45,7 +45,7 @@
 %\vspace*{\baselineskip}
 \begin{flushright}
 	Civil Engineering I \\
-	April 30, 2020
+	May 7, 2020
 \end{flushright}
 \begin{center}
 	{\Large \bf Lecture Note 3 }
@@ -360,35 +360,44 @@ we can determine the axial forces. This procedure goes as follows.
 \begin{enumerate}
 \item
 	Node A: \\
-		The equilbrium equations of 
-	the horizontal and vertical forces are written respectively as 
+	The equilbrium equations of the horizontal and vertical forces at node A 
+	are written respectively as 
 	\begin{equation}
 		N_1+H_A+N_2\cos\alpha=0, \ \ N_2\sin\alpha+V_A=0
 		\label{eqn:nodeA}
 	\end{equation}
-	where $\alpha=\frac{\pi}{3}$. Solving eq.(\ref{eqn:nodeA}), 
+	where $\alpha=\frac{\pi}{3}$. Solving eqs.(\ref{eqn:nodeA}), 
 	we have $N_1=\frac{F}{2}$ and $N_2=F$. 
 \item
 	Node B: \\
-	From the equilbrium equations:
+	It follows from the equiribrium condtions for node B written as 
 	\begin{equation}
-		N_1+N_3\cos\alpha=0, \ \ N_3\sin\alpha+V_B=0	
+		N_1+N_3\cos\alpha=0, \ \ N_3\sin\alpha+V_B=0
 		\label{eqn:nodeB}
 	\end{equation}
-	for node B, we obtain $N_1=\frac{F}{2}$ and $N_3=-F$.
-	We can verify that the axial force for member 1 from eq.(\ref{eqn:nodeA}) 
+	that we have $N_1=\frac{F}{2}$ and $N_3=-F$.
+	We can verify that the axial force for member 1 from eqs.(\ref{eqn:nodeA}) 
 	agrees with that from eq.(\ref{eqn:nodeB}).
 \item
 	Node C: \\
-	We have already determined all the axial forces. The equilbrium 
-	conditions for node C written as 
+	The equilbrium conditions for node C are written as 
 	\begin{equation}
-		F-N_1\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0,
+		F-N_1\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0.
 		\label{eqn:nodeC}
 	\end{equation}
-	are redundant. However, we can verify that $N_1,N_2$ and $N_3$ we 
-	have obtained do satisfy eq.(\ref{eqn:nodeC}). 
+	Since we have already determined all the axial forces, 
+	eqs.(\ref{eqn:nodeC}) are redundant.  
+	However, it is a good practice to verify the solutions using a redundant 
+	but independently derived relations that should be satisfied as well.  
+	In the present problem, we can verify that our solutions $N_1,N_2$ and $N_3$ do 
+	satisfy eq.(\ref{eqn:nodeC}).
 \end{enumerate}
+As it has been shown, two equations are availablle for every nodal point.
+This means we can determine up to two axial forces per node 
+based on the  equilbrium conditions. 
+If more than two members are connected to a node, it is not possible to 
+determine the axial forces of those members all at once as long as 
+the nodal equilrium conditions are used exlusively.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig10.eps} 
