@@ -2,7 +2,7 @@ note3.pdf: note3.dvi
 	dvipdfmx -p a4 note3.dvi
 note3.dvi: note3.tex fig3_1.eps  fig3_2.eps fig3_3.eps fig3_4.eps fig3_5.eps \
 	fig1.eps fig3.eps fig4.eps fig5.eps fig6.eps fig7.eps fig8.eps fig9.eps fig10.eps \
-	fig11.eps fig12.eps fig13.eps fig14.eps
+	fig11.eps fig12.eps fig13.eps fig14.eps fig15.eps fig16.eps
 	platex note3.tex
 
 fig1.eps: Figs/fig1.svgz
@@ -31,6 +31,10 @@ fig13.eps: Figs/fig13.svgz
 	inkscape -z -f Figs/fig13.svgz -E fig13.eps
 fig14.eps: Figs/fig14.svgz
 	inkscape -z -f Figs/fig14.svgz -E fig14.eps
+fig15.eps: Figs/fig15.svgz
+	inkscape -z -f Figs/fig15.svgz -E fig15.eps
+fig16.eps: Figs/fig16.svgz
+	inkscape -z -f Figs/fig16.svgz -E fig16.eps
 
 fig3_1.eps: Figs/fig3_1.svgz
 	inkscape -z -f Figs/fig3_1.svgz -E fig3_1.eps
