@@ -1,6 +1,7 @@
 \documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
+\usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
 %\setlength{\leftmargin}{1.5cm}
 %\setlength{\textwidth}{15.5cm}
@@ -43,51 +44,95 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vspace*{\baselineskip}
 \begin{flushright}
-	09/05/2019
+	Civil Engineering I\\
+	May 14, 2020
 \end{flushright}
 \begin{center}
-	{\Large \bf Civil Engineering I \\
-	- Introduction to structural mechanics-\\
-	Design of simply supported truss structure 2
-	}  \\
+	{\LARGE \bf Lecuture Note 4 }
 \end{center}
 %\vspace{1.5cm}
-\section*{Exercises 4}
-Consider designing a simply supported Warren truss shown in Fig.\ref{fig:fig4_1}.
-To assemble the truss, we use the bars of length $l$ having a uniform circular 
-cross section of diameter $d$ as illustrated in Fig.\ref{fig:fig4_2}-(a).
-When completed, the truss is going to be used to support two straight pipes (pipe 1 and 2) 
-crossing over a canal of width $3l$.
-In performing the structural analysis necessary for the design, 
-we will assume the followings.
-\subsection*{Assumptions}
+\setcounter{section}{3}
+\section{Design of Truss Structure}
+\subsection{Axial Stress}
+When desigining a truss structure, we need to know in advance the strength of 
+the material. The strength of a truss member may be measured as the maximam axial 
+force that the truss member can bear without breaking nor causing excessive deformation. 
+The advantage of this definition is that we can evaluate the strength of the truss 
+member just by performing a simple loading experiment.
+On the other hand, a downside of the definition is that the strength depends on 
+the thickness of the truss member. The larger the cross sectional area, the 
+higher the strength is. This is very inconvenient for the strength should be a 
+given parameter whereas the cross sectional area is one of the design 
+variables. Dealing with the design criterion dependent on the design variables 
+ makes the designing work rather tricky. 
+ To avoid such a bizzar situation, we usually use the quantitiy called axial 
+ stress as a measure of strength as well as the intensity of the axial force.
+In the context of this lecture, the axial stress $\sigma$ is defined by
+\begin{equation}
+	\sigma=\frac{N}{A}
+	\label{eqn:def_sigma}
+\end{equation}
+where $N$ is the axial force and $A$ is the cross sectional area of a truss member. 
+The dimension of the axial stress is force per unit area. 
+We take the positive axial stress as tensile and negative as compressional loading. 
+The axial stress is a variable that depends on the applied force, 
+support condition, geoemtry, and the thickness of the truss member. 
+By performing a axial loading test on the truss member, 
+we can identify the maximum tensile and compressional axial stress 
+that the truss member can safely bears. 
+We write the maximum compressional and tensile stress values as 
+$\sigma_{a}^c$ and $\sigma_{a}^t$. 
+The two maximum stress values are collectively called allowable stress.
+The tensile and compressional allowable stress are usually differenet. 
+For the sake of simplicity, we assume the two kinds of allowable stress agree 
+each other and write
+\begin{equation}
+	\sigma_a^c=\sigma_a^t=\sigma_a.
+	\label{eqn:sig_a}
+\end{equation}
+In designing a truss structure, we shall require 
+\begin{equation}
+	\left| \sigma \right| \leq \sigma_a
+	\label{eqn:sig_a_cond}
+\end{equation}
+for every member of the truss. 
+\subsection{Design of Simply Supported Truss -an example-}
+Consider designing a simply supported Warren truss in Fig.\ref{fig:fig4_1} bridging 
+a canal of width $3l$. To assemble the truss structure, we use the bars of equal 
+length $l$ with a uniform circular cross section of diameter $d$ as illustrated in Fig.\ref{fig:fig4_2}-(a).
+We suppose that the truss is used to support two straight water pipes (pipe 1 and 2) 
+of identical cross sections. The truss provides an extra rigidity 
+with the pipes and prevent the water-filled pipes from bending over the canal. 
+We design the truss for this purpose based on the allowable stress concept.
+In the structural analysis necessary for the design, we assume the followings.
+\subsubsection{Assumptions}
 \begin{enumerate}
 \item
-	The two pipes are identical and are both completely filled with water. 
+	The two pipes are identical and both are completely filled with water. 
 \item
-	The the truss member (round bars) are so thin that their weight is negligible.
+	The the truss members (bars) are so thin that their weight is negligible.
 \item
 	The weight of the water-filled pipes are supported evenly at the lower nodal 
-	points (joints) of the truss.
+		points (joints) A, A' to D,D' of the truss.
 \item
-	Due to the symmetry of the structure, the vertical downward force of magnitude 
+	Due to the symmetry of the structure, the vertical force of magnitude 
 	$F$ applied to the nodes A, B, C and D comes only from pipe 1.
 \item
-	Although the pipes are infinitely long, the length of the pipe that needed to be 
-	supported by the truss is $4l$ (Imagine that the reminder of the weight goes 
-	to the supports on the ground that are not shown in Fig.\ref{fig:fig4_1}.)
+	The extent of the pipe that needed to be supported by the truss is $4l$. 
+	You can imagine that the reminder of the weight goes to the supports on the 
+	ground that are not shown in Fig.\ref{fig:fig4_1}.)
 \item
 	A structural member breaks (yields) if the axial stress (axial force/area) 
-	exceeds a certain value called an "allowable stress".
+	exceeds a given allowable stress.
 \end{enumerate}
 \begin{figure}
 	\begin{center}
 	\includegraphics[width=1.25\linewidth]{fig4_1.eps} 
 	\end{center}
 	\caption{
-		(a)A front, (b) side, and (c) top views of a simply supported Warren truss made 
-		of round bars of uniform circular cross section. 
-		The truss truss bears the weight of two identical, symmetrically placed, water filled pipes.
+		(a)front, (b) side, and (c) top views of a simply supported Warren truss consisting 
+		of bars of uniform circular cross sections. 
+		The truss bears the weight of two identical, symmetrically placed, completely filled water pipes.
 		The weight is distributed evenly to the nodal points (joints) on the lower level 
 		applying the downward vertical load of magnitude $F$ to the nodes A, B, C and D.
 	}
@@ -98,13 +143,14 @@ we will assume the followings.
 	\includegraphics[width=0.5\linewidth]{fig4_2.eps} 
 	\end{center}
 	\caption{
-		The cross sections of (a) a truss member (round bar) and (b) the pipe.  
+		The cross sections of (a) a truss member and (b) the pipe.  
 	}
 	\label{fig:fig4_2}
 \end{figure}
-\subsection*{Problems}
-With the assumptions made above, determine the minimum value of $d$ for which the 
+\subsubsection{Structural analysis flow}
+With the assumptions above, determine the minimum value of $d$ for which the 
 truss can safely support the pipes without damaging (breaking) any of its members. 
+The flow of structural analysis is as follows.
 \begin{enumerate}
 \item
 	Determine the vertical reaction forces supplied to the truss by the supports at A and D. 
@@ -116,24 +162,42 @@ truss can safely support the pipes without damaging (breaking) any of its member
 	%Let the outer diameter of the pipes be $D$, the thickness $t$, and the mass 
 	%densities of the water and stainless steel be $\rho_w$ and $\rho_s$, 
 	%respectively.
-	Write the magnitude $F$ of the force using the dimensions 
-	$l,D,t$ of the bars and pipes, gravitiy constant $g$, 
-	and the mass densities of water $\rho_w$ and steel $\rho_s$ as 
+	Write the magnitude $F$ of the force in terms of the dimensions 
+	$l,D,t$ of the bars and pipes. You may also use gravitiy constant $g$, 
+	, the mass densities of water $\rho_w$ and steel $\rho_s$ 
 	indicated in Fig.\ref{fig:fig4_2}. 
 \item
 	For given allowable stress $\sigma_a$, determine the minimum cross sectional 
 	area $A_{min}$ and the the corresponding diameter $d_{min}$. 
-	Note that the axial stress is given by $N/A$ where $N$ is the axial force 
-	and $A=\pi d^2/4$ is the cross sectional area of the bar.
+%	Note that the axial stress is given by $N/A$ where $N$ is the axial force 
+%	and $A=\pi d^2/4$ is the cross sectional area of the bar.
 \item
-	Evaluate $d_{min}$ numerically when\\
+	Evaluate $d_{min}$ numerically for\\
+		\begin{center}
 			$D$=500.0[mm], $t$=10.0[mm], 
 			$\rho_s=$7.9[g/cm$^3$],
 			$\rho_w=$1.0[g/cm$^3$],
 			$l=3.0$[m],
-			$\sigma_a$=20.0[kgf/mm$^2$], $g$=10.0[m/s$^2$]\\
-	You may use a scientific calculator, but the use of Excel is recommended. 
+			$\sigma_a$=20.0[kgf/mm$^2$], $g$=10.0[m/s$^2$]
+		\end{center}
+	If necessary, you may use a scientific calculator, spred sheet software, or computer programming languages. 
 	%so that you can review the process of your calculation and make modification if necessary.
+\end{enumerate}
+\subsubsection{Worked out design calculations}
+\begin{enumerate}
+\item
+\begin{equation}
+	H_A=0, \ \ V_A+V_D=4F, 
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	V_D\times 3l - F\times l-F\times 2l-F\times 3l=0
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	V_A=V_B=2F, \ \ H_A=0
+	\label{eqn:}
+\end{equation}
 \end{enumerate}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
