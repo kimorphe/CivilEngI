@@ -1,10 +1,17 @@
+all: note3.pdf prb3.pdf
 note3.pdf: note3.dvi 
 	dvipdfmx -p a4 note3.dvi
+prb3.pdf: prb3.dvi 
+	dvipdfmx -p a4 prb3.dvi
+prb3.dvi: prb3.tex prb.eps
+	platex prb3.tex
 note3.dvi: note3.tex fig3_1.eps  fig3_2.eps fig3_3.eps fig3_4.eps fig3_5.eps \
 	fig1.eps fig3.eps fig4.eps fig5.eps fig6.eps fig7.eps fig8.eps fig9.eps fig10.eps \
 	fig11.eps fig12.eps fig13.eps fig14.eps fig15.eps fig16.eps
 	platex note3.tex
 
+prb.eps: Figs/prb.svgz
+	inkscape -z -f Figs/prb.svgz -E prb.eps
 fig1.eps: Figs/fig1.svgz
 	inkscape -z -f Figs/fig1.svgz -E fig1.eps
 fig3.eps: Figs/fig3.svgz

@@ -1,0 +1,63 @@
+\documentclass[10pt,a4j]{article}
+%\usepackage{graphicx,wrapfig}
+\usepackage{graphicx}
+%\usepackage{showkeys}
+\setlength{\topmargin}{-1.5cm}
+%\setlength{\textwidth}{16.5cm}
+\setlength{\textwidth}{14.5cm}
+\setlength{\textheight}{25.2cm}
+\newlength{\minitwocolumn}
+\setlength{\minitwocolumn}{0.5\textwidth}
+\addtolength{\minitwocolumn}{-\columnsep}
+%\addtolength{\baselineskip}{-0.1\baselineskip}
+%
+\def\Mmaru#1{{\ooalign{\hfil#1\/\hfil\crcr
+\raise.167ex\hbox{\mathhexbox 20D}}}}
+%
+\begin{document}
+\newcommand{\fat}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\D}{\partial}
+\newcommand{\w}{\omega}
+\newcommand{\ga}{\alpha}
+\newcommand{\gb}{\beta}
+\newcommand{\gx}{\xi}
+\newcommand{\gz}{\zeta}
+\newcommand{\vhat}[1]{\hat{\fat{#1}}}
+\newcommand{\spc}{\vspace{0.7\baselineskip}}
+\newcommand{\halfspc}{\vspace{0.3\baselineskip}}
+\bibliographystyle{unsrt}
+%\pagestyle{empty}
+\newcommand{\twofig}[2]
+ {
+   \begin{figure}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center}   #1
+         \end{center}
+     \end{minipage}
+         \hspace{\columnsep}
+     \begin{minipage}[t]{\minitwocolumn}
+         \begin{center} #2
+         \end{center}
+     \end{minipage}
+   \end{figure}
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace*{\baselineskip}
+\begin{flushright}
+	{Civil Engineering I \\ 
+	Due: 23:59, May 14,2020
+	}
+\end{flushright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hspace{10mm}
+\section*{Assignment 4}
+Suppose that two weights of different masses denoted as $m$ and $M$ are hanging from a rigid ceiling. 
+Determine the ratio $M/m$ when string BE is tied horizontally. 
+    \begin{figure}[h]
+        \begin{center}
+        \includegraphics[width=1.0\linewidth]{prb.eps} 
+        \end{center}
+        \caption{Two weights in static equilibrium hanging from a ceiling by perfectly flexible strings.} 
+        \label{fig:prb}
+    \end{figure}
+\end{document}
