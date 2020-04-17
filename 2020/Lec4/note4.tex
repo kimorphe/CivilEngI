@@ -98,11 +98,11 @@ In designing a truss structure, we shall require
 for every member of the truss. 
 \subsection{Design of Simply Supported Truss -an example-}
 Consider designing a simply supported Warren truss in Fig.\ref{fig:fig4_1} bridging 
-a canal of width $3l$. To assemble the truss structure, we use the bars of equal 
+a trench of width $3l$. To assemble the truss structure, we use the bars of equal 
 length $l$ with a uniform circular cross section of diameter $d$ as illustrated in Fig.\ref{fig:fig4_2}-(a).
 We suppose that the truss is used to support two straight water pipes (pipe 1 and 2) 
 of identical cross sections. The truss provides an extra rigidity 
-with the pipes and prevent the water-filled pipes from bending over the canal. 
+with the pipes and prevent the water-filled pipes from bending over the trench. 
 We design the truss for this purpose based on the allowable stress concept.
 In the structural analysis necessary for the design, we assume the followings.
 \subsubsection{Assumptions}
@@ -206,6 +206,48 @@ The flow of structural analysis is as follows.
 	(b) Forces applied to joints including axial and reaction forces.} 
 	\label{fig:fig1}
 \end{figure}
+\item
+	\[
+		N_1=N_3=\frac{1}{\sqrt{3}}F ,\ \ N_2=\frac{2}{\sqrt{3}}F
+	\]
+	\[
+		N_4=N_9=-\frac{2}{\sqrt{3}}F ,\ \ N_5=N_8=\frac{2}{\sqrt{3}}F
+	\]
+	\[
+		N_6=N_7=0, \ \ N_{10}=N_{11}=-\frac{2}{\sqrt{3}}F
+	\]
+\item
+\begin{eqnarray}
+	F &=& 
+	\left( \rho_w A_w + \rho_s A_\rho \right)gl \nonumber \\
+	&= & 
+	\frac{\pi}{4}gl
+	\left\{ 
+		\rho_w(D-t)^2+ \rho_s\left(D^2-(D-t)^2\right)
+	\right\}
+	\nonumber \\
+	&=&
+	\frac{\pi}{4}gl
+	\left\{ 
+		\rho_w(D-t)^2+ \rho_s\left(2Dt-t^2\right)
+	\right\}
+	\label{eqn:}
+\end{eqnarray}
+\item
+\begin{equation}
+	\left| \frac{N}{A}\right| \leq \sigma_a
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	d^2 > \frac{8}{\sqrt{3}\pi} \frac{F}{\sigma_a}
+	\label{eqn:}
+\end{equation}
+\begin{equation}
+	d_{min}=
+	\left\{ \frac{8}{\sqrt{3}\pi} \frac{F}{\sigma_a}
+	\right\}^{1/2}
+	\label{eqn:}
+\end{equation}
 \end{enumerate}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
