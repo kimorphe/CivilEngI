@@ -1,7 +1,7 @@
 \documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
 %\setlength{\leftmargin}{1.5cm}
 %\setlength{\textwidth}{15.5cm}
@@ -51,22 +51,22 @@
 	{\LARGE \bf Lecture Note 2}
 \end{center}
 \setcounter{section}{1}
-\section{Equilbrium of Force and Moment}
-\subsection{Rotaional motion and moment}
-Consider a perfectly rigid body $B$ subjected to a set of forces
+\section{Equilibrium of Force and Moment}
+\subsection{Rotational motion and moment}
+Consider a rigid body $B$ subjected to a set of forces
 \[ 
 	\left\{\ \fat{f}_1, \fat{f}_2, \dots \fat{f}_{n} \right\}
 \]
 (see Fig.\ref{fig:fig3}-(a)).
-If $B$ is staying still under the loading, the Newton's 2nd law requires that 
-the total force vanishes. Thus,
+If body $B$ is staying perfectly still, 
+Newton's second law requires the sum of the forces to vanish.
+Thus,
 \begin{equation}
 	\sum_{i=1}^n \fat{f}_i = \fat{0}.
 	\label{eqn:2nd_law}
 \end{equation}
-Note that eq.(\ref{eqn:2nd_law}) is a necessary and not a sufficient condition 
-for the body to be in a static equilibrium. 
-%A simple counter example for is shown in Fig.\ref{fig:fig3}-(b).
+Note that the converse is not necessarily true.
+To see this, consider a special loading condition depicted in Fig.\ref{fig:fig3}-(b). 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.6\linewidth]{fig3.eps} 
@@ -74,59 +74,55 @@ for the body to be in a static equilibrium.
 	\caption{A body $B$ subjected to a set of forces $\fat{f}_i,(i=1\cdot n)$.} 
 	\label{fig:fig3}
 \end{figure}
-To see this, consider a special loading condition shown in Fig.\ref{fig:fig3}. 
-Our experience tells us that the body start rotating upon loading the couple force 
- shown in this figure although the sum $\fat{f}_1+\fat{f}_2$ of the forces is zero.
-This means the Newton's 2nd law \ref{eqn:2nd_law} only ensures that the loads
-do not cause a translational motion. 
-It is therefore necessaray to introduce an additional condition concerning rotational 
-motion to complete the equilibrium condition for a rigid body. 
-To do so, we have to device a way to measure the tendency that a given force to have on 
-the rotational motion. 
+Although the couple-force satisfies the second law of eq.(\ref{eqn:2nd_law}), we will see the body starts rotating. 
+This means Newton's 2nd law ensures that the vanishing forces do not generate translational 
+motion but not necessarily rotation. It is, therefore, necessary to impose an additional 
+condition concerning rotation to complete the equilibrium condition. 
+To do so, we first need to devise a way to measure the tendency of a force to rotate a body.
 \subsection{Moment}
-The tendency that a force to rotatate a body about given point, or an axis,
-is called moment. To define the moment based on our experience, imagine that 
-a body $B$ is pinned on a wall at $P$ about which $B$ can rotate freely without 
-friction (see Fig.\ref{fig:fig1}). If a vertical load $\fat{f}$ is applied to a point $A$ 
-located on the same level as $P$, the body starts rotating in ithe clockwise direction.
-If we're asked to rotate the body twice as hard, we'd probably either 
-double the magnitude of the force, or slide the point of application twice as far from $P$ 
-as illustrated in Figs.\ref{eqn:fig1}-(b) and (c).
-This observation suggests that the moment should be proportional to the magnitude of the 
-force and the distance between the loading point and the pivot.  
-Thus, we may adopt the following as our first tentative definition for the moment $M$. 
+The tendency of a force to rotate a body about a given point, or an axis, is
+called moment. To define the moment based on our experience, 
+imagine that body $B$ is pinned on a wall at $P$ about which $B$ can rotate freely without 
+friction (see Fig.\ref{fig:fig1}). When a load $\fat{f}$ is applied vertically to a point $A$ 
+located on the same level as $P$, the body starts rotating in the clockwise direction. 
+ If we are asked to rotate the body twice as hard, we would either double the magnitude of 
+the force or slide the point of application twice as far from $P$ as illustrated in Figs.\ref{eqn:fig1}-(b) and (c). 
+The above observations suggest that the moment should be proportional to the magnitude of the force 
+and the distance between the pivot and loading point. 
+Thus, we adopt the following as our tentative definition of moment $M$.
 \begin{equation}
-	M=({\rm distance \, between \,the \, pivot\, and\, force) \times (magnitude \, of \, the \,force)}
+	M=({\rm distance \, between \,the \, pivot\, and\, loading\ point) \times (magnitude \, of \, the \,force)}
 	\label{eqn:def_M_temp}
 \end{equation}
-According to the definition (\ref{eqn:def_M_temp}), the moments about $P$ due the 
-forces shown in Figs.-(a), (b) and (c) are evaluated as $r|\fat{f}|, r|2\fat{f}|$ and $2r|\fat{f}|$, respectively.
-
-The definition works fine as far as the configuration shown in shown in Fig.\ref{fig:fig1}.
-To generalize the definition further, let's next inspect an obliquely applied forces
- shown in Fig.\ref{fig:fig2}.
-In this setup, the force is not vertically directed, and the pivot and loading points are on the different levels.
-If we decompose the force vector $\fat{f}$, as shown in Fig.\ref{fig:fig2} into the components parallell $\fat{f}_{\perp}$ 
-and vertical $\fat{f}_\parallel$ to the line $l$ passing $P$ and $A$, we notice that $\fat{f}_{\parallel}$ does not 
-contribute to the rotational motion about $P$. 
-This means we need to consider only the vertical component $\fat{f}_{\perp}$ in defining the moment. 
-Consequently, the present setup has been reduced to the previously inspected in Fig.\ref{fig:fig2}-(a).
-Thus, we can now write the formula for the moment $M$ as 
+According to the definition of (\ref{eqn:def_M_temp}), the moments about $P$ due to the 
+forces shown in Fig.\ref{fig:fig1}-(a), (b) and (c) are evaluated as $r|\fat{f}|, r|2\fat{f}|$ 
+and $2r|\fat{f}|$, respectively. The definition works fine as far as the pivot-force 
+configuration shown in Fig.\ref{fig:fig1} is concerned.
+To extend the definition to more general configuration, let's next inspect the setup 
+shown in Fig.\ref{fig:fig2}. In this setup, an angled force is applied to a point $A$ 
+located on a level different from the pivot $P$.
+To reduce the general configuration in Fig.\ref{fig:fig2} to the special case 
+in Fig.\ref{fig:fig1}-(a), we decompose the force vector $\fat{f}$ into the parallel 
+$\fat{f}_{\perp}$ and vertical $\fat{f}_\parallel$ components with respect to the line $l$ 
+connecting $P$ and $A$. We then notice that $\fat{f}_{\parallel}$ does not contribute to 
+the rotation about $P$. This means we need to retain only the vertical component 
+$\fat{f}_{\perp}$ in defining moment $M$. Thus, we can formulate the definition of (\ref{eqn:def_M_temp}) 
+for general pivot-force configuration as 
 \begin{equation}
 	M=|\fat{r}|\times |\fat{f}_{\perp}|.
 	\label{eqn:def_M_fp}
 \end{equation}
-Geometrically, eq.(\ref{eqn:def_M_fp}) gives the area $S$ of parallellogram $PABC$. 
-The formula for $M$ is altanatively writen as
+Geometrically, the right hand side of eq.(\ref{eqn:def_M_fp}) gives the area $S$ of 
+parallelogram $PABC$. Therefore, the formula for $M$ can be written alternatively as
 \begin{equation}
 	M=r_\perp \times |\fat{f}|
 	\label{eqn:}
 \end{equation}
-where $r_\perp$ is the parpendicular distance from $P$ to the line of loading 
-$l'$ depicted in Fig.\ref{fig:fig2}.
-Finally, we incorprate a mechanism to distinguish a clockwise from counterclockwise 
-moment into the definition of $M$. This is achieved by assigining positive 
-and negative moments to the anticlockwise and clockwise moments as follows.
+where $r_\perp$ is the perpendicular distance from $P$ to the line of loading 
+$l'$ shown in Fig.\ref{fig:fig2}.
+Finally, we incorporate a mechanism to distinguish a clockwise from counterclockwise 
+moment into the definition of $M$. This is accomplished by assigning negative or  
+positive moment as follows.
 \begin{equation}
 	M=\sigma S , \ \ \left(S= |\fat{r}|\times |\fat{f}_{\perp}|=r_\perp \times |\fat{f}| \right)
 	\label{eqn:M_def}
@@ -142,83 +138,86 @@ with
 	,
 	\label{eqn:sign}
 \end{equation}
-which completes our definition of moment. 
+Equation (\ref{eqn:M_def}) with (\ref{eqn:sign}) is a complete definition of moment in two dimensional space. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig1.eps} 
 	\end{center}
 	\caption{
-		Basic loading conditions considered in defining moment that generate 
-		rotational motion about a pivotal point $P$.} 
+		Basic loading conditions considered in defining moment with 
+		respect to the pivotal point $P$.} 
 	\label{fig:fig1}
 \end{figure}
-%\begin{equation}
-%	M=(0,0,xf_y-yf_x)
-%	\label{eqn:}
-%\end{equation}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig2.eps} 
 	\end{center}
-	\caption{Oblique load acting on a body $B$.} 
+	\caption{The configuration of the angled force, loading point and pivot as assumed rotation center.} 
 	\label{fig:fig2}
 \end{figure}
-
-In the previous class, we have learned the relationship between the vector 
-cross product and the area of the parallelogram. In the present case, the 
-it is written as 
+\subsection{Moment and Vector Cross Product}
+In the previous lecture, we learned the relationship between the vector 
+cross product and the area of a parallelogram. For parallelogram PABC in 
+Fig.\ref{fig:fig2}, the relationship is  written as 
 \begin{equation}
 	S=\left| \fat{r} \times \fat{f} \right|.
+	\label{eqn:r_x_f}
+\end{equation}
+With eq.(\ref{eqn:r_x_f}), the definition of $M$ in eq.(\ref{eqn:M_def}) can be rewritten as 
+\begin{equation}
+	M=\sigma\left| \fat{r} \times \fat{f} \right|
+	\label{eqn:M_def2}
+\end{equation}
+In rewriting the definition, $\fat{r}$ and $\fat{f}$ have to be considered as vectors 
+in 3D space. The most straightforward way of embedding 2D vectors in 3D space is 
+to pad the third coordinate with zero as 
+\begin{equation}
+	\fat{r}=(x,\, y,\, 0), \ \ 
+	\fat{f}=(f_x,\, f_y,\,0).
 	\label{eqn:}
 \end{equation}
-Thus, we can define the moment using the vector cross product. 
-In using vector cross product, however, $\fat{r}$ and $\fat{f}$ have 
-to be considered as vectors in 3D space. 
-The most straightforward way of embedding the 2D vectors in 3D space is 
-to pad zero to the third coordinate writting 
+Then the component-based formula of vector cross product yields 
 \begin{equation}
-	\fat{r}=(x,y,0), \ \ 
-	\fat{f}=(f_x,f_y,0).
-	\label{eqn:}
+	\fat{r}\times \fat{f}=(0,0,xf_y-yf_x)
 \end{equation}
-Then the component-based formula of vector cross product yields the following. 
+to have an alternative formula for $M$ as 
 \begin{equation}
-	\fat{r}\times \fat{f}=(0,0,xf_y-yf_x).
+	M=\sigma \left| xf_y-yf_x \right| = xf_y-yf_x.
+	\label{eqn:M_def2d_cross}
 \end{equation}
-We have thus obtained an alternative formula for $M$ as 
-\begin{equation}
-	M=\sigma \left| 
-		xf_y-yf_x
-	\right|.
-\end{equation}
-Furthermore, we can verify that 
-\begin{equation}
-	M=xf_y-yf_x.
-\end{equation}
-since $\sigma$, or the rotatinal direction, has already been considered in the cross product.
-The definition (\ref{eqn:M_def}) of the moment is valid only for 2D problem where 
-rotational motion take places about an axisi with  predetermined direction. 
-When we have to deal with rotational motion in 3D space, moment is defined as a vector 
-quantity by the cross product
-\begin{equation}
-	\fat{M}=(M_x, M_y, M_z)=
-	\fat{r}\times\fat{f}
-	=
+The last equality in eq.(\ref{eqn:M_def2d_cross}) holds because 
+$\fat{r}, \fat{f}$ and $\fat{r}\times\fat{f}$ form a right-handed system.
+When $\fat{f}$ tends to generate a counterclockwise rotation, 
+$\fat{r}\times\fat{f}$ directs upward, which means $xf_y-y_fx>0$.  
+On the other hand, $\fat{r}\times\fat{f}$ directs downward when 
+$\fat{f}$ tends to generate a clockwise rotation. \\
+
+The definition (\ref{eqn:M_def}) and the alternative (\ref{eqn:M_def2d_cross}) 
+are valid only for 2D problem where rotation takes place about the 3rd axis. 
+When we deal with rotational motion in 3D space, moment is defined as a vector 
+quantity as 
+\begin{eqnarray}
+	\fat{M} &=& 
+	(M_x,\, M_y,\, M_z) \nonumber \\
+	&=&
+	\fat{r}\times\fat{f} \nonumber \\
+	&=&
 	\left(
 		yf_z-zf_y
-	,
+	,\,
 		zf_x-xf_z
-	,
+	,\,
 		xf_y-yf_x
 	\right).
 	\label{eqn:}
-\end{equation}
-This is not surprising because the axis of rotation can be directed in 
-any direction in the three dimensional space depending on the loading condition. 
+\end{eqnarray}
+This is not surprising because we can consider rotation about 
+three mutually orthogonal axis in 3D space that there should be 
+three corresponding moments.
 \subsection{Equilibrium Equations}
-From the foregoing discussion, there should be two types of equilibrium conditions
-for a rigid body. The one is the equilibrium of force and the equibrium of the 
-moment is the other. Those are written as 
+Going back to the general loading condition illustrated in Fig.\ref{fig:fig3}-(a), 
+we can now write two kinds of equilibrium conditions 
+for a rigid body as 
 \begin{equation}
 	\sum_{i=1}^n \fat{f}_i = \fat{0}, 
 	\label{eqn:equib_f}
@@ -231,57 +230,58 @@ and
 	\label{eqn:equib_M}
 \end{equation}
 where $\fat{x}_i$ is the loading point of $\fat{f}_i$.
-It should be noted that $\fat{r}_i \times \fat{f}_i$ is the moment 
-due to $\fat{f}_i$ about the origin of the coordinate. 
-Equation (\ref{eqn:equib_M}) thus read 
-"the sum of all moment about the coordinate origin is zero".
-However, the total moment about an arbitrary point, say $\fat{p}$, 
-should equally vanishes if the body is staying still. 
-Thus, it seems necessary to write the equilbrium equation as 
-\begin{equation}
-	\sum_{i=1}^n \left(\fat{x}_i-\fat{p}\right) \times \fat{f}_i = \fat{0}
-	\label{eqn:equib_Mp}
-\end{equation}
-instead of eq.(\ref{eqn:equib_M}).
-However, eqs.(\ref{eqn:equib_f}) and (\ref{eqn:equib_M}) imply eq.(\ref{eqn:equib_Mp})
-because 
+Equation (\ref{eqn:equib_f}) is the direct application of the 2nd law, 
+while eq.(\ref{eqn:equib_M}) is the equilibrium condition for moment.
+Since $\fat{r}_i \times \fat{f}_i$ is the moment due to $\fat{f}_i$ about the 
+coordinate origin, eq.(\ref{eqn:equib_M}) read "the sum of all moment about 
+the coordinate origin is zero".
+Equations (\ref{eqn:equib_f}) and (\ref{eqn:equib_M}) are the complete
+set of equilibrium conditions for a rigid body to stay perfectly still.
+If both eqs.(\ref{eqn:equib_f}) and (\ref{eqn:equib_M}) are satisfied, 
+the total moment vanishes regardless of the location of the assumed 
+rotation center. To prove this, let $\fat{p}$ be the rotation center and 
+examine the sum of moments about  $\fat{p}$. Then we have 
 \begin{equation}
 	\sum_{i=1}^n \left(\fat{x}_i-\fat{p}\right) \times \fat{f}_i
 	=
 	\sum_{i=1}^n \left( \fat{x}_i\times \fat{f}_i  \right)
 	- 
-	\fat{p} \times \left(\sum_{i=1}^n \ \fat{f}_i \right), 
+	\fat{p} \times \left(\sum_{i=1}^n \ \fat{f}_i \right). 
 	\label{eqn:equib_Mp2}
 \end{equation}
-and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
+It follows from eqs.(\ref{eqn:equib_f})-(\ref{eqn:equib_Mp2}) that 
+\begin{equation}
+	\sum_{i=1}^n \left(\fat{x}_i-\fat{p}\right) \times \fat{f}_i = \fat{0}
+	\label{eqn:equib_Mp}
+\end{equation}
+holds for arbitrary $\fat{p}$.
 \section{Solved Problems}
 \begin{enumerate}
 \item
-	Obtain the moments about $P_1,P_2,P_3$ and $P_4$ due to the vertical
+	Obtain the moment about $P_1,P_2,P_3$ and $P_4$ due to the vertical
 	force $\fat{f}$ shown in Fig.\ref{fig:fig4}.
 	\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=0.35\linewidth]{fig4.eps} 
 		\end{center}
-		\caption{A vertical force of maginitude $F$ applied to the point $A$ in 
+		\caption{A vertical force of magnitude $F$ applied to the point $A$ in 
 		a 2D space.} 
 		\label{fig:fig4}
 	\end{figure}
 	\\
 
 	{\small
-		Let the pertpendicular distance from $A$ to $P_i$ be 
-		denoted as $h_i$ for $i=1,\dots 4$(see Fig.\ref{fig:fig4_1}). 
+		Let the perpendicular distance from $A$ to $P_i$ be $h_i$ for $i=1,\dots 4$(see Fig.\ref{fig:fig4_1}). 
 		Then, $h_i$ are given as 
 		\[
 			h_1=2r, \ h_2=r, \ h_3=0, \ h_4=r.
 		\]
-		The moment $M_i$ about $P_i$ is given by 
+		With the perpendicular distances, the moment $M_i$ about $P_i$ is written as 
 		\[
 			M_i=\pm \left| \fat{f} \right| h_i= \pm Fh_i
 		\]	
-		where the sign is chosen so as to assign a positive value to a counterclockwise momemt.
-		In the present case, the moments are given as
+		where the sign is chosen so that a counterclockwise moment takes positive value.
+		Based on this rule, we have 
 		\[
 			M_1=-2Fr, \ M_2=-Fr, \ M_3=0, \ M_4=Fr.
 		\]
@@ -295,7 +295,7 @@ and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
 		\end{figure}
 	}
 \item
-	Obtain the moments about $P_1$ to $P_5$ due to the obliquely acting load $\fat{f}$ 
+	Obtain the moments about $P_1$ to $P_4$ due to the obliquely acting load $\fat{f}$ 
 	of magnitude $F$ as shown in Fig.\ref{fig:fig6}.
 	\begin{figure}[h]
 		\begin{center}
@@ -306,28 +306,28 @@ and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
 	\end{figure}
 	\\
 	{\small
-		Let the moment about $P_i$ be  denoted as $M_i$ for $i=1,\dots 4$.
-		Since the line of action of $\fat{f}$ passes $P_1$ as shown in Fig.\ref{fig:fig6_1}, 
-		we have $M_1=0$.
+		Let the moment about $P_i$ be denoted as $M_i$ for $i=1,\dots 4$.
+		By extending the line of action of $\fat{f}$ as indicated by 
+		a red line in Fig.\ref{fig:fig6_1}, we immediately have $M_1=0$.
 		Noting that $\overrightarrow{AP_2}$ is perpendicular to $\fat{f}$, 
-		we obtain $M_2$ as 
+		we have 
 		\[ 
-			M_2=F\times \overline{AP}_2=\sqrt{2}Fr
-		\].
+			M_2=F\times \overline{AP}_2=\sqrt{2}Fr.
+		\]
 		To obtain $M_3$ and $M_4$, it is convenient to decompose $\fat{f}$ into 
 		the horizontal and vertical components as 
 		\[
 			\fat{f}=(f_x,f_y)=\frac{F}{\sqrt{2}}\left(1, -1\right).
 		\]
-		With $f_y$, $M_3$ and $M_4$ are evaluated as follows.
+		With $f_y$, $M_3$ and $M_4$ are given as 
 		\[
 			M_3=+\left|f_y\right| \times \overline{A P_3}=\frac{Fr}{\sqrt{2}}
 		\]
 		\[
-			M_4=+\left|f_y \right| \times \overline{A P_4}=\sqrt{2}Fr
+			M_4=+\left|f_y \right| \times \overline{A P_4}=\sqrt{2}Fr.
 		\]
-		The moments are all positive since $\fat{f}$ generates the counterclockwise moments 
-		with respect to $P_1$ to $P_4$.
+		The moments above take positive values since $\fat{f}$ contributes 
+		to the counterclockwise rotation about $P_2, P_3$ and $P_4$.
 		\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=0.35\linewidth]{fig6_1.eps} 
@@ -337,9 +337,9 @@ and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
 		\end{figure}
 	}
 \item
-	Determine the magnitude and the direction of the force $\fat{f}$ shown in 
-	Fig.\ref{fig:fig8} necessary to equilibrate the four forces acting to the bar.
-	Also, find if the total moment vanishes for the force $\fat{f}$ thus determined.  
+	Determine the magnitude and direction of the force $\fat{f}$ shown in 
+	Fig.\ref{fig:fig8} necessary to equilibrate the forces acting to the bar.
+	For the force $\fat{f}$ thus determined, find if the total moment vanishes as well.
 	\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=0.4\linewidth]{fig8.eps} 
@@ -350,37 +350,36 @@ and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
 	\\
 
 	{\small
-		Let $F$ be the unknwon magnitude of $\fat{f}$, and write $\fat{f}$ with 
-		the vector component as 
+		Let $F$ be the magnitude of $\fat{f}$ and write $\fat{f}$ as 
 		\[
 			\fat{f}=F \left( -\cos\theta,\, \sin\theta \right)
 		\]
-		for the $xy$ Cartesian coordinate shown in Fig.\ref{fig:fig8}. 
-		Then, the equiribrium equations of the horizontal and vertical forces are 
-		given by 
+		in terms of the $xy$ Cartesian vector components. 
+		Then, the equilibrium equations of the horizontal and vertical 
+		forces are written as 
 		\[
-			-F\cos\theta + 2[kgf]=0, \ \ 
-			F\sin\theta -1[kgf]-1[kgf]=0.
+			-F\cos\theta + 2[{\rm kgf}]=0, \ \ 
+			F\sin\theta -1[{\rm kgf}]-1[{\rm kgf}]=0
 		\]
-		to find 
+		to have 
 		\begin{equation}
-			F=2\sqrt{2} \,[{\rm kgf}], \ \ \theta=\frac{\pi}{4}
+			F=2\sqrt{2} \,[{\rm kgf}], \ \ \theta=\frac{\pi}{4}.
 			\label{eqn:ans3}
 		\end{equation}
 		For the force vector given by eq.(\ref{eqn:ans3}), we can show that the 
 		the sum of the moments vanishes.
-		For example, the total moment about $(x,y)=(0,0)$, that is the point where $\fat{f}$ 
-		is applied, is evaluated as  
+		For example, the total moment about $(x,y)=(0,0)$ is shown to vanish as  
 		\[
 			{\rm 1[kgf] \times 2[m] -1[kgf] \times 2[m]=0 [kgf] }
 		\]
-		since the horizontal and the oblique force $\fat{f}$ do not contribute to 
-		the moment about this point. We would conclude the same if 
-		regardless of the point for which the moments are evaluated. 	
+		since the horizontal and the oblique force $\fat{f}$ do not 
+		contribute to the moment about $(0,\, 0)$. 
+		We would conclude the same even if we evaluate the total moment 
+		about an arbitrary off-centered point.
 	}
 
 \end{enumerate}
-\section{Supplmentary Problems}
+\section{Supplementary Problems}
 \begin{enumerate}
 \item
 	Obtain the moments with respect to $P_1,\dots P_4$ shown 
@@ -394,21 +393,20 @@ and by assumption the left hand side of eq.(\ref{eq:equib_Mp2}) vanish.
 		\label{fig:fig5}
 	\end{figure}
 \item
-	Obtain the moments with respect to points $P_1,\dots P_4$ shown in Fig.\ref{fig:fig7} 
+	Obtain the moments with respect to $P_1,\dots P_4$ shown in Fig.\ref{fig:fig7} 
 	due to the force $\fat{f}$ of magnitude $F$ acting obliquely to 
-	the point $A$ in a 2D space.
+	a point $A$ in a 2D space.
 	\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=0.35\linewidth]{fig7.eps} 
 		\end{center}
-		\caption{A force of magnitude $F$ acting obliquely to a body.} 
+		\caption{An angled  force of magnitude $F$.} 
 		\label{fig:fig7}
 	\end{figure}
 \item
 	Obtain the total moments about $P_1,\dots P_4$ due to the 
-	forces shown in Fig.\ref{fig:fig9}. 
-	Show that the total moment about $P_5$ vanishes for any $a$ such that 
-	$0\leq a \leq l$.
+	forces shown in Fig.\ref{fig:fig9}. Show that the total moment about 
+	$P_5$ vanishes for arbitrary $a$ such that $0\leq a \leq l$.
 	\begin{figure}[h]
 		\begin{center}
 		\includegraphics[width=0.4\linewidth]{fig9.eps} 

@@ -53,103 +53,110 @@
 \setcounter{section}{2}
 \section{Basics of Truss Structures}
 \subsection{Introduction}
-A bridge structure is an assembleage of plates, bars, and cables.
-The parts making up the bridge structure are called structural members.
-In this class, we're going to focus on slender bar-like structural members. 
-By "bar", we mean a slender structural member for which an evident longitudinal 
-axis exists. The cross sectional area of the bar can either be uniform or 
-nonuniform in the longitudinal axis. By joining the bar-like members, we can 
-build a structure called truss. Therefore, we will call the bar-like structural 
-member as a truss member. Fig.\ref{fig:fig1} shows examples of truss stuctures. 
-The truss structures shown in this figures bear the name of their inventors. 
+A bridge structure is assembled by joining plates, bars, and cables of various sizes.
+The parts making up a bridge structure are called structural members.
+In this lecture, we focus on the mechanics of slender bar-like structural 
+members. By "bar", we mean a slender object for which an evident longitudinal 
+axis exists. The cross sectional area of the bar may or may not be uniform
+in the axial direction. No assumption is made regarding the shape of the cross section.
+By joining bars, we can build a bridge structure called truss. 
+In this context, we call the bar-like structural member as a truss member. 
+Fig.\ref{fig:fig1} shows examples of truss stuctures. 
+The truss structures shown in this figure bear the name of their inventors. 
 Truss structures are characterized by a triangular assemblage of the members. 
-The major advantage of the truss structure is the weight. 
+The major advantage of the truss structure is weight. 
 Truss structures are often lighter in weight than girder bridges, which 
-is the most prevalent bridge structure best suited to short-spanned bridges.
-In designing truss structures, the first questions to be answered are
+is the most prevalent bridge structure best suited to short-span bridges.
+In designing truss structures, we need to address the following issues.
 \begin{itemize}
 \item
-	How is the whole strctures supported ?
+	How is the whole truss strcture supported ?
 \item
-	How to connect two or more structural members at the joints ?
+	How to connect two or more truss members at the joints ?
 \item
 	How much force each truss member has to bear ?
 \end{itemize}
+Those are the topics of this lecture to be discussed in some detail. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig1.eps} 
 	\end{center}
-	\caption{Examples of truss structures. (a)Warren truss, (b) Howe truss, and (c) Pratt truss.} 
+	\caption{Examples of truss structures. (a) Warren truss, (b) Howe truss, and (c) Pratt truss.} 
 	\label{fig:fig1}
 \end{figure}
-Those are the issues discussed in this class. 
 \subsection{Support Condition and Reaction Forces}
 There are three support condtions that are basic in structural mechanics. 
 Those are 
 \begin{itemize}
 \item
-	fixed(or clamped) support,
+	fixed (or clamped) support,
 \item
-	pin( or hinge) support,and 
+	pin (or hinge) support, and 
 \item
 	roller support.
 \end{itemize}
-In the followings, the three suppport conditions are explained
-looking at the constraints that each support imposes to the 
-body being supported. To this end, we do not have to be specific about the 
-geometry nor the size of the supported objects. Therefore, we're going to 
-study the support conditions for a single bar without loosing generaity.
+For each of the three support condition, we will look at the constraints that a support 
+imposes to a body. In doing so, we need not be specific about the geometry of the 
+supported object. For simplicity, therefore, we'll study the interaction between 
+the supports and a single straight bar. 
 \subsubsection{Fixed support}
-When a bar is fixed perfectly to a rigid and immobile wall as shown in Fig.\ref{fig:fig3}-(a), 
-we say the bar is connected to a "fixed" or "clamped" support. 
-At the fixed support, the translational and rotational motion are completely restraied. 
-In the present example, the horizontal, vertiacl, and the rotational motion at the left 
-end of the bar is completely fixed.
-To see the action of the fixed support on the bar, suppose that the bar is loaded with
-a vertical force as illustrated in Fig.\ref{fig:fig3}-(a).
-The support (wall) should apply the forces and/or moment to the bar to restrain the 
-dispalacement at $A$ and to hold the bar as in Fig.\ref{fig:fig3}-(a). 
-Such forces supplied by supports in response to the loading is called reaction forces. 
-To see this more closely, assume that the bar is subjected to the reaction forces $V,H$ 
-and moment $M$ at A (see. Fig.\ref{fig:fig3}-(b)).
-Then the equilibrium condtions for horizontal and vertical forces conclude the following. 
+When a bar is fixed to a rigid and immobile wall as shown in Fig.\ref{fig:fig3}-(a), 
+we say the bar is held by a "fixed" or "clamped" support. At the fixed support, 
+we assume that the translational and rotational motion are completely restraied. 
+In the setup shown in Fig.\ref{fig:fig3}-(a), the horizontal, vertical, 
+and rotational displacement at the left end of the bar are not allowed 
+at all. To see the action of the fixed support more clearly,
+suppose that the bar is under a vertical force as illustrated in Fig.\ref{fig:fig3}-(a).
+To restrain the displacement at $A$, it is neceesary for the support to apply 
+a force and/or moment to the bar. 
+The forces and moment supplied by the support in response to the loading are called 
+reaction force and reaction moment,respectively. 
+The reaction force and moment are sometimes called simply as reaction forces collectively. 
+To study the emergence of reaction forces, assume that the bar is subjected to the 
+reaction forces including moment as shown in Fig.\ref{fig:fig3}-(b)).
+Then the equilibrium condtions for the horizontal and vertical forces are written as 
 \begin{equation}
-	H=0, \ \ F-V=0 \ \ \Rightarrow V=F
+	H=0, \ \ F-V=0, 
 	\label{eqn:}
 \end{equation}
-If we evaluate the total moment about $A$, the equilibrium condition for the moment  
- is written as 
+while that for the moment about A as 
 \begin{equation}
 	M+F\times l =0 \ \ \Rightarrow M=-Fl.
 	\label{eqn:}
 \end{equation}
-We have not studied the way to impose moment without applying forces.
-However, a pure moment of arbitrary magnitude can be generated by 
-a couple forces shown in Fig.\ref{fig:fig6}. Note that the moment at the 
-center of the couple force is evaluated to be 
+As a result, we have 
+\begin{equation}
+	H=0, \ \ V=F, \ \ M=-Fl. 
+	\label{eqn:}
+\end{equation}
+It seems that we cannot justify the emergence of the reaction moment 
+in addition to the reaction force. However, a pure moment of arbitrary magnitude 
+can be generated by a couple of forces shown in Fig.\ref{fig:fig6}. 
+Note that the moment at the center of the couple is 
 \begin{equation}
 	M=K\varepsilon, 
 	\label{eqn:}
 \end{equation}
-while the sum of the coupled forces is zero. 
-Thus we may generate the moment of arbitray magnitude by selecting 
- either $K$ or $\varepsilon$ withouth violating the equilbrium of forces. 
- Note also that we cannot determine both $F$ and $\varepsilon$ simultaneouslu, thus 
-we should content with having only the moment. 
-This is why we have drawn the reaction moment in Fig.\ref{fig:fig3} but not the couple force.
+whereas the sum of the two forces vanishes. 
+This means we can generate the moment of arbitray magnitude without changing the net force, 
+by selecting either $K$ or $\varepsilon$.
+Note however that we cannot determine both $F$ and $\varepsilon$ simultaneously, and thus 
+we cannot but content with having only the moment of the couple. 
+This is why we have drawn the reaction moment in Fig.\ref{fig:fig3} instead of the 
+couple of forces.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig3.eps} 
 	\end{center}
-	\caption{(a) A bar fixed horizontally to a rigid and immobile wall. 
-	The reaction forces from the wall.} 
+	\caption{(a) A bar held horizontally by a rigid and immobile wall as a fixed support. 
+	The reaction forces from the fixed support.} 
 	\label{fig:fig3}
 \end{figure}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{fig6.eps} 
 	\end{center}
-	\caption{Generation of a pure moment by a couple force.} 
+	\caption{Generation of a pure moment by a couple of forces.} 
 	\label{fig:fig6}
 \end{figure}
 \subsubsection{Pin support}
