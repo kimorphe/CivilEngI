@@ -282,7 +282,7 @@ Regarding the axial and transverse forces, we have
 	N_A-N_B=0, \ Q_A-Q_B=0, .
 	\label{eqn:}
 \end{equation}
-thus we can introduce independent axial and transverse force components as
+thus we can introduce independent axial and transverse force components $N$ and $Q$ as
 \begin{equation}
 	N=N_A=N_B,\  Q=Q_A=Q_B.
 	\label{eqn:}
@@ -418,30 +418,30 @@ means we can determine up to two axial forces per node.
 If more than two members are connected to a node, it is not possible to 
 determine the axial forces of those members all at once. 
 In that case, you should postphone imposing equilibrium conditoin to that 
-node until at least one of the axial forces is determined 
-as a result of the analysis of neighboring noddes. 
+node until at least one of the axial forces involved is determined 
+as a result of the analysis on neighboring nodes. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig10.eps} 
 	\end{center}
 	\caption{(a) A free body diagram for a truss of Fig.\ref{fig:fig9}. 
-	(b) The forces exerted on the nodal points by the truss members.} 
+	(b) The forces exerted on the nodal points by the supports and truss members.} 
 	\label{fig:fig10}
 \end{figure}
 \subsection{Solved Problems}
 \begin{enumerate}
 \item
 Consider a simply supported bar shown in Fig.\ref{fig:fig3_3}, and 
-determine the reaction forces at support A and B.
+determine the reaction forces at the supports A and B.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig3_3.eps} 
 	\end{center}
-	\caption{A simply supported bar subjected to a vertical force of magnitude $F$i.}
+	\caption{A simply supported bar subjected to a vertical force of magnitude $F$.}
 	\label{fig:fig3_3}
 \end{figure}
 {\small
-	The free body diagram of the simply supported bar is shown in Fig.\ref{fig:fig15}. 
+	A free body diagram for the simply supported bar is shown in Fig.\ref{fig:fig15}. 
 	The horizontal and vertical components of the reaction forces are denoted in
 	this figure as $H_A, V_A$ and $V_B$.
 	The equilbrium equations for the reaction force compoents are 
@@ -462,38 +462,37 @@ determine the reaction forces at support A and B.
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig15.eps} 
 	\end{center}
-	\caption{A free body diagram of the bar shown in Fig.\ref{fig:fig3_3}.} 
+	\caption{A free body diagram for the bar shown in Fig.\ref{fig:fig3_3}.} 
 	\label{fig:fig15}
 	\end{figure}
 \item
 Examine two support conditions shown in Fig.\ref{fig:fig3_4}, 
 and determine whether all the reaction forces and moments can 
-be determined from the equilibrium equations. 
+be determined by the equilibrium equations. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig3_4.eps} 
 	\end{center}
-	\caption{A straight bar connected to (a)fixed supports, and (b) pinned supports.} 
+	\caption{A straight bar in two support conditions.} 
 	\label{fig:fig3_4}
 \end{figure}
 {\small
-	The free body diagrams for the two support condtions are shown in 
-	Fig.\ref{fig:fig16}. The total number of unknown reaction force components are  
-	6 for (a) and 4 for (b), whereas the number of equilbirium equations 
+	The free body diagrams for the two support condtions are shown in Fig.\ref{fig:fig16}. 
+	As shown in this figure, the total number of unknown reaction force components are  
+	6 for (a) and 4 for (b) whereas the number of equilbirium equations 
 	available are three. Therefore, it is not possible to determine the 
 	reaction force components based only on the equilbrium conditions since 
-	the number of unknowns is strictly greater than constraining equations.  
-	When reaction forces can be determined from the equilbrium equations, 
-		we say the structure is statically determinate. 
-		Otherwise, the structure is called statically inteterminate.
-	The structures shown in Fig.\ref{fig:fig3_4} are the examples of 
-	statically indeterminate structures.
+	the number of unknowns is greater than constraining equations.  
+	When reaction forces can be determined by the equilbrium equations, 
+	we say the structure is statically determinate. Otherwise, the structure is 
+	called statically inteterminate. The structures shown in Fig.\ref{fig:fig3_4} are 
+	 examples of statically indeterminate structures.
 }
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig16.eps} 
 	\end{center}
-	\caption{The free body diagram for the bars shown in Fig.\ref{fig:fig3_4}.} 
+	\caption{Free body diagrams for the bars shown in Fig.\ref{fig:fig3_4}.} 
 	\label{fig:fig16}
 \end{figure}
 \item
@@ -503,87 +502,81 @@ be determined from the equilibrium equations.
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig13.eps} 
 	\end{center}
-	\caption{A simply supported truss structure.} 
+	\caption{A simply supported truss. } 
 	\label{fig:fig13}
 \end{figure}
 {\small 
-	We first assign numbers to each turss member and draw the free body 
-	diagram as shown in Fig.\ref{fig:fig14}.
-	The equilibrium equations for the horizontal and vertical forces 
-	are written as 
-	\[ 
-		H_A+F\cos\alpha =0 , \ \ V_A+V_B+F\sin\alpha=0
-	\]
-	where $\alpha=\frac{\pi}{4}$.
-	If we evaluate the moment about $A$, the vanishing moment condition 
-	becomes
+	We first assign a unique number to each turss member, and draw 
+	a free body diagram as shown in Fig.\ref{fig:fig14}-(a) to 
+	obtain the reaction forces in the first place. 
+	If we notice that the line of action of the force at $D$ passes the node $A$, 
+	the equilbrium of the mement about $A$ is written as  
 	\[
 		V_B\times l =0.
 	\]
-	since the line of action of the force at $D$ passes the node $A$. 
-	We hence conclude 
+	Given $V_B=0$, the equilibrium equations: 
+	\[ 
+		H_A+F\cos\alpha =0 , \ \ V_A+V_B+F\sin\alpha=0, \ \ \left( \alpha=\frac{\pi}{4}\right)
+	\]
+	for the horizontal and vertical reaction forces give
 	\[
-		H_A=V_A=-\frac{F}{\sqrt{2}}, \ \ V_B=0
+		H_A=V_A=-\frac{F}{\sqrt{2}}, \ \ V_B=0.
 	\]
 
-	To determine the axial forces one by one, let's enumerate the 
-	axial forces and illustrate all the forces that act to 
-	every nodes as shown in Fig.\ref{fig:fig14}. 
-	Again, the axial force of the $i$th member is denoted in 
-	this figure as $N_i$ for $i=1,\dots 5$.
-	Then we impose equilbrium conditions going through the nodes.
-	But we need to start with the node for which less than or equal to 
-	two unknown forces are involved. 
-	If we start with node D, the equilibrium conditions first give us
+	To determine the axial forces one by one, we draw a diagram 
+	that shows the forces acting to each nodes as shown 
+	in Fig.\ref{fig:fig14}. In this figure, the axial force of the $i$th 
+	truss member is denoted as $N_i$.
+	In imposing equilbrium conditions going through the nodes one by one, 
+	we need to start with the node to which two truss members are connected.
+	If we start with node $D$, the equilibrium conditions give
 	\[ 
-		N_4=N_5=\frac{F}{\sqrt{2}}
-	\].
-	If we start from node A instead, the equilbrium condtions get us 
+		N_4=N_5=\frac{F}{\sqrt{2}}.
+	\]
+	If we start from node $A$ instead, we obtain
 	\[
 		N_1=-H_A=\frac{F}{\sqrt{2}}, \ \ 
 		N_2=-V_A=\frac{F}{\sqrt{2}}
 	\]
-	Either way, the equilbrium equations for node C and D are made 
-	solvable once one of the axial forces of the members connected to those 
-	nodes have been determined. 
-	For node C, require 
+	Either way, the equilbrium equations for node $C$ and $D$ are made 
+	solvable as a result of the analsyes either or both on node $A$ and $D$.
+	The equilbrium equastions for the node $C$ are given by 
 	\[
 		N_5+\frac{N_3}{\sqrt{2}}=0, \ \ 
 		N_2+\frac{N_3}{\sqrt{2}}=0
 	\]
-	whereas for node D
+	whereas for node $D$ by
 	\[
 		N_4+\frac{N_3}{\sqrt{2}}+V_B=0, \ \ 
-		N_1+\frac{N_3}{\sqrt{2}}=0
+		N_1+\frac{N_3}{\sqrt{2}}=0.
 	\]
-	are required. From the set of equations presented above, we 
-	finally obtain $N_3=-F$.
+	From the set of equations presented above, we obtain $N_3=-F$.
 }
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig14.eps} 
 	\end{center}
-	\caption{(a)A free body diagram of the whole truss structure.
-	(b) Axial forces acting to the joints connected by hinges.} 
+	\caption{(a)A free body diagram for the whole truss structure.
+	(b) Axial forces acting to the pin connected joints.} 
 	\label{fig:fig14}
 \end{figure}
 \end{enumerate}
 \subsection{Supplementary Problems}
 \begin{enumerate}
 \item
-Consider a bar subjected to two angled forces as shown in Fig.\ref{fig:fig3_5}, and 
+For a bar subjected to two angled forces as shown in Fig.\ref{fig:fig11}, 
 determine the reaction forces and moment at the fixed support.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig11.eps} 
 	\end{center}
-	\caption{A bar subjected to two angled forces of magnitude $F$.}
+	\caption{A bar subjected to two angled forces of equal magnitude $F$.}
 	\label{fig:fig11}
 \end{figure}
 \item
 	Examine the bars shown in Fig.\ref{fig:fig12} under a vertical load 
 	of magnitude $F$, and answer whether the reaction forces and 
-	moment can be determined from the equilbrium conditions.
+	moment can be determined by the equilbrium conditions.
 	If the answer is positive, obtain the reaction forces and moment. 
 \begin{figure}[h]
 	\begin{center}
@@ -593,7 +586,7 @@ determine the reaction forces and moment at the fixed support.
 	\label{fig:fig12}
 \end{figure}
 \item
-Determine the reaction and axial forces acting to the truss structures shown in Fig.\ref{fig:fig3_5}.
+Obtain the reaction and axial forces acting to the truss structures shown in Fig.\ref{fig:fig3_5}.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig3_5.eps} 
