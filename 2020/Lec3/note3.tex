@@ -162,14 +162,12 @@ couple of forces.
 \end{figure}
 \subsubsection{Pin support}
 At a pin support, the bar is connected to a fixture with a hinge 
-as shown in Fig.\ref{fig:fig7}.
-Around the hinge, the bar may rotate freely and frictionlessly.
-Since the support itself is fixed to an immobile floor or a wall, 
-the bar is not allowed to move in any directions at the pin support. 
-This means pin supports generate the horizontal and vertical 
-reaction forces in reaction to the loading.
-On the other hand, the reaction moment does not arise 
-because pin supports let the bar rotate freely about the hinges. 
+as shown in Fig.\ref{fig:fig7}. Around the hinge, the bar may rotate 
+freely and frictionlessly. Since the support itself is fixed to an immobile 
+floor or a wall, the bar is not allowed to move in any directions at the 
+pin support.  This means pin supports apply the horizontal and vertical 
+reaction forces in reaction to the loading. On the other hand, the reaction 
+moment does not arise because the bar can rotate freely about the hinges. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.6\linewidth]{fig7.eps} 
@@ -178,19 +176,19 @@ because pin supports let the bar rotate freely about the hinges.
 	\label{fig:fig7}
 \end{figure}
 \subsubsection{Roller support}
-Figure \ref{fig:fig8} illustrates the roller supports installed on a floor 
-and a wall. As depicted in this figure, roller supports consists of 
-a hinge and a roller. The hinge allows the bar to rotate freely as pin 
-supports do. The roller allows the bar to slide freely along the wall or floor.  
-Consequently, we assume that the roller supports do not generate 
+Figure \ref{fig:fig8} illustrates the roller supports installed on a floor and a wall. 
+As depicted in this figure, the roller supports consists of a hinge and roller. 
+The hinge allows the bar to rotate freely as the pin supports do. 
+The roller allows the bar to slide freely along the wall or floor.  
+Consequently, it is assumed that the roller supports do not apply 
 the reaction moment nor the reaction force in the sliding direction. 
- When a roller support is installed to a wall, for example, vertical 
- dipacelement may take place at the support while horizontal displacement 
-may not. In this case, therefore, the roller support provide only the horizontal 
-reaction force. When the roller support is installed on a floor, 
-the support prevents the vertical motion while letting the horizontal 
-displacement takes place freely. This means the roller support works as a source 
-of vertical reaction force.
+When a roller support is installed to a vertical wall, for example, the vertical 
+ dipacelement may take place freely at the support while the horizontal displacement 
+is not allowed. In this case, therefore, the roller support generate only the horizontal 
+reaction force. When the roller support is installed on a horizontal floor, 
+the support prevents the vertical motion while the horizontal 
+displacement takes place freely. This means the roller support works in this case 
+as a source of vertical reaction force.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.6\linewidth]{fig8.eps} 
@@ -199,26 +197,26 @@ of vertical reaction force.
 	\label{fig:fig8}
 \end{figure}
 \subsubsection{Simple support}
-When a bar is supported by a pin support at one end and by a roller 
-support by the other end, we say the bar is simply supported. 
 The combination of the roller and pin support is called simple support. 
+When a bar is supported by a pin support at one end and by a roller 
+support at the other end, we say the bar is simply supported. 
 When a bar is simply supported, we can determine the reaction forces 
-from the equilibirium conditions for the force and moment. 
+based on the equilibirium conditions for the force and moment. 
 To see this, consider a simply supported bar shown in Fig.\ref{fig:fig3_2}
-subjected to an angled load.
+subjected to an angled load of magnitude $F$.
 The pin support at the left end applies both the vertical and horizontal reaction forces 
-since the motion except rotation is constrained at the left end.
+since the displacements in those directions are constrained.
 At the right end of the bar, the rotation and lateral motion are allowed.
-Only a vertical reaction force arises at the right end. 
-Fig.\ref{fig:fig3_1} shows the non-vanishing reaction forces with the external 
+Thus, the roller support at the right end applies only a vertical reaction force.
+Fig.\ref{fig:fig3_1} shows the non-vanishing reaction forces and the external 
 force at the center of the bar. The diagram showing the forces acting to a body or 
-a portion of the body is called free body diagram. Fig.\ref{fig:fig3_1} is an example 
+a portion of the body is called a free body diagram. Fig.\ref{fig:fig3_1} is an example 
 of the free body diagram for a simply supported bar.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.6\linewidth]{fig3_2.eps} 
 	\end{center}
-	\caption{A simply supported bar AC subjected to an oblique force of magnitude $F$.}
+	\caption{A simply supported bar AC subjected to an angled force of magnitude $F$.}
 	\label{fig:fig3_2}
 \end{figure}
 \begin{figure}[h]
@@ -231,62 +229,34 @@ of the free body diagram for a simply supported bar.
 	}
 	\label{fig:fig3_1}
 \end{figure}
-The equilbirium conditon for the moment about $A$ is 
+Referring to the free body diagram, we can write the equilibirum equations as follows. 
+With respect to the point $A$, the equilbirium conditon for the moment is written as  
 \[
-	-F\sin\frac{\pi}{4}\times \frac{l}{2} + V_C\times l =0,
+	-F\sin\frac{\pi}{4}\times \frac{l}{2} + V_C\times l =0.
 \]
-Thus we have $V_C=\frac{F}{2\sqrt{2}}$. The equilibrium of the horizontal force 
-gives us 
+Thus we have $V_C=\frac{F}{2\sqrt{2}}$. The equilibrium of the horizontal force gives
 \[
 	H=F\cos\frac{\pi}{4}=\frac{F}{\sqrt{2}}.
 \]
-Finally, the equilbirium of vertical forces requires 
+Finally, the sum of vertical forces requires 
 \[
-	F\sin\frac{\pi}{4} -(V_A+V_C)=0
+	F\sin\frac{\pi}{4} -(V_A+V_C)=0, 
 \]
-determines $V_A$ as 
+which determines $V_A$ as 
 \[
 	V_A=\frac{F}{2\sqrt{2}}.
 \]
 \subsection{Pin Connection}
 A point where two or more truss members are joined together is called a joint or node. 
-At a joint,  truss members are connected either by a gasset plate or a hinge as depicted 
+At a joint, truss members are connected either by a gasset plate or a hinge as depicted 
 in Fig.\ref{fig:fig4}. The former is called a rigid connection whereas the latter is called 
-a pin connection. At a rigidly connected  joint, the truss members are joined 
-so tightly by a gasset plate that the angles between the truss members do not 
+a pin connection. At a rigidly connected joint, the truss members are joined 
+tightly by a gasset plate that the angles between the truss members do not 
 change upon loading. This means both force and moment can be transmitted across 
 the rigid joints from one member to another. 
-At a pin connection, on the other hand, the truss members joined by a hinge may rotate 
-freely about the joint. In other words, the pin connected joint does not bear a moment. 
-The consequence is important in the analyses of truss structure. 
-
-If we look at a truss member with rigidly connected ends, 
-the force and the moments work on both ends. This is the case 
-even thought the trusss member is not directly loaded by external forces. 
-When the structure and the structural members are in static equilibrium, the 
-equilibrium condtions must be met, which requires
-\begin{equation}
-	N_A-N_B=0, \ Q_A-Q_B=0, \  M_A-M_B+Q_Bl=0 
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-\end{equation}
-and thus we have
-\begin{equation}
-	N_A=N_B=N,\  Q_A=Q_B=Q, \  M_A-M_B=Ql.
-	\label{eqn:sec_forces}
-\end{equation}
-where $N$ and $Q$ are called axial and shear force, respectively.
-When the truss member is connected to pins at both ends, then 
-$M_A=M_B=0$ by assumption. This reduces to eq.(\ref{eqn:sec_forces}) 
-to 
-\begin{equation}
-	N_A=N_B=N,\  Q_A=Q_B=0, \  M_A=M_B=0.
-	\label{eqn:sec_forces}
-\end{equation}
-This means that the truss members transmit only the axial forces 
- if they are connected at both ends by hinges. As we will see, this 
- greatly simplifies the analyses of truss structures. 
+At a pin connection, on the other hand, the truss members can rotate freely about 
+the joint. In other words, pin connected joints do not bear a moment, and 
+only a force can be transmitted across the pin connected joints. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig4.eps} 
@@ -294,28 +264,71 @@ This means that the truss members transmit only the axial forces
 	\caption{A rigid and pin connections joining two truss members.} 
 	\label{fig:fig4}
 \end{figure}
+
+The load bearing mechanism of the structures changes significantly whether the 
+structural members are joined rigidly or pin connected. To see this, let's first 
+examin a truss member with the rigidly connected ends. When a truss structure is externally loaded, 
+the force and moments are transmitted througout the structure if the 
+members are joined rigidly. As a result, every truss member is subjected to 
+the force and moment at the joints even if the external load is not applied 
+directly to it. To describe the loading condition more preceisely, let's 
+denote the moment and forces in the axial and transverse directions 
+acting at a bar's ends as shown in Fig.\ref{fig:fig5}-(a). 
+There are six components of force and moment in this figure. 
+However, those six components are  mutually not  independent since 
+the equilibrium conditions must be satisfid. 
+Regarding the axial and transverse forces, we have 
+\begin{equation}
+	N_A-N_B=0, \ Q_A-Q_B=0, .
+	\label{eqn:}
+\end{equation}
+thus we can introduce independent axial and transverse force components as
+\begin{equation}
+	N=N_A=N_B,\  Q=Q_A=Q_B.
+	\label{eqn:}
+\end{equation}
+Moreover, the equlibrium conditon for moment about $A$ gives 
+\begin{equation}
+	M_A-M_B+Q_Bl=0 
+	\label{eqn:equib_Mab}
+\end{equation}
+reducing the number of independent components to three(i.e. $N,Q$ and $M_A$ or $M_B$).\\
+
+When the truss member $AB$ is pin connected at both ends, the 
+number of indepenent components of the nodal force and moment can be reduced further. 
+By assumption, the pin connected joints do not bear moment. Hence   
+\begin{equation}
+		M_A=M_B=0, 
+	\label{eqn:}
+\end{equation}
+which reduces eq.(\ref{eqn:equib_Mab}) to $Q=0$.
+In conclusion, we have 
+\begin{equation}
+	N_A=N_B=N,\  Q_A=Q_B=0, \  M_A=M_B=0.
+	\label{eqn:sec_forces}
+\end{equation}
+for pin connected truss members.  
+%This means that the truss members transmit only the axial forces if they are connected at both ends by hinges. 
+As we shall see in the next section, eq.(\ref{eqn:sec_forces}) greatly simplifies the analyses of truss structures. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig5.eps} 
 	\end{center}
-	\caption{The axial force transmitted to a truss member.}
+	\caption{The nodal force $N$ applied to a truss member.$N$ is called axial force.}
 	\label{fig:fig5}
 \end{figure}
 %
 %
 \subsection{Analysis of Truss Structure}
 One of the primary objectives of the analysis of truss structure is to determine 
-the axial forces in truss members generated due to  the extrnal load. 
-Evaluation of the axial forces is important because the excessive axial force leads to the 
-failure of the member and/or the structure.
-When a pin-connected truss is simply supported, the reaction forces from the supports and the 
-axial forces in the truss members can be determined from the equilbrium conditions of forces. 
-To obtain the axial forces, we're going to impose equilbrium conditions node by node.   
-There are two other approaches to this problem. However the node-by-node method is the simplest. 
-To study this approach, consider determining axial forces in the truss shown in 
-Fig.\ref{fig:fig9}. This is one of the simplest truss structures of all, but it can serve as a 
-canonical problem in learning the node-by-node method.\\ 
-
+the axial forces in truss members when the truss is extrnally loaded. 
+Evaluating the axial forces is important because excessive axial force leads to a  
+failure of the member and/or the structure. When a pin-connected truss is simply supported, 
+the axial forces in the truss members can be determined by imposing the equilbrium condition 
+node by node. There are other approaches to this problem.  
+However the node-by-node method is the simplest (not the most efficient in many cases unfortunately). 
+To learn the node-by-node approach, let's consider obtaining axial forces in the truss shown in 
+Fig.\ref{fig:fig9}.\\ 
 
 \begin{figure}[h]
 	\begin{center}
@@ -325,59 +338,60 @@ canonical problem in learning the node-by-node method.\\
 	\label{fig:fig9}
 \end{figure}
 The analysis of truss structure usually start with the identification of 
-external forces that act to the structure. 
-The external loads include reaction forces.  
-In the present problem, the horizontal force at node $C$ of magnitude $F$ 
-is the given external load.
-The reaction forces are not known, but we can determine them using 
-equilbrium conditions for the whole truss structure. To write the 
-equilbrium equations, we draw a free body diagram as shown in Fig.\ref{fig:fig9}-(a)
-where $H_A, V_A$ and $V_B$ are the horizontal or vertical component 
-of the reaction forces. The arrows in this figure indicate the direction of 
-forces when the vector componets take positive values. 
-With the foregoing notation, the equilbrium equations of the forces 
-and moment are written as
+external forces acting to the structure including reaction forces. 
+In the present example, the horizontal force at node $C$ of magnitude $F$ 
+is the given external load. The reaction forces are not known. 
+However, we have alreadly learned how we can use the equilbrium equations to 
+in determining the reaction forces for a simply supported bar. 
+If we consider the equilbrium conditions for the whole structure, 
+we can similarly obtain the reaction forces for simply supported truss structures 
+as well. To take this appoach, we first draw a free body diagram as shown in 
+Fig.\ref{fig:fig9}-(a) where $H_A, V_A$ and $V_B$ are the horizontal 
+or vertical components of the reaction forces. The arrows in this figure 
+indicate the direction when the force vector componets take positive values. 
+The equilbrium equations of the forces and moment are then written as 
 \begin{equation}
-	F+H_A=0, \ \ V_A+V_B=0, \ \ -F\times l\sin\frac{\pi}{3}+V_B\times l=0.
-	\label{eqn:}
+	F+H_A=0, \ \ V_A+V_B=0, \ \ -F\times l\sin\frac{\pi}{3}+V_B\times l=0. 
+	\label{eqn:equib_whole}
 \end{equation}
-Note that the total moment about $A$ has been considered in the third equation.
-Thus, we have 
+Thus we have 
 \begin{equation}
 	H_A=-F, \ \ V_A=-V_B=\frac{\sqrt{3}}{2}F
-	\label{eqn:}
+	\label{eqn:reac_frc}
 \end{equation}
-Once we have obtained every reaction force, we're ready to determine the axial forces. 
-For the analysis of the axial forces, it is convenient to number the truss members as 
+Note that the total moment about $A$ has been considered in the third equation of (\ref{eqn:equib_whole}).
+
+Given the reaction forces $H_A, V_A$ and $V_B$, we are ready to determine the axial forces. 
+For the analysis of axial force, it is convenient to number the truss members as 
 shown in Fig.\ref{fig:fig8}-(a), and denote the axial forces of the $i$th truss member 
-as $N_i$ for $i=1,2$ and 3. Note that the tensile axial force is taken to be positive. 
-If a tensile axial force is acting to a truss member, then the truss member is 
-being pulled by the joints it is connected to. 
-In other words, the truss member under a tensile axial force is pulling 
-the joints at its end. This is a consequence of the law of action and reaction.
-In the present situation, body A is the truss member and body B is the joint connected to.
-To make things clearer, let's look at the truss member 1. The truss member 1 is connected 
-to node A and B. Therefore, it is pulling the nodes A and B together if $N_1>0$. 
-The same observation applies to the truss members 2 and 3. 
-Figure.\ref{fig:fig9}-(b) shows the forces that act to each node (joints) of the truss. 
-It should be noted that this figure depicts the forces acting to the node not the truss members.  
-Since the truss structure including its joints is at rest, the set of forces 
-applied to each joint must satisfy the equilbrium condition.
+as $N_i$ where $i$ assumes 1,2 or 3. 
+In the following analysis, it is important to note that tensile axial force is taken to be 
+positive while compressional force to be negative. If a truss member is bearing a tensile axial 
+force, therefore, we can tell that the truss member is being pulled by the joints at its ends.
+By the law of action and reaction (Newton's 3rd law), this implies that the truss member under  
+tensile axial force is pulling the joints at its end. To make the discussion clearer, 
+let's look at the truss member 1. As shown in Fig.\ref{fig:fig10}-(a), the truss member 1 is 
+connected to node A and B. Hence, it pulls together the nodes A and B if $N_1>0$ and 
+ pushes apart if $N_1<0$. 
+ Since the same observation applies to the truss members 2 and 3, we can draw 
+ the forces that act to each node (joints) of the truss as shown in Fig.\ref{fig:fig9}-(b).
+It should be noted here that Fig.\ref{fig:fig10} depicts the forces acting to the node not 
+the truss members, which is why the truss members are drawn by dashed lines there. 
 By imposing the equilbrium conditions for horizontal and vertical forces node by node, 
 we can determine the axial forces. This procedure goes as follows.
 \begin{enumerate}
 \item
-	Node A: \\
-	The equilbrium equations of the horizontal and vertical forces at node A 
+	Node $A$: \\
+	The equilbrium equations of the horizontal and vertical forces at node $A$
 	are written respectively as 
 	\begin{equation}
 		N_1+H_A+N_2\cos\alpha=0, \ \ N_2\sin\alpha+V_A=0
 		\label{eqn:nodeA}
 	\end{equation}
-	where $\alpha=\frac{\pi}{3}$. Solving eqs.(\ref{eqn:nodeA}), 
-	we have $N_1=\frac{F}{2}$ and $N_2=F$. 
+	where $\alpha=\frac{\pi}{3}$. Solving eqs.(\ref{eqn:nodeA}). 
+	Thus we have $N_1=\frac{F}{2}$ and $N_2=F$. 
 \item
-	Node B: \\
+	Node $B$: \\
 	It follows from the equiribrium condtions for node B written as 
 	\begin{equation}
 		N_1+N_3\cos\alpha=0, \ \ N_3\sin\alpha+V_B=0
@@ -385,27 +399,27 @@ we can determine the axial forces. This procedure goes as follows.
 	\end{equation}
 	that we have $N_1=\frac{F}{2}$ and $N_3=-F$.
 	We can verify that the axial force for member 1 from eqs.(\ref{eqn:nodeA}) 
-	agrees with that from eq.(\ref{eqn:nodeB}).
+	agrees with that given from eq.(\ref{eqn:nodeB}).
 \item
-	Node C: \\
+	Node $C$: \\
 	The equilbrium conditions for node C are written as 
 	\begin{equation}
 		F-N_1\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0.
 		\label{eqn:nodeC}
 	\end{equation}
-	Since we have already determined all the axial forces, 
-	eqs.(\ref{eqn:nodeC}) are redundant.  
+	Since we have already determined all the axial forces, eqs.(\ref{eqn:nodeC}) are redundant.  
 	However, it is a good practice to verify the solutions using a redundant 
-	but independently derived relations that should be satisfied as well.  
-	In the present problem, we can verify that our solutions $N_1,N_2$ and $N_3$ do 
+	but independently derived relations that should be satisfied.  
+	In this problem, we can verify that our solutions $N_1,N_2$ and $N_3$ do 
 	satisfy eq.(\ref{eqn:nodeC}).
 \end{enumerate}
-As it has been shown, two equations are availablle for every nodal point.
-This means we can determine up to two axial forces per node 
-based on the  equilbrium conditions. 
+As it has been shown, two equations are availablle for every nodal point, which 
+means we can determine up to two axial forces per node. 
 If more than two members are connected to a node, it is not possible to 
-determine the axial forces of those members all at once as long as 
-the nodal equilrium conditions are used exlusively.
+determine the axial forces of those members all at once. 
+In that case, you should postphone imposing equilibrium conditoin to that 
+node until at least one of the axial forces is determined 
+as a result of the analysis of neighboring noddes. 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.8\linewidth]{fig10.eps} 
