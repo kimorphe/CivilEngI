@@ -1,4 +1,4 @@
-\documentclass[10pt,a4j]{article}
+﻿\documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
 \usepackage{showkeys}
@@ -53,24 +53,11 @@
 \setcounter{section}{2}
 \section{Basics of Truss Structures}
 \subsection{Introduction}
-A bridge structure is assembled by joining plates, bars, and cables of various sizes.
-The parts making up a bridge structure are called structural members.
-In this lecture, we focus on the mechanics of slender bar-like structural 
-members. By "bar", we mean a slender object for which an evident longitudinal 
-axis exists. The cross sectional area of the bar may or may not be uniform
-in the axial direction. No assumption is made regarding the shape of the cross section.
-By joining bars, we can build a bridge structure called truss. 
-In this context, we call the bar-like structural member as a truss member. 
-Fig.\ref{fig:fig1} shows examples of truss stuctures. 
-The truss structures shown in this figure bear the name of their inventors. 
-Truss structures are characterized by a triangular assemblage of the members. 
-The major advantage of the truss structure is weight. 
-Truss structures are often lighter in weight than girder bridges, which 
-is the most prevalent bridge structure best suited to short-span bridges.
-In designing truss structures, we need to address the following issues.
+Bridges are fabricated by joining plates, bars, and cables of various sizes. The parts making up a bridge structure are called structural members. In this lecture, we focus on the mechanics of slender bar-like structural members. By "bar", we mean a slender object for which an evident longitudinal axis exists. The cross-sectional area of the bar may or may not be uniform in the axial direction. No assumption is made either regarding the shape of the cross-section. By joining bars, we can build a bridge structure called a truss. In this context, we often call the bars as truss members. In Fig.\ref{fig:fig1}, examples of truss structures are shown. The truss structures in this figure bear the name of their inventors. Truss structures are characterized by a triangular assemblage of the members. The major advantage of the truss structure is weights. Trusses are often lighter in weight than girder bridges, which are the most prevalent bridge structure best suited to short-span bridges. In designing truss structures, we need to address the following issues.
+%DONE
 \begin{itemize}
 \item
-	How is the whole truss strcture supported ?
+	How is the whole truss structure supported ?
 \item
 	How to connect two or more truss members at the joints ?
 \item
@@ -85,7 +72,7 @@ Those are the topics of this lecture to be discussed in some detail.
 	\label{fig:fig1}
 \end{figure}
 \subsection{Support Condition and Reaction Forces}
-There are three support condtions that are basic in structural mechanics. 
+There are three support conditions that are basic in structural mechanics. 
 Those are 
 \begin{itemize}
 \item
@@ -103,7 +90,7 @@ the supports and a single straight bar.
 When a bar is fixed to a rigid and immobile wall as shown in Fig.\ref{fig:fig3}-(a), 
 we say the bar is held by a "fixed" or "clamped" support. 
 At a fixed support, we assume that the translational and rotational motion 
-are completely restraied. In the setup shown in Fig.\ref{fig:fig3}-(a),  
+are completely restrained. In the setup shown in Fig.\ref{fig:fig3}-(a),  
 the horizontal, vertical, and rotational displacement at the left end of 
 the bar are therefore not allowed at all. To see how the fixed support works, 
 suppose that the bar is under a vertical force as illustrated in Fig.\ref{fig:fig3}-(a).
@@ -112,7 +99,7 @@ The force and moment applied by a support called reaction force and reaction mom
 The reaction force and moment are required to statically support the bar by 
 equilibrating the total forces and moments. 
 To see this, assume that the bar is subjected to the reaction forces and  moment 
-as shown in Fig.\ref{fig:fig3}-(b)). Then the equilibrium condtions for the horizontal 
+as shown in Fig.\ref{fig:fig3}-(b)). Then the equilibrium conditions for the horizontal 
 and vertical forces are written as 
 \begin{equation}
 	H=0, \ \ F-V=0, 
@@ -123,7 +110,7 @@ and for the moment about A as
 	M+F\times l =0.
 	\label{eqn:}
 \end{equation}
-As a result, the equilbrium conditions can be satisfied if and only if 
+As a result, the equilibrium conditions can be satisfied if and only if 
 the reaction forces such as  
 \begin{equation}
 	H=0, \ \ V=F, \ \ M=-Fl. 
@@ -139,8 +126,8 @@ constants such that
 	M=K\varepsilon.
 	\label{eqn:}
 \end{equation}
-Note that the sum of the two forces consisting the cuple vanishes. 
-This means we can generate a pure moment of arbitray magnitude.
+Note that the sum of the two forces consisting the couple vanishes. 
+This means we can generate a pure moment of arbitrary magnitude.
 For given $M$, however, we cannot determine $K$ and $\varepsilon$ uniquely. 
 We thus have to be content with specifying only $M$ rather than $F$ and $\varepsilon$. 
 This is why we have drawn the reaction moment in Fig.\ref{fig:fig3} instead of the 
@@ -163,7 +150,7 @@ couple of forces.
 \subsubsection{Pin support}
 At a pin support, the bar is connected to a fixture with a hinge 
 as shown in Fig.\ref{fig:fig7}. Around the hinge, the bar may rotate 
-freely and frictionlessly. Since the support itself is fixed to an immobile 
+freely and smoothly. Since the support itself is fixed to an immobile 
 floor or a wall, the bar is not allowed to move in any directions at the 
 pin support.  This means pin supports apply the horizontal and vertical 
 reaction forces in reaction to the loading. On the other hand, the reaction 
@@ -183,7 +170,7 @@ The roller allows the bar to slide freely along the wall or floor.
 Consequently, it is assumed that the roller supports do not apply 
 the reaction moment nor the reaction force in the sliding direction. 
 When a roller support is installed to a vertical wall, for example, the vertical 
- dipacelement may take place freely at the support while the horizontal displacement 
+ displacement may take place freely at the support while the horizontal displacement 
 is not allowed. In this case, therefore, the roller support generate only the horizontal 
 reaction force. When the roller support is installed on a horizontal floor, 
 the support prevents the vertical motion while the horizontal 
@@ -201,7 +188,7 @@ The combination of the roller and pin support is called simple support.
 When a bar is supported by a pin support at one end and by a roller 
 support at the other end, we say the bar is simply supported. 
 When a bar is simply supported, we can determine the reaction forces 
-based on the equilibirium conditions for the force and moment. 
+based on the equilibrium conditions for the force and moment. 
 To see this, consider a simply supported bar shown in Fig.\ref{fig:fig3_2}
 subjected to an angled load of magnitude $F$.
 The pin support at the left end applies both the vertical and horizontal reaction forces 
@@ -229,8 +216,8 @@ of the free body diagram for a simply supported bar.
 	}
 	\label{fig:fig3_1}
 \end{figure}
-Referring to the free body diagram, we can write the equilibirum equations as follows. 
-With respect to the point $A$, the equilbirium conditon for the moment is written as  
+Referring to the free body diagram, we can write the equilibrium equations as follows. 
+With respect to the point $A$, the equilibrium condition for the moment is written as  
 \[
 	-F\sin\frac{\pi}{4}\times \frac{l}{2} + V_C\times l =0.
 \]
@@ -248,10 +235,10 @@ which determines $V_A$ as
 \]
 \subsection{Pin Connection}
 A point where two or more truss members are joined together is called a joint or node. 
-At a joint, truss members are connected either by a gasset plate or a hinge as depicted 
+At a joint, truss members are connected either by a gusset plate or a hinge as depicted 
 in Fig.\ref{fig:fig4}. The former is called a rigid connection whereas the latter is called 
 a pin connection. At a rigidly connected joint, the truss members are joined 
-tightly by a gasset plate that the angles between the truss members do not 
+tightly by a gusset plate that the angles between the truss members do not 
 change upon loading. This means both force and moment can be transmitted across 
 the rigid joints from one member to another. 
 At a pin connection, on the other hand, the truss members can rotate freely about 
@@ -267,16 +254,16 @@ only a force can be transmitted across the pin connected joints.
 
 The load bearing mechanism of the structures changes significantly whether the 
 structural members are joined rigidly or pin connected. To see this, let's first 
-examin a truss member with the rigidly connected ends. When a truss structure is externally loaded, 
-the force and moments are transmitted througout the structure if the 
+examine a truss member with the rigidly connected ends. When a truss structure is externally loaded, 
+the force and moments are transmitted throughout the structure if the 
 members are joined rigidly. As a result, every truss member is subjected to 
 the force and moment at the joints even if the external load is not applied 
-directly to it. To describe the loading condition more preceisely, let's 
+directly to it. To describe the loading condition more precisely, let's 
 denote the moment and forces in the axial and transverse directions 
 acting at a bar's ends as shown in Fig.\ref{fig:fig5}-(a). 
 There are six components of force and moment in this figure. 
 However, those six components are  mutually not  independent since 
-the equilibrium conditions must be satisfid. 
+the equilibrium conditions must be satisfied. 
 Regarding the axial and transverse forces, we have 
 \begin{equation}
 	N_A-N_B=0, \ Q_A-Q_B=0, .
@@ -287,7 +274,7 @@ thus we can introduce independent axial and transverse force components $N$ and 
 	N=N_A=N_B,\  Q=Q_A=Q_B.
 	\label{eqn:}
 \end{equation}
-Moreover, the equlibrium conditon for moment about $A$ gives 
+Moreover, the equilibrium condition for moment about $A$ gives 
 \begin{equation}
 	M_A-M_B+Q_Bl=0 
 	\label{eqn:equib_Mab}
@@ -295,7 +282,7 @@ Moreover, the equlibrium conditon for moment about $A$ gives
 reducing the number of independent components to three(i.e. $N,Q$ and $M_A$ or $M_B$).\\
 
 When the truss member $AB$ is pin connected at both ends, the 
-number of indepenent components of the nodal force and moment can be reduced further. 
+number of independent components of the nodal force and moment can be reduced further. 
 By assumption, the pin connected joints do not bear moment. Hence   
 \begin{equation}
 		M_A=M_B=0, 
@@ -321,10 +308,10 @@ As we shall see in the next section, eq.(\ref{eqn:sec_forces}) greatly simplifie
 %
 \subsection{Analysis of Truss Structure}
 One of the primary objectives of the analysis of truss structure is to determine 
-the axial forces in truss members when the truss is extrnally loaded. 
+the axial forces in truss members when the truss is externally loaded. 
 Evaluating the axial forces is important because excessive axial force leads to a  
 failure of the member and/or the structure. When a pin-connected truss is simply supported, 
-the axial forces in the truss members can be determined by imposing the equilbrium condition 
+the axial forces in the truss members can be determined by imposing the equilibrium condition 
 node by node. There are other approaches to this problem.  
 However the node-by-node method is the simplest (not the most efficient in many cases unfortunately). 
 To learn the node-by-node approach, let's consider obtaining axial forces in the truss shown in 
@@ -341,15 +328,15 @@ The analysis of truss structure usually start with the identification of
 external forces acting to the structure including reaction forces. 
 In the present example, the horizontal force at node $C$ of magnitude $F$ 
 is the given external load. The reaction forces are not known. 
-However, we have alreadly learned how we can use the equilbrium equations to 
+However, we have already learned how we can use the equilibrium equations to 
 in determining the reaction forces for a simply supported bar. 
-If we consider the equilbrium conditions for the whole structure, 
+If we consider the equilibrium conditions for the whole structure, 
 we can similarly obtain the reaction forces for simply supported truss structures 
-as well. To take this appoach, we first draw a free body diagram as shown in 
+as well. To take this approach, we first draw a free body diagram as shown in 
 Fig.\ref{fig:fig9}-(a) where $H_A, V_A$ and $V_B$ are the horizontal 
 or vertical components of the reaction forces. The arrows in this figure 
-indicate the direction when the force vector componets take positive values. 
-The equilbrium equations of the forces and moment are then written as 
+indicate the direction when the force vector components take positive values. 
+The equilibrium equations of the forces and moment are then written as 
 \begin{equation}
 	F+H_A=0, \ \ V_A+V_B=0, \ \ -F\times l\sin\frac{\pi}{3}+V_B\times l=0. 
 	\label{eqn:equib_whole}
@@ -377,12 +364,12 @@ connected to node A and B. Hence, it pulls together the nodes A and B if $N_1>0$
  the forces that act to each node (joints) of the truss as shown in Fig.\ref{fig:fig9}-(b).
 It should be noted here that Fig.\ref{fig:fig10} depicts the forces acting to the node not 
 the truss members, which is why the truss members are drawn by dashed lines there. 
-By imposing the equilbrium conditions for horizontal and vertical forces node by node, 
+By imposing the equilibrium conditions for horizontal and vertical forces node by node, 
 we can determine the axial forces. This procedure goes as follows.
 \begin{enumerate}
 \item
 	Node $A$: \\
-	The equilbrium equations of the horizontal and vertical forces at node $A$
+	The equilibrium equations of the horizontal and vertical forces at node $A$
 	are written respectively as 
 	\begin{equation}
 		N_1+H_A+N_2\cos\alpha=0, \ \ N_2\sin\alpha+V_A=0
@@ -392,7 +379,7 @@ we can determine the axial forces. This procedure goes as follows.
 	Thus we have $N_1=\frac{F}{2}$ and $N_2=F$. 
 \item
 	Node $B$: \\
-	It follows from the equiribrium condtions for node B written as 
+	It follows from the equilibrium condtions for node B written as 
 	\begin{equation}
 		N_1+N_3\cos\alpha=0, \ \ N_3\sin\alpha+V_B=0
 		\label{eqn:nodeB}
@@ -402,7 +389,7 @@ we can determine the axial forces. This procedure goes as follows.
 	agrees with that given from eq.(\ref{eqn:nodeB}).
 \item
 	Node $C$: \\
-	The equilbrium conditions for node C are written as 
+	The equilibrium conditions for node C are written as 
 	\begin{equation}
 		F-N_1\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0.
 		\label{eqn:nodeC}
@@ -413,11 +400,11 @@ we can determine the axial forces. This procedure goes as follows.
 	In this problem, we can verify that our solutions $N_1,N_2$ and $N_3$ do 
 	satisfy eq.(\ref{eqn:nodeC}).
 \end{enumerate}
-As it has been shown, two equations are availablle for every nodal point, which 
+As it has been shown, two equations are available for every nodal point, which 
 means we can determine up to two axial forces per node. 
 If more than two members are connected to a node, it is not possible to 
 determine the axial forces of those members all at once. 
-In that case, you should postphone imposing equilibrium conditoin to that 
+In that case, you should postpone imposing equilibrium condition to that 
 node until at least one of the axial forces involved is determined 
 as a result of the analysis on neighboring nodes. 
 \begin{figure}[h]
@@ -444,7 +431,7 @@ determine the reaction forces at the supports A and B.
 	A free body diagram for the simply supported bar is shown in Fig.\ref{fig:fig15}. 
 	The horizontal and vertical components of the reaction forces are denoted in
 	this figure as $H_A, V_A$ and $V_B$.
-	The equilbrium equations for the reaction force compoents are 
+	The equilibrium equations for the reaction force components are 
 	\[
 		H_A=0, \ \ V_A+V_B=F, 
 	\]
@@ -477,15 +464,15 @@ be determined by the equilibrium equations.
 	\label{fig:fig3_4}
 \end{figure}
 {\small
-	The free body diagrams for the two support condtions are shown in Fig.\ref{fig:fig16}. 
+	The free body diagrams for the two support conditions are shown in Fig.\ref{fig:fig16}. 
 	As shown in this figure, the total number of unknown reaction force components are  
-	6 for (a) and 4 for (b) whereas the number of equilbirium equations 
+	6 for (a) and 4 for (b) whereas the number of equilibrium equations 
 	available are three. Therefore, it is not possible to determine the 
-	reaction force components based only on the equilbrium conditions since 
+	reaction force components based only on the equilibrium conditions since 
 	the number of unknowns is greater than constraining equations.  
-	When reaction forces can be determined by the equilbrium equations, 
+	When reaction forces can be determined by the equilibrium equations, 
 	we say the structure is statically determinate. Otherwise, the structure is 
-	called statically inteterminate. The structures shown in Fig.\ref{fig:fig3_4} are 
+	called statically indeterminate. The structures shown in Fig.\ref{fig:fig3_4} are 
 	 examples of statically indeterminate structures.
 }
 \begin{figure}[h]
@@ -506,11 +493,11 @@ be determined by the equilibrium equations.
 	\label{fig:fig13}
 \end{figure}
 {\small 
-	We first assign a unique number to each turss member, and draw 
+	We first assign a unique number to each truss member, and draw 
 	a free body diagram as shown in Fig.\ref{fig:fig14}-(a) to 
 	obtain the reaction forces in the first place. 
 	If we notice that the line of action of the force at $D$ passes the node $A$, 
-	the equilbrium of the mement about $A$ is written as  
+	the equilibrium of the moment about $A$ is written as  
 	\[
 		V_B\times l =0.
 	\]
@@ -527,7 +514,7 @@ be determined by the equilibrium equations.
 	that shows the forces acting to each nodes as shown 
 	in Fig.\ref{fig:fig14}. In this figure, the axial force of the $i$th 
 	truss member is denoted as $N_i$.
-	In imposing equilbrium conditions going through the nodes one by one, 
+	In imposing equilibrium conditions going through the nodes one by one, 
 	we need to start with the node to which two truss members are connected.
 	If we start with node $D$, the equilibrium conditions give
 	\[ 
@@ -538,9 +525,9 @@ be determined by the equilibrium equations.
 		N_1=-H_A=\frac{F}{\sqrt{2}}, \ \ 
 		N_2=-V_A=\frac{F}{\sqrt{2}}
 	\]
-	Either way, the equilbrium equations for node $C$ and $D$ are made 
-	solvable as a result of the analsyes either or both on node $A$ and $D$.
-	The equilbrium equastions for the node $C$ are given by 
+	Either way, the equilibrium equations for node $C$ and $D$ are made 
+	solvable as a result of the analysis either or both on node $A$ and $D$.
+	The equilibrium equations for the node $C$ are given by 
 	\[
 		N_5+\frac{N_3}{\sqrt{2}}=0, \ \ 
 		N_2+\frac{N_3}{\sqrt{2}}=0
@@ -576,7 +563,7 @@ determine the reaction forces and moment at the fixed support.
 \item
 	Examine the bars shown in Fig.\ref{fig:fig12} under a vertical load 
 	of magnitude $F$, and answer whether the reaction forces and 
-	moment can be determined by the equilbrium conditions.
+	moment can be determined by the equilibrium conditions.
 	If the answer is positive, obtain the reaction forces and moment. 
 \begin{figure}[h]
 	\begin{center}
