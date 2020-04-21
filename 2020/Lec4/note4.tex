@@ -110,7 +110,7 @@ In the structural analysis necessary for the design, we assume the followings.
 \item
 	The two pipes are identical and both are completely filled with water. 
 \item
-	The the truss members (bars) are so thin that their weight is negligible.
+	The truss members (bars) are so thin that their weight is negligible.
 \item
 	The weight of the water-filled pipes are supported evenly at the lower nodal 
 		points (joints) A, A' to D,D' of the truss.
@@ -147,7 +147,7 @@ In the structural analysis necessary for the design, we assume the followings.
 	}
 	\label{fig:fig4_2}
 \end{figure}
-\subsubsection{Structural analysis flow}
+\subsubsection{Flow of Structural Analysis}
 With the assumptions above, determine the minimum value of $d$ for which the 
 truss can safely support the pipes without damaging (breaking) any of its members. 
 The flow of structural analysis is as follows.
@@ -172,7 +172,7 @@ The flow of structural analysis is as follows.
 %	Note that the axial stress is given by $N/A$ where $N$ is the axial force 
 %	and $A=\pi d^2/4$ is the cross sectional area of the bar.
 \item
-	Evaluate $d_{min}$ numerically for\\
+	To get an idea of what we have designed, evaluate $d_{min}$ numerically for\\
 		\begin{center}
 			$D$=500.0[mm], $t$=10.0[mm], 
 			$\rho_s=$7.9[g/cm$^3$],
@@ -180,33 +180,56 @@ The flow of structural analysis is as follows.
 			$l=3.0$[m],
 			$\sigma_a$=20.0[kgf/mm$^2$], $g$=10.0[m/s$^2$]
 		\end{center}
-	If necessary, you may use a scientific calculator, spred sheet software, or computer programming languages. 
+	If necessary, you may use a scientific calculator, spread sheet software, or computer programming language. 
 	%so that you can review the process of your calculation and make modification if necessary.
 \end{enumerate}
 \subsubsection{Worked out design calculations}
+Following the procedure given in the previous section, the desing calculation goes as follows.  
 \begin{enumerate}
 \item
-\begin{equation}
-	H_A=0, \ \ V_A+V_D=4F, 
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-	V_D\times 3l - F\times l-F\times 2l-F\times 3l=0
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-	V_A=V_B=2F, \ \ H_A=0
-	\label{eqn:}
-\end{equation}
+	For given external forces of magnitude $F$ applied to the nodes $A,B,C$ and $D$, 
+	the equilbrium conditions for the hole truss structure give the following equations. 
+	\begin{equation}
+		H_A=0, \ \ V_A+V_D=4F, 
+		\label{eqn:equib_fs}
+	\end{equation}
+	\begin{equation}
+		V_D\times 3l - F\times l-F\times 2l-F\times 3l=0
+		\label{eqn:equib_Ma}
+	\end{equation}
+	Here, the total moment has been evaluated in eq.(\ref{eqn:equib_Ma}) with respect to node $A$.
+		For the free body diagram and the notations, see Fig.\ref{fig:fig1}-(a).
+	We thus have 
+	\begin{equation}
+		V_A=V_B=2F, \ \ H_A=0.
+		\label{eqn:reac_fs}
+	\end{equation}
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig1.eps} 
 	\end{center}
 	\caption{(a) The free body diagram of the truss shown in Fig.\ref{fig:fig4_1}. 
-	(b) Forces applied to joints including axial and reaction forces.} 
+	(b) Forces applied to the nodes of the truss structure.} 
 	\label{fig:fig1}
 \end{figure}
 \item
+	For the analysis of axial forces, we assign a unique number to 
+	each truss member as shown in Fig.\ref{fig:fig1}-(b).
+	The axial force of the $i$th truss member is denoted as $N_i$ as shown in this figure.
+	Before start imposing the equilbrium conditions node by node, we should 
+	first notice the symmetry of the structure. 
+	Since $H_A=0$, the truss as well as the loading condition are symmetric about the vertical 
+	line $a-a'$ shown in Fig.\ref{fig:fig1}-(b). 
+	Therefore we have 	
+	\[
+		N_1=N_3, \ \ N_4=N_9,\ \  N_6=N_7
+	\]
+	reducing the number of axia forces to be determined almost by half.
+	Among seven nodes ($A,B,\dots D$), node $A$ and $D$ would produce 
+	equilbrium equations solvable for the axial forces. So, we impose the 
+	equilibrium conditions node by node starting from node $A$, 
+	and then move on to node $E$ and $B$ sucsessively. 
+	As a result of we finally have the followings. 
 	\[
 		N_1=N_3=\frac{1}{\sqrt{3}}F ,\ \ N_2=\frac{2}{\sqrt{3}}F
 	\]
@@ -217,37 +240,53 @@ The flow of structural analysis is as follows.
 		N_6=N_7=0, \ \ N_{10}=N_{11}=-\frac{2}{\sqrt{3}}F
 	\]
 \item
-\begin{eqnarray}
-	F &=& 
-	\left( \rho_w A_w + \rho_s A_\rho \right)gl \nonumber \\
-	&= & 
-	\frac{\pi}{4}gl
-	\left\{ 
-		\rho_w(D-t)^2+ \rho_s\left(D^2-(D-t)^2\right)
-	\right\}
-	\nonumber \\
-	&=&
-	\frac{\pi}{4}gl
-	\left\{ 
-		\rho_w(D-t)^2+ \rho_s\left(2Dt-t^2\right)
-	\right\}
-	\label{eqn:}
-\end{eqnarray}
+	The maximum compressional and tensile axial forces are $-\frac{2}{\sqrt{3}}F$ 
+	and $\frac{2}{\sqrt{3}}F$, respectively.
+	Hence, the maximum axial force in absolute value is $\frac{2}{\sqrt{3}}F$.
 \item
-\begin{equation}
-	\left| \frac{N}{A}\right| \leq \sigma_a
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-	d^2 > \frac{8}{\sqrt{3}\pi} \frac{F}{\sigma_a}
-	\label{eqn:}
-\end{equation}
-\begin{equation}
-	d_{min}=
-	\left\{ \frac{8}{\sqrt{3}\pi} \frac{F}{\sigma_a}
-	\right\}^{1/2}
-	\label{eqn:}
-\end{equation}
+	Let the weight of the pipe per length be denoted as $w$. Then $w$ is written as 
+	\begin{equation}
+		w= \left( \rho_w A_w + \rho_s A_\rho \right)g
+		\label{eqn:}
+	\end{equation}
+	where $A_w$ and $A_w$ are the cross sectional area occupied by 
+	water and the pipe.
+	With the diameter and the thickness of the pipe, The areas are written as 
+	\begin{equation}
+		A_w=\frac{\pi}{4}(D-t)^2, \ \ A_s=\frac{\pi}{4}\left(D^2-(D-t)^2\right).
+		\label{eqn:}
+	\end{equation}
+	Since weight $F$ comes from a section of the pipe of length $l$, we have
+	\begin{equation}
+		F=wl=
+		\frac{\pi}{4}gl
+		\left\{ 
+			\rho_w(D-t)^2+ \rho_s\left(2Dt-t^2\right)
+		\right\}
+		\label{eqn:F_explicit}
+	\end{equation}
+\item
+	In order for the maximum axial stress not to exceed the allowable stress, the area 
+	$A$ of the truss member must satisfy 
+	\begin{equation}
+		\left| \frac{N_{max}}{A}\right| \leq \sigma_a
+		\label{eqn:tol}
+	\end{equation}
+	where $N_{max}$ is the maximam axial force.
+	For $N_{max}=-\frac{2F}{\sqrt{3}}$ and $A=\frac{\pi}{4}d^2$, eq.(\ref{eqn:tol}) gives
+	\begin{equation}
+		d^2 \geq  \frac{8}{\sqrt{3}\pi} \frac{F}{\sigma_a}.
+		\label{eqn:}
+	\end{equation}
+	We thus obtain the minimum allowable diameter $d_{min}$ as 
+	\begin{equation}
+		d_{min}=
+		\left\{ \frac{8}{\sqrt{3}\pi} \frac{F}{\sigma_a}
+		\right\}^{1/2}.
+		\label{eqn:dmin}
+	\end{equation}
+\item
+	For given numerical data, $d_{min}$ may be evaluated as shown in Fig.\ref{fig:}.
 \end{enumerate}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
