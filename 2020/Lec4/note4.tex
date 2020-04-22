@@ -120,7 +120,7 @@ In the structural analysis necessary for the design, we assume the followings.
 \item
 	The extent of the pipe that needed to be supported by the truss is $4l$. 
 	You can imagine that the reminder of the weight goes to the supports on the 
-	ground that are not shown in Fig.\ref{fig:fig4_1}.)
+	ground that are not shown in Fig.\ref{fig:fig4_1}.
 \item
 	A structural member breaks (yields) if the axial stress (axial force/area) 
 	exceeds a given allowable stress.
@@ -254,7 +254,7 @@ Following the procedure given in the previous section, the design calculation go
 	water and the pipe.
 	With the diameter and the thickness of the pipe, The areas are written as 
 	\begin{equation}
-		A_w=\frac{\pi}{4}(D-2t)^2, \ \ A_s=\frac{\pi}{4}\left(D^2-(D-t)^2\right).
+		A_w=\frac{\pi}{4}(D-2t)^2, \ \ A_s=\frac{\pi}{4}\left(D^2-(D-2t)^2\right).
 		\label{eqn:}
 	\end{equation}
 	Since weight $F$ comes from a section of the pipe of length $l$, we have
@@ -262,7 +262,7 @@ Following the procedure given in the previous section, the design calculation go
 		F=wl=
 		\frac{\pi}{4}gl
 		\left\{ 
-			\rho_w(D-t)^2+ 4\rho_s\left(Dt-t^2\right)
+			\rho_w(D-2t)^2+ 4\rho_s\left(Dt-t^2\right)
 		\right\}
 		\label{eqn:F_explicit}
 	\end{equation}
@@ -287,14 +287,13 @@ Following the procedure given in the previous section, the design calculation go
 		\label{eqn:dmin}
 	\end{equation}
 \item
-	For given numerical data, $d_{min}$ may be evaluated as shown in Fig.\ref{fig:fig2}.
+	For given numerical data, $d_{min}$ may be evaluated as shown in Fig.\ref{fig:fig4}.
 	\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig2.eps} 
 	\end{center}
-	\caption{A spread sheet for numerical evaluation of $d_{min}$, the minimum 
-		allowable diameter of the truss member.} 
-	\label{fig:fig2}
+	\caption{A spread sheet for numerical evaluation of $d_{min}$, the minimum allowable diameter of the truss member.} 
+	\label{fig:fig4}
 	\end{figure}
 \end{enumerate}
 \end{document}
