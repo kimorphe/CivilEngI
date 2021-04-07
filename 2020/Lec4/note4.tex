@@ -76,7 +76,7 @@ In designing a truss structure, we shall require
 \end{equation}
 for every member of the truss. 
 \subsection{Design of Simply Supported Truss -an example-}
-Consider designing a simply supported Warren truss in bridging a trench of width 3$l$ (see Fig.\ref{fig:fig4_1}. 
+Consider designing a simply supported Warren truss in bridging a trench of width 3$l$ (see Fig.\ref{fig:fig4_1}). 
 To fabricate the truss, we use the bars of an equal length $l$ with a uniform circular 
 cross-section of diameter $d$ as illustrated in Fig.\ref{fig:fig4_2}-(a).
 When completed, the truss is used to support two straight water pipes (pipe 1 and 2) 
@@ -91,7 +91,7 @@ In the structural analysis necessary for the design, we assume the following.
 	The truss members are so thin that their weight is negligible.
 \item
 	The weight of the water-filled pipes is supported evenly at the lower nodal 
-		points (joints) A, A' to D,D' of the truss.
+		points (joints) A(A') to D(D') of the truss.
 \item
 	Due to the symmetry of the structure, the vertical force of magnitude 
 	$F$ applied to the nodes A, B, C, and D comes only from pipe 1.
@@ -172,7 +172,7 @@ Following the procedure in the previous section, the design calculation goes as 
 	For the free body diagram and the notations, see Fig.\ref{fig:fig1}-(a).
 	Thus we have 
 	\begin{equation}
-		V_A=V_B=2F, \ \ H_A=0.
+		V_A=V_D=2F, \ \ H_A=0.
 		\label{eqn:reac_fs}
 	\end{equation}
 \begin{figure}[h]
@@ -193,7 +193,7 @@ Following the procedure in the previous section, the design calculation goes as 
 	line $a-a'$ shown in Fig.\ref{fig:fig1}-(b). 
 	Therefore we have 	
 	\[
-		N_1=N_3, \ \ N_4=N_9,\ \  N_6=N_7
+		N_1=N_3, \ \ N_4=N_9,\ \ N_5=N_8, \ \   N_6=N_7
 	\]
 	reducing the number of unknown axial forces almost by half.
 	Among seven nodes ($A,B,\dots D$), node $A$ and $D$ would produce 
@@ -215,10 +215,10 @@ Following the procedure in the previous section, the design calculation goes as 
 \item
 	Let the weight of the pipe per length be denoted as $w$. Then $w$ is written as 
 	\begin{equation}
-		w= \left( \rho_w A_w + \rho_s A_\rho \right)g
+		w= \left( \rho_w A_w + \rho_s A_s \right)g
 		\label{eqn:}
 	\end{equation}
-	where $A_w$ and $A_w$ are the cross-sectional areas occupied by 
+	where $A_w$ and $A_s$ are the cross-sectional areas occupied by 
 	water and the pipe wall, respectively. Using the diameter and the pipe-wall thickness, 
 	the areas are written as 
 	\begin{equation}
@@ -264,7 +264,7 @@ Following the procedure in the previous section, the design calculation goes as 
 	\begin{center}
 	\includegraphics[width=1.0\linewidth]{fig2.eps} 
 	\end{center}
-	\caption{A table for the numerical evaluation of $d_{min}$ (the minimum allowable diameter of the truss member) .} 
+	\caption{A table used for the numerical evaluation of $d_{min}$ (the minimum allowable diameter of the truss member) .} 
 	\label{fig:fig4}
 	\end{figure}
 \end{enumerate}

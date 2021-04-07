@@ -1,7 +1,7 @@
 ﻿\documentclass[10pt,a4j]{article}
 %\usepackage{graphicx,wrapfig}
 \usepackage{graphicx}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \setlength{\topmargin}{-1.5cm}
 %\setlength{\leftmargin}{1.5cm}
 %\setlength{\textwidth}{15.5cm}
@@ -174,7 +174,7 @@ When a bar is supported by the pin support at one end and by the roller support 
 Referring to the free body diagram, we can write the equilibrium equations.
 Regarding the moment about $A$, we have  
 \[
-	-F\sin\frac{\pi}{4}\times \frac{l}{2} + V_C\times l =0.
+	-F\sin\left(\frac{\pi}{4}\right)\times \frac{l}{2} + V_C\times l =0.
 \]
 Thus $V_C=\frac{F}{2\sqrt{2}}$ follows. 
 The equilibrium of the horizontal force gives
@@ -213,7 +213,7 @@ $N$ and $Q$ as
 \end{equation}
 Moreover, the equilibrium condition for the moment about $A$ gives 
 \begin{equation}
-	M_A-M_B+Q_Bl=0 
+	-M_A+M_B-Q_Bl=0 
 	\label{eqn:equib_Mab}
 \end{equation}
 reducing the number of independent components to three (i.e. $N,Q$ and $M_A$ or $M_B$).\\
@@ -267,7 +267,7 @@ The equilibrium equations of the forces and moment are then written as follows.
 \end{equation}
 Thus we have 
 \begin{equation}
-	H_A=-F, \ \ V_A=-V_B=\frac{\sqrt{3}}{2}F
+	H_A=-F, \ \ V_B=-V_A=\frac{\sqrt{3}}{2}F
 	\label{eqn:reac_frc}
 \end{equation}
 Note that the total moment about $A$ has been considered in the third equation of (\ref{eqn:equib_whole}).
@@ -305,7 +305,7 @@ It should be noted here that Fig.\ref{fig:fig10} depicts the forces acting to th
 	Node $C$: \\
 	The equilibrium conditions for node $C$ are written as 
 	\begin{equation}
-		F-N_1\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0.
+		F-N_2\cos\alpha+N_3\cos\alpha=0, \ \ N_2\sin\alpha+N_3\sin\alpha=0.
 		\label{eqn:nodeC}
 	\end{equation}
 	Since we have already determined all the axial forces, eqs.(\ref{eqn:nodeC}) are redundant.  
@@ -335,21 +335,23 @@ Obtain the reaction forces for a simply supported bar shown in Fig.\ref{fig:fig3
 	\label{fig:fig3_3}
 \end{figure}
 {\small
+	//
+	{\bf Solution.}
 	A free body diagram for the simply supported bar is shown in Fig.\ref{fig:fig15}. 
 	The horizontal and vertical components of the reaction forces are denoted in
-	this figure as $H_A, V_A$, and $V_B$.
+	this figure as $H_A, V_A$, and $V_C$.
 	The equilibrium equations for the reaction forces are written as 
 	\[
-		H_A=0, \ \ V_A+V_B=F, 
+		H_A=0, \ \ V_A+V_C=F, 
 	\]
 	and 
 	\[
-		-F\times a +V_B\times l =0
+		-F\times a +V_C\times l =0
 	\]
 	where the last equation is concerned with the moment about $A$.
 	From the equations above, we obtain
 	\[
-		H_A=0, \ \ V_A=\frac{b}{l}F, \ \ V_B=\frac{a}{l}F.
+		H_A=0, \ \ V_A=\frac{b}{l}F, \ \ V_C=\frac{a}{l}F.
 	\]
 }
 	\begin{figure}[h]
@@ -371,6 +373,8 @@ be determined by the equilibrium equations.
 	\label{fig:fig3_4}
 \end{figure}
 {\small
+	\\
+	{\bf Solution.}
 	The free body diagrams for the two support conditions are shown in Fig.\ref{fig:fig16}. 
 	As shown in this figure, the number of unknown reaction force components is  
 	6 for (a) and 4 for (b) whereas the number of equilibrium equations 
@@ -390,7 +394,7 @@ be determined by the equilibrium equations.
 \end{figure}
 \item
 	Obtain the reaction and axial forces acting to the simply supported truss 
-	shown in Fig.\ref{fig:13}.
+	shown in Fig.\ref{fig:fig13}.
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=0.5\linewidth]{fig13.eps} 
@@ -399,6 +403,8 @@ be determined by the equilibrium equations.
 	\label{fig:fig13}
 \end{figure}
 {\small 
+	\\
+	{\bf Solution.}
 	We assign a unique number to each truss member, and draw a free body diagram 
 	as shown in Fig.\ref{fig:fig14}-(a) to obtain the reaction forces in the first place. 
 	If we notice that the line of action of the force passes node $A$, the equilibrium 
@@ -435,7 +441,7 @@ be determined by the equilibrium equations.
 		N_5+\frac{N_3}{\sqrt{2}}=0, \ \ 
 		N_2+\frac{N_3}{\sqrt{2}}=0
 	\]
-	whereas for node $D$ by
+	whereas for node $B$ by
 	\[
 		N_4+\frac{N_3}{\sqrt{2}}+V_B=0, \ \ 
 		N_1+\frac{N_3}{\sqrt{2}}=0.
